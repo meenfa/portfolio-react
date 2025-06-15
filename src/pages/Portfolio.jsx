@@ -130,8 +130,7 @@ const Portfolio = () => {
             >
               <span className="text-xl font-bold text-white">अंकित.</span>
             </div>
-
-            {/* Desktop Navigation Links */}
+            {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-6">
               {['about', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
                 <button
@@ -239,12 +238,6 @@ const Portfolio = () => {
                       Python
                     </span>
                   </div>
-
-                  {/* <div className="absolute -bottom-3 -right-3 animate-float-vertical-reverse">
-                    <span className="px-2 py-1 bg-black text-white text-xs font-mono rounded-lg border border-gray-100 shadow-md">
-                      Python
-                    </span>
-                  </div> */}
                 </div>
               </div>
 
@@ -252,14 +245,14 @@ const Portfolio = () => {
               <div className="space-y-2 text-gray-400 pt-4">
                 <p>
                   Hi, I'm Ankit, a passionate <span className="text-white font-bold">Backend Developer</span> with deep knowledge in
-                  Django, Python, Laravel and building scalable web applications.
+                  <span className="text-white font-bold"> Django, Python, Laravel</span> and buildingscalable web applications.
                 </p>
                 <p>
                   My focus is on developing efficient APIs, optimizing database performance, and implementing
-                  secure authentication systems.
+                 secure authentication systems.
                 </p>
-                <p className="text-m leading-relaxed">
-                  Currently working on <span className="text-white font-bold"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react" >Padhai </a></span> (LMS platform), where I lead the
+                <p>
+                  Currently working on <span className="text-gray-200 font-bold"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Padhai LMS platform</a></span>, where I lead the
                   development of both frontend and backend systems.
                 </p>
               </div>
@@ -508,7 +501,7 @@ const Portfolio = () => {
                   </div>
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-black hover:bg-gray-900 border border-gray-600 rounded text-white focus:outline-none focus:ring-1 focus:ring-gray-500 text-sm font-medium transition-colors"
+                    className="px-4 py-2 bg-black hover:bg-gray-900 border border-gray-600 rounded text-white focus:outline-none focus:ring-1 focus:ring-gray-500 text-sm font-medium transition-colors cursor-pointer"
                   >
                     Send Message
                   </button>
