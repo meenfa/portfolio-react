@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, ExternalLink, Mail, Phone, MapPin, Download, File } from 'lucide-react';
+import { Github, Linkedin, ExternalLink, Mail, Phone, MapPin, Download, File, DownloadIcon } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -249,7 +249,7 @@ const Portfolio = () => {
                 </p>
                 <p>
                   My focus is on developing efficient APIs, optimizing database performance, and implementing
-                 secure authentication systems.
+                  secure authentication systems.
                 </p>
                 <p>
                   Currently working on <span className="text-gray-200 font-bold"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Padhai LMS platform</a></span>, where I lead the
@@ -336,75 +336,70 @@ const Portfolio = () => {
 
           {/* Projects Section */}
 
-<section id="work" className="py-20 bg-black text-gray-300">
-  <div className="container mx-auto px-6 max-w-6xl">
-    <div className="mb-16">
-      <h2 className="text-3xl font-light text-white mb-2">Projects</h2>
-      <div className="w-12 h-px bg-gray-600"></div>
-    </div>
+          <section id="projects" className="py-20 bg-black text-gray-300">
+                <h2 className="text-2xl font-bold text-white mb-6">Projects</h2>
+              <div className="grid gap-12">
+                {projects.map((project, index) => (
+                  <div key={index} className="group">
+                    <div className="flex flex-col lg:flex-row gap-8 items-start">
+                      {/* Project Image */}
+                      <div className="w-full lg:w-5/12 overflow-hidden rounded-lg border border-gray-800">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-auto object-cover transition-opacity duration-500 group-hover:opacity-80"
+                        />
+                      </div>
 
-    <div className="grid gap-12">
-      {projects.map((project, index) => (
-        <div key={index} className="group">
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
-            {/* Project Image */}
-            <div className="w-full lg:w-5/12 overflow-hidden rounded-lg border border-gray-800">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-auto object-cover transition-opacity duration-500 group-hover:opacity-80"
-              />
-            </div>
+                      {/* Project Details */}
+                      <div className="w-full lg:w-7/12">
+                        <h3 className="text-xl font-light text-white mb-3">{project.title}</h3>
+                        <p className="text-gray-400 mb-5 leading-relaxed">{project.description}</p>
 
-            {/* Project Details */}
-            <div className="w-full lg:w-7/12">
-              <h3 className="text-xl font-light text-white mb-3">{project.title}</h3>
-              <p className="text-gray-400 mb-5 leading-relaxed">{project.description}</p>
-              
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tags.map((tag, i) => (
-                  <span key={i} className="px-3 py-1 text-xs text-gray-400 bg-gray-900 rounded-full">
-                    {tag}
-                  </span>
+                        {/* Tech Stack */}
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.tags.map((tag, i) => (
+                            <span key={i} className="px-3 py-1 text-xs text-gray-400 bg-gray-900 rounded-full">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {/* Project Links */}
+                        <div className="flex gap-4">
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            View Code
+                          </a>
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
+                            >
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              Live Demo
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Divider - Hidden for last item */}
+                    {index !== projects.length - 0 && (
+                      <div className="mt-12 border-t border-gray-800"></div>
+                    )}
+                  </div>
                 ))}
               </div>
-
-              {/* Project Links */}
-              <div className="flex gap-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  <Github className="w-4 h-4 mr-2" />
-                  View Code
-                </a>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Divider - Hidden for last item */}
-          {index !== projects.length - 1 && (
-            <div className="mt-12 border-t border-gray-800"></div>
-          )}
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+            
+          </section>
 
 
           <section
@@ -447,7 +442,7 @@ const Portfolio = () => {
                     <span className="text-gray-400 text-sm">Kathmandu, Nepal</span>
                   </div>
                 </div>
-                <div className="flex space-x-3 pt-2">
+                <div className="flex space-x-2 pt-2">
                   <a
                     href="https://github.com/ankitkarki27"
                     target="_blank"
@@ -463,15 +458,19 @@ const Portfolio = () => {
                     className="flex items-center justify-center w-8 h-8 rounded-lg bg-black text-gray-300 hover:text-white transition-colors border border-gray-700"
                   >
                     <Linkedin className="w-4 h-4" />
+                    
                   </a>
                   <a
                     href="https://drive.google.com/file/d/1AKVjMhslY9VcN4BhHj-zNeWb0OaDqnP9/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-8 h-8 rounded-lg bg-black text-gray-300 hover:text-white transition-colors border border-gray-700"
-                  >
-                    <File className="w-4 h-4" />
+                    className="flex items-center space-x-2 bg-black hover:bg-gray-200 px-4 py-2 rounded-lg text-white hover:text-black transition-colors border border-gray-700 text-sm"
+                >
+                    <DownloadIcon className="w-4 h-4" />
+                    <span>Resume</span>
                   </a>
+                   
+
                 </div>
               </div>
 
