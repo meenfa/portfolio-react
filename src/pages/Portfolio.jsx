@@ -25,7 +25,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "ELearning Management System",
-      description: "An Online Platform to enroll in courses, student progress tracking, and community discussion forums for an online learning experience.",
+      description: "An Online Platform to enroll in courses, student progress tracking, and community discussion forums for an online learning experience. ",
       tags: ["React", "Django", "PostgreSQL", "RTK", "Tailwind"],
       github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
       image: "/image/padhai.png"
@@ -335,60 +335,76 @@ const Portfolio = () => {
           </section>
 
           {/* Projects Section */}
-          <section
-            id="projects"
-            style={sectionStyle}
-          >
-            <h2 className="text-2xl font-bold mb-6 text-white">Projects</h2>
-            <div className="space-y-8">
-              {projects.map((project, index) => (
-                <div key={index} className="border border-gray-700 rounded overflow-hidden">
-                  <div className="flex flex-col md:flex-row">
-                    <div className="md:w-1/2 h-50 bg-gray-800 overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
-                      />
-                    </div>
-                    <div className="md:w-1/2 p-4">
-                      <h3 className="font-bold text-lg mb-2 text-white">{project.title}</h3>
-                      <p className="text-gray-300 mb-3 text-sm">{project.description}</p>
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        {project.tags.map((tags, i) => (
-                          <span key={i} className="px-2 py-1 rounded-full bg-gray-800 text-gray-200 text-xs">
-                            {tags}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="flex space-x-3">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center text-gray-400 hover:text-blue-300 text-xs font-medium transition-colors"
-                        >
-                          <Github className="w-3 h-3 mr-1" />
-                          GitHub
-                        </a>
-                        {project.link && (
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center text-gray-400 hover:text-blue-300 text-xs font-medium transition-colors"
-                          >
-                            <ExternalLink className="w-3 h-3 mr-1" />
-                            Live
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+
+<section id="work" className="py-20 bg-black text-gray-300">
+  <div className="container mx-auto px-6 max-w-6xl">
+    <div className="mb-16">
+      <h2 className="text-3xl font-light text-white mb-2">Projects</h2>
+      <div className="w-12 h-px bg-gray-600"></div>
+    </div>
+
+    <div className="grid gap-12">
+      {projects.map((project, index) => (
+        <div key={index} className="group">
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+            {/* Project Image */}
+            <div className="w-full lg:w-5/12 overflow-hidden rounded-lg border border-gray-800">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-auto object-cover transition-opacity duration-500 group-hover:opacity-80"
+              />
             </div>
-          </section>
+
+            {/* Project Details */}
+            <div className="w-full lg:w-7/12">
+              <h3 className="text-xl font-light text-white mb-3">{project.title}</h3>
+              <p className="text-gray-400 mb-5 leading-relaxed">{project.description}</p>
+              
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="px-3 py-1 text-xs text-gray-400 bg-gray-900 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Project Links */}
+              <div className="flex gap-4">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  <Github className="w-4 h-4 mr-2" />
+                  View Code
+                </a>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Live Demo
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Divider - Hidden for last item */}
+          {index !== projects.length - 1 && (
+            <div className="mt-12 border-t border-gray-800"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
 
           <section
