@@ -24,8 +24,8 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "ELearning Management System",
-      description: "An Online Platform to enroll in courses, student progress tracking, and community discussion forums for an online learning experience. ",
+      title: "Online Learning Platform",
+      description: "An online platform for course enrollment and student progress tracking, designed to support community discussion forums and an AI-powered text interview module in future releases.",
       tags: ["React", "Django", "PostgreSQL", "RTK", "Tailwind"],
       github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
       image: "/image/padhai.png"
