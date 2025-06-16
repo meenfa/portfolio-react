@@ -80,7 +80,8 @@ const Portfolio = () => {
   ];
   const experience = [
     {
-      role: "Backend Developer (Intern → Junior Developer)",
+      role: "Backend Developer (Intern )",
+      // role: "Backend Developer (Intern → Junior Developer)",
       company: "NepBigyapan",
       period: "Dec 2024 – May 2025",
       description: [
