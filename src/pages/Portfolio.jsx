@@ -115,21 +115,19 @@ const Portfolio = () => {
 
   // Section style with scroll-margin to account for fixed navbar
   const sectionStyle = {
-    scrollMarginTop: '4.5rem' // 4rem (navbar) + 0.5rem extra spacing
+    scrollMarginTop: '4rem' // 4rem (navbar) + 0.5rem extra spacing
   };
 
   return (
     <div className="min-h-screen bg-black text-gray-100">
-      {/* Fixed Navbar */}
       <nav className="fixed top-0 w-full  bg-black/90 backdrop-blur-md z-50 h-16">
         <div className="mx-auto px-6 max-w-3xl h-full">
           <div className="flex justify-between items-center h-full">
-            {/* Logo */}
             <div
               className="flex items-center cursor-pointer"
               onClick={() => scrollToSection('about')}
             >
-              <span className="text-xl font-bold text-white">अंकित.</span>
+              <span className="text-m font-bold text-white">अंकित.</span>
             </div>
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-6">
@@ -148,7 +146,7 @@ const Portfolio = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-gray-400 hover:text-white focus:outline-none"
+                className="text-white hover:text-white focus:outline-none"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   {mobileMenuOpen ? (
@@ -184,8 +182,9 @@ const Portfolio = () => {
         {/* About*/}
         <section
           id="about"
-          style={sectionStyle}
-          className="min-h-[calc(100vh-2rem)] flex items-center"
+          style={sectionStyle} 
+          className="flex items-center"
+          // className="min-h-[calc(100vh-2rem)] flex items-center"
         >
           <div className="mx-auto px-6 py-12 w-full max-w-3xl">
             <div className="space-y-8">
@@ -245,7 +244,7 @@ const Portfolio = () => {
               {/* Bio Text */}
               <div className="space-y-2 text-gray-400 pt-4">
                 <p>
-                  Hi, I'm Ankit, a passionate <span className="text-white font-bold">Backend Developer</span> with deep knowledge in
+                  Hi, I'm Ankit, a passionate <span className="text-white font-bold">Backend Developer</span> with very good knowledge in
                   <span className="text-white font-bold"> Django, Python, Laravel</span> and buildingscalable web applications.
                 </p>
                 <p>
@@ -335,9 +334,8 @@ const Portfolio = () => {
             </div>
           </section>
 
-          {/* Projects Section */}
-
-          <section id="projects" className="py-20 bg-black text-gray-300">
+{/* projects */}
+          <section id="projects" style={sectionStyle}>
                 <h2 className="text-2xl font-bold text-white mb-6">Projects</h2>
               <div className="grid gap-12">
                 {projects.map((project, index) => (
@@ -348,7 +346,7 @@ const Portfolio = () => {
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-auto object-cover transition-opacity duration-500 group-hover:opacity-80"
+                          className="w-full h-auto object-cover transition-opacity duration-500 hover:opacity-90"
                         />
                       </div>
 
