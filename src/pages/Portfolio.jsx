@@ -121,7 +121,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-black text-gray-100">
       <nav className="fixed top-0 w-full  bg-black/90 backdrop-blur-md z-50 h-16">
-        <div className="mx-auto px-6 max-w-3xl h-full">
+        <div className="mx-auto px-2 max-w-3xl h-full">
           <div className="flex justify-between items-center h-full">
             <div
               className="flex items-center cursor-pointer"
@@ -186,7 +186,7 @@ const Portfolio = () => {
           className="flex items-center"
           // className="min-h-[calc(100vh-2rem)] flex items-center"
         >
-          <div className="mx-auto px-6 py-12 w-full max-w-3xl">
+          <div className="mx-auto px-2 py-16 w-full max-w-3xl">
             <div className="space-y-8">
               {/* Name/Title and Image Row */}
               <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
@@ -291,7 +291,7 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <div className="mx-auto px-6 py-12 pb-32 space-y-16 max-w-3xl">
+        <div className="mx-auto px-2 py-12 pb-32 space-y-16 max-w-3xl">
           {/* Skills Section */}
           <section
             id="skills"
@@ -334,7 +334,10 @@ const Portfolio = () => {
             </div>
           </section>
 
-{/* projects */}
+
+
+
+          {/* projects */}
           <section id="projects" style={sectionStyle}>
                 <h2 className="text-2xl font-bold text-white mb-6">Projects</h2>
               <div className="grid gap-12">
@@ -349,11 +352,10 @@ const Portfolio = () => {
                           className="w-full h-auto object-cover transition-opacity duration-500 hover:opacity-90"
                         />
                       </div>
-
                       {/* Project Details */}
                       <div className="w-full lg:w-7/12">
                         <h3 className="text-xl font-light text-white mb-3">{project.title}</h3>
-                        <p className="text-gray-400 mb-5 leading-relaxed">{project.description}</p>
+                        <p className="text-gray-400 mb-5 text-sm">{project.description}</p>
 
                         {/* Tech Stack */}
                         <div className="flex flex-wrap gap-2 mb-6">
@@ -370,7 +372,7 @@ const Portfolio = () => {
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
+                            className="flex items-center text-xs text-gray-400 hover:text-white transition-colors"
                           >
                             <Github className="w-4 h-4 mr-2" />
                             View Code
@@ -380,7 +382,7 @@ const Portfolio = () => {
                               href={project.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
+                              className="flex items-center text-xs text-gray-400 hover:text-white transition-colors"
                             >
                               <ExternalLink className="w-4 h-4 mr-2" />
                               Live Demo
@@ -399,6 +401,7 @@ const Portfolio = () => {
               </div>
             
           </section>
+
 
 
           <section
