@@ -243,7 +243,7 @@ const Portfolio = () => {
               {/* Bio Text */}
               <div className="space-y-2 text-gray-400 pt-4">
                 <p>
-                  Hi, I'm Ankit, a passionate <span className="text-white font-bold">Backend Developer</span> with very good knowledge in
+                  Hi, I'm Ankit, a passionate <span className="text-white font-bold">Junior Backend Developer</span> with very good knowledge in
                   <span className="text-white font-bold"> Django, Python, Laravel</span> and buildingscalable web applications.
                 </p>
                 <p>
