@@ -13,7 +13,7 @@ const Portfolio = () => {
     {
       level: "Bachelor of Computer Applications",
       school: "Tribhuvan University, Kathmandu, Nepal",
-      date: "2020 - 2025"
+      date: "2020 - Present"
     },
     {
       level: "High School",
@@ -210,7 +210,6 @@ const Portfolio = () => {
 
                 {/* Image Container with Floating Tech Badges */}
                 <div className="hidden sm:block sm:pl-2 relative">
-                  {/* Image */}
                   <img
                     src="/image/image.png"
                     alt="Ankit Karki"
@@ -421,7 +420,6 @@ const Portfolio = () => {
           </section>
 
           {/* Contact Section */}
-
           <section
             id="contact"
             style={sectionStyle}
