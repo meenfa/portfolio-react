@@ -178,7 +178,7 @@ const Portfolio = () => {
         )}
       </nav>
 
-      <div className="pt-16">
+      <div className="pt-12">
         {/* About*/}
         <section
           id="about"
@@ -209,12 +209,12 @@ const Portfolio = () => {
                 </div>
 
                 {/* Image Container with Floating Tech Badges */}
-                <div className="hidden sm:block sm:pl-4 relative">
+                <div className="hidden sm:block sm:pl-2 relative">
                   {/* Image */}
                   <img
                     src="/image/image.png"
                     alt="Ankit Karki"
-                    className="w-36 h-20 object-cover rounded-lg shadow-lg border border-gray-700"
+                    className="w-42 h-24 object-cover rounded-lg shadow-lg border border-gray-700"
                   />
 
                   {/* Floating Tech Badges with Animation */}
