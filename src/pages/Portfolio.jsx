@@ -85,7 +85,7 @@ const Portfolio = () => {
       company: "NepBigyapan",
       period: "Dec 2024 – May 2025",
       description: [
-        "Started as a backend intern and transitioned to Junior Developer over 6 months",
+        // "Started as a backend intern and transitioned to Junior Developer over 6 months",
         "Gained hands-on experience with Laravel and Django",
         "Worked on projects like an institution management system and a restaurant management system",
         "Built RESTful APIs for various applications",
