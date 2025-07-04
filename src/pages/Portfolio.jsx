@@ -251,9 +251,9 @@ const Portfolio = () => {
                   secure authentication systems.
                 </p>
                 <p>
-                  Currently working on <span className="text-gray-200 font-bold"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Padhai LMS platform</a></span>, where I lead the
-                  development of both frontend and backend systems.
+                  Currently working on <span className="text-gray-200 font-bold"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Padhai LMS platform</a></span>, where I lead both backend and frontend development. I'm also interested in exploring new technologies and contributing to open-source projects.
                 </p>
+               
               </div>
 
               {/* Buttons */}
