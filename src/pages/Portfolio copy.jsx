@@ -182,21 +182,15 @@ const Portfolio = () => {
         {/* About*/}
         <section
           id="about"
-          style={sectionStyle}
+          style={sectionStyle} 
           className="flex items-center"
-        // className="min-h-[calc(100vh-2rem)] flex items-center"
+          // className="min-h-[calc(100vh-2rem)] flex items-center"
         >
           <div className="mx-auto px-2 py-16 w-full max-w-3xl">
             <div className="space-y-8">
               {/* Name/Title and Image Row */}
               <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
                 {/* Name and Title */}
-                <div className="sm:hidden flex justify-center">
-                  <div className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg flex items-center space-x-2 animate-pulse">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    <span>Available</span>
-                  </div>
-                </div>
                 <div className="space-y-2 flex-1">
                   <h1 className="text-3xl font-bold text-white">Ankit Karki</h1>
                   <p className="text-gray-400">Backend Developer</p>
@@ -221,26 +215,17 @@ const Portfolio = () => {
                     alt="Ankit Karki"
                     className="w-42 h-24 object-cover rounded-lg shadow-lg border border-gray-700"
                   />
-                  {/* Floating Status Badge - Available on desktop only */}
-                  <div className="absolute -top-3 -right-3 z-20">
-                    <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg flex items-center space-x-2 animate-float-vertical">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
-                      <span>Available for work</span>
-                    </div>
-                  </div>
 
                   {/* Floating Tech Badges with Animation */}
                   <div className="absolute -top-3 -left-8 animate-float-vertical">
-                    <span className="px-2 py-1 bg-black text-white font-mono rounded-lg border border-gray-700 text-xs shadow-md">
-                      Django
+                    <span className="px-2 py-1 bg-black text-white font-mono rounded-lg border border-gray-700 text-xs shadow-md">  Django
                     </span>
                   </div>
 
-                  {/* <div className="absolute -top-3 -right-2 animate-float-vertical">
-                    <span className="px-2 py-1 bg-green-500 text-white font-mono rounded-lg   text-xs shadow-md">   
-                      Available for work
+                  <div className="absolute -top-3 -right-2 animate-float-vertical">
+                    <span className="px-2 py-1 bg-black text-white font-mono rounded-lg border border-gray-700 text-xs shadow-md">   Laravel
                     </span>
-                  </div> */}
+                  </div>
 
                   <div className="absolute -bottom-3 -left-3 animate-float-horizontal-reverse">
                     <span className="px-2 py-1 bg-black text-white text-xs font-mono rounded-lg border border-gray-700 shadow-md">
@@ -249,13 +234,11 @@ const Portfolio = () => {
                   </div>
                   <div className="absolute -bottom-3 -right-3 animate-float-vertical-reverse">
                     <span className="px-2 py-1 bg-black text-white text-xs font-mono rounded-lg border border-gray-700 shadow-md">
-                      Laravel
+                      Python
                     </span>
                   </div>
                 </div>
               </div>
-              {/* Available Badge for Mobile */}
-
 
               {/* Bio Text */}
               <div className="space-y-2 text-gray-400 pt-4">
@@ -270,7 +253,7 @@ const Portfolio = () => {
                 <p>
                   Currently working on <span className="text-gray-200 font-bold"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Padhai LMS platform</a></span>, where I lead both backend and frontend development. I'm also interested in exploring new technologies and contributing to open-source projects.
                 </p>
-
+               
               </div>
 
               {/* Buttons */}
@@ -307,13 +290,13 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <div className="mx-auto px-2 py-4 pb-32 space-y-16 max-w-3xl">
+        <div className="mx-auto px-2 py-12 pb-32 space-y-16 max-w-3xl">
           {/* Skills Section */}
           <section
             id="skills"
             style={sectionStyle}
           >
-            <h2 className="text-2xl font-bold mb-4 text-white">Skills</h2>
+            <h2 className="text-2xl font-bold mb-6 text-white">Skills</h2>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, index) => (
                 <span
@@ -355,67 +338,67 @@ const Portfolio = () => {
 
           {/* projects */}
           <section id="projects" style={sectionStyle}>
-            <h2 className="text-2xl font-bold text-white mb-6">Projects</h2>
-            <div className="grid gap-12">
-              {projects.map((project, index) => (
-                <div key={index} className="group">
-                  <div className="flex flex-col lg:flex-row gap-8 items-start">
-                    {/* Project Image */}
-                    <div className="w-full lg:w-5/12 overflow-hidden rounded-lg border border-gray-800">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-auto object-cover transition-opacity duration-500 hover:opacity-90"
-                      />
-                    </div>
-                    {/* Project Details */}
-                    <div className="w-full lg:w-7/12">
-                      <h3 className="text-xl font-light text-white mb-3">{project.title}</h3>
-                      <p className="text-gray-400 mb-5 text-sm">{project.description}</p>
-
-                      {/* Tech Stack */}
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tags.map((tag, i) => (
-                          <span key={i} className="px-3 py-1 text-xs text-gray-400 bg-gray-900 rounded-full">
-                            {tag}
-                          </span>
-                        ))}
+                <h2 className="text-2xl font-bold text-white mb-6">Projects</h2>
+              <div className="grid gap-12">
+                {projects.map((project, index) => (
+                  <div key={index} className="group">
+                    <div className="flex flex-col lg:flex-row gap-8 items-start">
+                      {/* Project Image */}
+                      <div className="w-full lg:w-5/12 overflow-hidden rounded-lg border border-gray-800">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-auto object-cover transition-opacity duration-500 hover:opacity-90"
+                        />
                       </div>
+                      {/* Project Details */}
+                      <div className="w-full lg:w-7/12">
+                        <h3 className="text-xl font-light text-white mb-3">{project.title}</h3>
+                        <p className="text-gray-400 mb-5 text-sm">{project.description}</p>
 
-                      {/* Project Links */}
-                      <div className="flex gap-4">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center text-xs text-gray-400 hover:text-white transition-colors"
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          View Code
-                        </a>
-                        {project.link && (
+                        {/* Tech Stack */}
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.tags.map((tag, i) => (
+                            <span key={i} className="px-3 py-1 text-xs text-gray-400 bg-gray-900 rounded-full">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {/* Project Links */}
+                        <div className="flex gap-4">
                           <a
-                            href={project.link}
+                            href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center text-xs text-gray-400 hover:text-white transition-colors"
                           >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Live Demo
+                            <Github className="w-4 h-4 mr-2" />
+                            View Code
                           </a>
-                        )}
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center text-xs text-gray-400 hover:text-white transition-colors"
+                            >
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              Live Demo
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
+
+                    {/* Divider - Hidden for last item */}
+                    {index !== projects.length - 0 && (
+                      <div className="mt-12 border-t border-gray-800"></div>
+                    )}
                   </div>
-
-                  {/* Divider - Hidden for last item */}
-                  {index !== projects.length - 0 && (
-                    <div className="mt-12 border-t border-gray-800"></div>
-                  )}
-                </div>
-              ))}
-            </div>
-
+                ))}
+              </div>
+            
           </section>
 
 
@@ -475,18 +458,18 @@ const Portfolio = () => {
                     className="flex items-center justify-center w-8 h-8 rounded-lg bg-black text-gray-300 hover:text-white transition-colors border border-gray-700"
                   >
                     <Linkedin className="w-4 h-4" />
-
+                    
                   </a>
                   <a
                     href="https://drive.google.com/file/d/1AKVjMhslY9VcN4BhHj-zNeWb0OaDqnP9/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 bg-black hover:bg-gray-200 px-4 py-2 rounded-lg text-white hover:text-black transition-colors border border-gray-700 text-sm"
-                  >
+                >
                     <DownloadIcon className="w-4 h-4" />
                     <span>Resume</span>
                   </a>
-
+                   
 
                 </div>
               </div>
