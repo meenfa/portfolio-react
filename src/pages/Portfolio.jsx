@@ -276,7 +276,7 @@ const Portfolio = () => {
               {/* Buttons */}
               <div className="flex flex-wrap gap-3 pt-4">
                 <a
-                  href="https://drive.google.com/file/d/1AKVjMhslY9VcN4BhHj-zNeWb0OaDqnP9/view?usp=sharing"
+                 href="https://drive.google.com/file/d/1AKVjMhslY9VcN4BhHj-zNeWb0OaDqnP9/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 bg-black hover:bg-gray-200 px-4 py-2 rounded-lg text-white hover:text-black transition-colors border border-gray-700 text-sm"
