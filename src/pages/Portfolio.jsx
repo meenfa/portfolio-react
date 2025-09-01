@@ -271,7 +271,7 @@ return (
                 secure authentication systems.
               </p>
               <p>
-                Currently working on <span className="text-gray-200 font-bold"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Padhai LMS platform</a></span>, where I lead both backend and frontend development. I'm also interested in exploring new technologies and contributing to open-source projects.
+                Currently working on <span className="text-gray-200 font-bold"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Digital Padhai </a></span>, a LMS platform where I lead both backend and frontend development. I'm also interested in exploring new technologies and contributing to open-source projects.
               </p>
 
             </div>
