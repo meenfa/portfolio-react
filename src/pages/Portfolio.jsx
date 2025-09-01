@@ -195,7 +195,7 @@ return (
             <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
               {/* Name and Title */}
               <div className="sm:hidden flex justify-center">
-                <div className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg flex items-center space-x-2 animate-pulse">
+                <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg flex items-center space-x-2 animate-pulse">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   <span>Available</span>
                 </div>
@@ -226,7 +226,7 @@ return (
                 />
                 {/* Floating Status Badge - Available on desktop only */}
                 <div className="absolute -top-3 -right-3 z-20">
-                  <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg flex items-center space-x-2 animate-float-vertical">
+                  <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg flex items-center space-x-2 animate-float-vertical">
                     <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
                     <span>Available for work</span>
                   </div>
@@ -264,7 +264,7 @@ return (
             <div className="space-y-2 text-gray-400 pt-4">
               <p>
                 Hi, I'm Ankit, a passionate <span className="text-white font-bold">Junior Backend Developer</span> with very good knowledge in
-                <span className="text-white font-bold"> Django, Python, Laravel</span> and buildingscalable web applications.
+                <span className="text-white font-bold"> Django, Python, Laravel and React.js</span> and building scalable web applications.
               </p>
               <p>
                 My focus is on developing efficient APIs, optimizing database performance, and implementing
@@ -279,7 +279,7 @@ return (
             {/* Buttons */}
             <div className="flex flex-wrap gap-3 pt-4">
               <a
-                href="https://drive.google.com/file/d/1n6NuJ5loxjVnWV7ceX51WiAh8tSvoxCT/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Dpxxay05_CvITZHxbg1IAcxX7aNgME35/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-black hover:bg-gray-200 px-4 py-2 rounded-lg text-white hover:text-black transition-colors border border-gray-700 text-sm"
@@ -353,9 +353,6 @@ return (
           </div>
         </section>
 
-
-
-
         {/* projects */}
         <section id="projects" style={sectionStyle}>
           <h2 className="text-2xl font-bold text-white mb-6">Projects</h2>
@@ -421,8 +418,6 @@ return (
 
         </section>
 
-
-
         <section
           id="education"
           style={sectionStyle}
@@ -481,7 +476,7 @@ return (
 
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1AKVjMhslY9VcN4BhHj-zNeWb0OaDqnP9/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1Dpxxay05_CvITZHxbg1IAcxX7aNgME35/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 bg-black hover:bg-gray-200 px-4 py-2 rounded-lg text-white hover:text-black transition-colors border border-gray-700 text-sm"
