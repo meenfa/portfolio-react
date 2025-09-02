@@ -80,19 +80,16 @@ const Portfolio = () => {
   ];
   const experience = [
     {
-      role: "Laravel Developer (Intern )",
-      // role: "Backend Developer (Intern → Junior Developer)",
+      role: "Laravel Developer (Intern)",
       company: "NepBigyapan",
       period: "Dec 2024 – April 2025",
       description: [
-        // "Started as a backend intern and transitioned to Junior Developer over 6 months",
+        
         "Gained hands-on experience with Laravel and React",
         "Built a Construction Company Website using both backend and frontend using Laravel and React.js.",
         "Developed backend APIs and managed database integration efficiently.",
         "Designed responsive UI with HTML, CSS, and JavaScript.",
-        // "Worked on projects like an institution management system and a restaurant management system",
-        // "Built RESTful APIs for various applicationxs",
-        // "Explored full-stack development through small internal projects"
+      
       ],
 tags: ["Laravel", "Django", "RESTful APIs", "Full-stack Development"]
     },
@@ -116,9 +113,9 @@ const scrollToSection = (sectionId) => {
   setMobileMenuOpen(false);
 };
 
-// Section style with scroll-margin to account for fixed navbar
+
 const sectionStyle = {
-  scrollMarginTop: '4rem' // 4rem (navbar) + 0.5rem extra spacing
+  scrollMarginTop: '4rem'
 };
 
 return (
@@ -191,13 +188,13 @@ return (
       >
         <div className="mx-auto px-2 py-16 w-full max-w-3xl">
           <div className="space-y-8">
-            {/* Name/Title and Image Row */}
+            
             <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-              {/* Name and Title */}
+            
               <div className="sm:hidden flex justify-center">
                 <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg flex items-center space-x-2 animate-pulse">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                  <span>Available</span>
+                  <span>Available For Work</span>
                 </div>
               </div>
               <div className="space-y-2 flex-1">
@@ -224,7 +221,7 @@ return (
                   alt="Ankit Karki"
                   className="w-42 h-24 object-cover rounded-lg shadow-lg border border-gray-700"
                 />
-                {/* Floating Status Badge - Available on desktop only */}
+                {/* Floating Status Badge Available on desktop only */}
                 <div className="absolute -top-3 -right-3 z-20">
                   <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg flex items-center space-x-2 animate-float-vertical">
                     <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
@@ -257,8 +254,6 @@ return (
                 </div>
               </div>
             </div>
-            {/* Available Badge for Mobile */}
-
 
             {/* Bio Text */}
             <div className="space-y-2 text-gray-400 pt-4">
