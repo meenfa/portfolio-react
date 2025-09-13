@@ -205,7 +205,7 @@ const Portfolio = () => {
                       <img
                         src="/image/myphoto.jpg"
                         alt="Ankit Karki"
-                        className="w-32 h-32 object-cover rounded-full shadow-lg border border-gray-700"
+                        className="w-24 h-24 object-cover rounded-full shadow-lg border border-gray-700"
                       />
                       {/* Floating Tech Badges with Animation */}
                       {/* <div className="absolute -top-2 -left-6 animate-float-vertical">
