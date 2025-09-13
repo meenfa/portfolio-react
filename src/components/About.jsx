@@ -26,7 +26,7 @@ const About = () => {
 
                 <div>
                 <h1 className="text-3xl font-semibold text-black">Ankit Karki <span className="hidden sm:inline ml-2 text-xs bg-black hover:bg-gray-700 text-white font-thin px-2 py-1 rounded-lg cursor-pointer">Available for Work</span></h1>
-                 <p className="text-gray-600 text-lg">Backend Developer</p>
+                 <p className="text-gray-600 text-base italic">Backend Developer</p>
                 </div>
               </div>
 
@@ -45,7 +45,7 @@ const About = () => {
 
           <div className="space-y-4 text-gray-700 pt-0">
             <p className='text-base text-wrap'>
-              Hi, I'm Ankit, a passionate <span className="text-black font-semibold">Backend Developer</span> with very good knowledge in
+              Hi, I'm Ankit, a passionate <span className="text-black font-bold">Backend Developer</span> with very good knowledge in
               <span className="text-black font-semibold"> Django, Python, Laravel and React.js</span> and building scalable web applications.
             </p>
             <p className='text-base text-wrap'>
