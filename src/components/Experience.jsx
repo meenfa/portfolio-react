@@ -11,7 +11,7 @@ const Experience = () => {
         "Built a Construction Company Website using both backend and frontend using Laravel and React.js.",
         "Developed backend APIs and managed database integration efficiently.",
       ],
-      tags: ["Laravel", "Django", "RESTful APIs", "Full-stack Development"]
+      tags: ["Laravel",, "RESTful APIs", "Full-stack Development"]
     },
   ];
 
