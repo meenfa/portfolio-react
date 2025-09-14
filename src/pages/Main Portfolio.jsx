@@ -5,6 +5,7 @@ import Projects from '../components/Projects';
 import Education from '../components/Education';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
+import Blog from '../components/Blog';
 
 const Portfolio = () => {
     const [activeSection, setActiveSection] = useState('about');
@@ -14,7 +15,7 @@ const Portfolio = () => {
     useEffect(() => {
         const handleHashChange = () => {
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['about', 'skills', 'experience', 'projects', 'education', 'contact'].includes(hash)) {
+            if (hash && ['about', 'skills', 'experience', 'projects', 'education', 'contact','blog'].includes(hash)) {
                 setActiveSection(hash);
                 scrollToSection(hash);
             }
@@ -69,7 +70,7 @@ const Portfolio = () => {
                         </div>
 
                         <div className="hidden md:flex items-center space-x-6">
-                            {['about',  'skills', 'experience','projects', 'education', 'contact'].map((section) => (
+                            {['about',  'skills', 'experience','projects', 'education', 'contact','blog'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
@@ -100,7 +101,7 @@ const Portfolio = () => {
                 {mobileMenuOpen && (
                     <div className="md:hidden bg-white absolute top-16 w-full border-b border-gray-200">
                         <div className="px-6 py-2 space-y-2">
-                            {['about', 'experience', 'skills', 'projects', 'education', 'contact'].map((section) => (
+                            {['about', 'experience', 'skills', 'projects', 'education', 'contact','blogs'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
@@ -120,7 +121,9 @@ const Portfolio = () => {
                 <Experience />
                 <Projects />
                 <Education />
+                <Blog />
                 <Contact />
+                
             </div>
 
             <footer className="border-t border-gray-300 py-4 text-gray-500 bg-white">

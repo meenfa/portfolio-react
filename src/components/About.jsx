@@ -9,7 +9,7 @@ const About = () => {
         <div className="space-y-8">
           <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
             <div className="sm:hidden flex justify-center">
-              <div className="bg-black text-white px-4 py-2 rounded-lg text-sm font-thin flex items-center space-x-2 cursor-pointer">
+              <div className="bg-blue-700 hover:blue-700 text-white px-4 py-2 rounded-lg text-sm font-thin flex items-center space-x-2 cursor-pointer">
                 <span>Available For Work</span>
               </div>
             </div>
@@ -25,8 +25,8 @@ const About = () => {
                 </div>
 
                 <div>
-                <h1 className="text-3xl font-semibold text-black">Ankit Karki <span className="hidden sm:inline ml-2 text-xs bg-black hover:bg-gray-700 text-white font-thin px-2 py-1 rounded-lg cursor-pointer">Available for Work</span></h1>
-                 <p className="text-gray-600 text-base italic">Backend Developer</p>
+                <h1 className="text-3xl font-semibold text-black">Ankit Karki <span className="hidden sm:inline ml-2 text-xs bg-blue-700 hover:bg-blue-700 text-white font-thin px-2 py-1 rounded-lg cursor-pointer">Available for Work</span></h1>
+                 <p className="text-gray-600 text-base">Backend Developer</p>
                 </div>
               </div>
 

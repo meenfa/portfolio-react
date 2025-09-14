@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, DownloadIcon, Mail, Phone, MapPin } from 'lucide-react';
+import { Github, Linkedin, DownloadIcon, Mail, Phone, MapPin, Youtube, YoutubeIcon } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -28,26 +28,35 @@ const Contact = () => {
                 href="https://github.com/ankitkarki27"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg bg-black text-white hover:bg-gray-800 transition-colors border border-gray-300"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <Github className="w-4 h-4" />
+                <Github className="w-6 h-6" />
               </a>
               <a
                 href="https://www.linkedin.com/in/ankitkarki27/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg bg-black text-white hover:bg-gray-800 transition-colors border border-gray-300"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.youtube.com/@meenfaforlifeyt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <YoutubeIcon className="w-6 h-6 " />
+                {/* <span>Resume</span> */}
               </a>
               <a
                 href="https://drive.google.com/file/d/1Dpxxay05_CvITZHxbg1IAcxX7aNgME35/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-black hover:bg-gray-800 px-4 py-2 rounded-lg text-white transition-colors border border-gray-300 text-sm"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <DownloadIcon className="w-4 h-4" />
-                <span>Resume</span>
+                <DownloadIcon className="w-6 h-6" />
+                {/* <span>Resume</span> */}
               </a>
             </div>
           </div>
