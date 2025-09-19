@@ -70,7 +70,7 @@ const Portfolio = () => {
                         </div>
 
                         <div className="hidden md:flex items-center space-x-6">
-                            {['about',  'skills', 'experience','projects', 'education', 'contact','blog'].map((section) => (
+                            {['about',  'skills', 'experience','projects','contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
@@ -101,7 +101,7 @@ const Portfolio = () => {
                 {mobileMenuOpen && (
                     <div className="md:hidden bg-white absolute top-16 w-full border-b border-gray-200">
                         <div className="px-6 py-2 space-y-2">
-                            {['about', 'experience', 'skills', 'projects', 'education', 'contact','blogs'].map((section) => (
+                            {['about', 'experience', 'skills', 'projects','contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
@@ -120,8 +120,7 @@ const Portfolio = () => {
                 <Skills />
                 <Experience />
                 <Projects />
-                <Education />
-                <Blog />
+               
                 <Contact />
                 
             </div>

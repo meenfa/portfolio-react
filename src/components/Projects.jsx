@@ -5,8 +5,8 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "G Digital Padhai",
-      description: "An online platform for course enrollment and student progress tracking, designed to support community discussion forums and an AI-powered text interview module in future releases.",
+      title: "Digital Padhai",
+      description: "An online education platform for course enrollment and student progress tracking, designed to support community discussion forums and an AI-powered text interview module in future releases.",
       tags: ["React", "Django", "PostgreSQL", "RTK", "Tailwind"],
       github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
       image: "/image/padhai.png",
