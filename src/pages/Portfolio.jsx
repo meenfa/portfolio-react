@@ -132,7 +132,7 @@ const Portfolio = () => {
             </div>
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-6">
-              {['about', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
+              {['about', 'skills', 'experience', 'projects', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}

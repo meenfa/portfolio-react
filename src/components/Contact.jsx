@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, DownloadIcon, Mail, Phone, MapPin, Youtube, YoutubeIcon } from 'lucide-react';
+import { Github, Linkedin, DownloadIcon, Mail, Phone, MapPin, Youtube, YoutubeIcon, Instagram } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -40,6 +40,14 @@ const Contact = () => {
               >
                 <Linkedin className="w-6 h-6" />
               </a>
+               <a
+                href="https://www.instagram.com/meenfaforlife/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
               <a
                 href="https://www.youtube.com/@meenfaforlifeyt"
                 target="_blank"
@@ -61,7 +69,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-50 p-4 rounded">
+          <div className="p-4 rounded">
             <h3 className="font-semibold text-black mb-3">Send me a message</h3>
             <form
               action="https://formspree.io/f/xdkzgjjl"

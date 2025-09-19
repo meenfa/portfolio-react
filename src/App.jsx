@@ -2,7 +2,7 @@ import React from 'react'
 
 import Main from './pages/Main Portfolio'
 import './App.css'
-// import Portfolio from './pages/port'
+import Portfolio from './pages/Portfolio'
 
 const App = () => {
   return (

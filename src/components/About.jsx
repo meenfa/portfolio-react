@@ -3,16 +3,11 @@ import { Github, Linkedin, Twitter, Mail, MapPin, Download, MailIcon } from 'luc
 
 const About = () => {
   return (
-    <section id="about" className="flex items-center py-16 bg-white">
+    <section id="about" className="flex items-center py-12 bg-white">
     {/* <section className="flex items-center py-16 bg-white"> */}
       <div className="mx-auto px-2 w-full max-w-3xl">
         <div className="space-y-8">
           <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-            <div className="sm:hidden flex justify-center">
-              <div className="bg-blue-700 hover:blue-700 text-white px-4 py-2 rounded-lg text-sm font-thin flex items-center space-x-2 cursor-pointer">
-                <span>Available For Work</span>
-              </div>
-            </div>
 
             <div className="space-y-2 flex-1">
               <div className="flex items-center gap-4">
@@ -20,20 +15,25 @@ const About = () => {
                   <img
                     src="/image/myphoto.jpg"
                     alt="Ankit Karki"
-                    className="w-24 h-24 object-cover rounded-full border-1 border-gray-600"
+                    className="w-24 h-24 object-cover rounded-full border-1 border-gray-200"
                   />
                 </div>
 
                 <div>
-                <h1 className="text-3xl font-semibold text-black">Ankit Karki <span className="hidden sm:inline ml-2 text-xs bg-blue-700 hover:bg-blue-700 text-white font-thin px-2 py-1 rounded-lg cursor-pointer">Available for Work</span></h1>
-                 <p className="text-gray-600 text-base">Backend Developer</p>
+                <h1 className="text-3xl font-semibold text-black">
+  Ankit Karki
+  <span className="ml-4 text-xs bg-gray-600 hover:bg-gray-700 text-white font-thin px-2 py-1 rounded-lg cursor-pointer border-1 border-gray-200">
+    Available for Work
+  </span>
+</h1>
+ <p className="text-gray-600 text-base">Backend Developer</p>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4 items-center pt-2 ">
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-gray-600" />
-                  <span className="text-gray-600 text-sm">ankitkarki8088@gmail.com</span>
+                  <span className="text-gray-600 text-sm"> ankitkarki8088@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4 text-gray-600" />
@@ -62,7 +62,7 @@ const About = () => {
               href="https://drive.google.com/file/d/1Dpxxay05_CvITZHxbg1IAcxX7aNgME35/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-black hover:bg-gray-800 px-4 py-2 rounded-lg text-white transition-colors border border-gray-300 text-sm"
+              className="flex items-center space-x-2  px-4 py-2 rounded-lg text-black transition-colors border border-gray-800 text-sm hover:bg-gray-50"
             >
               <Download className="w-4 h-4" />
               <span>Resume</span>
