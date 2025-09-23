@@ -10,7 +10,8 @@ const Projects = () => {
       tags: ["React", "Django", "PostgreSQL", "RTK", "Tailwind"],
       github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
       image: "/image/padhai.png",
-      status: "ongoing"
+      status: "ongoing",
+      project_type: "Full Stack",
     },
     {
       title: "Rainbow Constructions",
@@ -19,7 +20,8 @@ const Projects = () => {
       github: "https://github.com/ankitkarki27/Construction-backend",
       link: "https://rainbowconstructions.vercel.app/",
       image: "/image/construction-company.png",
-      status: "completed"
+      status: "completed",
+      project_type: "Full Stack",
     },
     {
       title: "Jobs Nepal",
@@ -27,7 +29,8 @@ const Projects = () => {
       tags: ["Laravel", "MySQL", "Tailwind CSS"],
       github: "https://github.com/ankitkarki27/job-portal",
       image: "/image/project-jobsnepal.png",
-      status: "completed"
+      status: "completed",
+      project_type: "Full Stack",
     },
     {
       title: "Trend-e-vision: E-commerce App",
@@ -36,21 +39,23 @@ const Projects = () => {
       github: "https://github.com/ankitkarki27/dj-ecomstore.git",
       link: "https://ankitkarki27.pythonanywhere.com/",
       image: "/image/project-trendy.png",
-      status: "ongoing"
+      status: "ongoing",
+      project_type: "Full Stack",
     },
     {
       title: "Bookmarker",
       description: "Tool to save, organize, and manage bookmarks in one place with a clean UI.",
-      tags: ["React"],
+      tags: ["React","Tailwind CSS", "Vercel"],
       github: "https://github.com/ankitkarki27/bookmarker",
       link: "https://bookmarker-theta.vercel.app/",
       image: "/image/project-bookmarker.jpg",
-      status: "completed"
+      status: "completed",
+      project_type: "Frontend",
     },
     {
       title: "Donors Nepal",
       description: "Connects blood seekers with nearby donors using location-based matching.",
-      tags: ["PHP", "Laravel", "MySQL"],
+      tags: ["PHP", "MySQL"],
       github: "https://github.com/ankitkarki27/Donors-Nepal.git",
       image: "/image/project-dn3.jpg",
       status: "completed"
@@ -94,9 +99,9 @@ const Projects = () => {
                   </div>
                   <p className="text-gray-900 mb-2 text-sm text-wrap">{project.description}</p>
 
-                  <div className="flex flex-wrap gap-0 mb-2">
+                  <div className="flex flex-wrap gap-0 mb-1">
                     {project.tags.map((tag, i) => (
-                      <span key={i} className="px-1 py-2 text-sm text-gray-700 text-wrap">
+                      <span key={i} className="px-0 py-2 text-sm text-gray-700 text-wrap">
                         {tag}{i !== project.tags.length - 1 && ' / '}
                       </span>
                     ))}
@@ -107,11 +112,12 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-sm text-gray-600 hover:text-black transition-colors"
+                      className="flex items-center text-sm text-gray-850 hover:text-black transition-colors"
                     >
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1">
+                         <Github className="w-4 h-4" />
                         <span>Github</span>
-                        <ExternalLink className="w-4 h-4" />
+                       
                       </div>
 
                       {/* Github   <Github className="w-4 h-4 ml-2" /> */}
@@ -121,11 +127,12 @@ const Projects = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center text-sm text-gray-600 hover:text-black transition-colors"
+                        className="flex items-center text-sm text-gray-850 hover:text-black transition-colors"
                       >
-                      <div className="flex items-center gap-2">
-                        <span>View</span>
+                      <div className="flex items-center gap-1">
                         <ExternalLink className="w-4 h-4" />
+                        <span>View</span>
+                        
                       </div>
 
                       </a>

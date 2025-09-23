@@ -5,13 +5,14 @@ const Experience = () => {
     {
       role: "Laravel Developer (Intern)",
       company: "NepBigyapan",
+      location: "Remote",
       period: "Dec 2024 – April 2025",
       description: [
         "Gained hands-on experience with Laravel and React",
-        "Built a Construction Company Website using both backend and frontend using Laravel and React.js.",
+        "Built a Construction Company Website with a Laravel backend and a React.js frontend.",
         "Developed backend APIs and managed database integration efficiently.",
       ],
-      tags: ["Laravel",, "RESTful APIs", "Full-stack Development"]
+      tags: ["Laravel", "RESTful APIs", "React.js", "MySQL", "Git"],
     },
   ];
 
@@ -21,25 +22,28 @@ const Experience = () => {
         <h2 className="text-2xl font-bold mb-6 text-black">Experience</h2>
         <div className="space-y-6">
           {experience.map((exp, index) => (
-            <div key={index} className="border-l-1 border-gray-200 pl-4">
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+            <div key={index} className="pl-4 border-l-1 border-gray-200 relative">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
                 <h3 className="font-semibold text-black">{exp.role}</h3>
                 <span className="text-gray-500 text-sm">{exp.period}</span>
               </div>
-              <p className="text-gray-700 text-sm mb-1">{exp.company}</p>
-              <ul className="mt-4 text-sm space-y-2 list-disc pl-5 text-gray-800 mb-3">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                <p className="text-gray-700 text-sm mb-0">{exp.company}</p>
+                <span className="text-gray-500 text-sm">{exp.location}</span>
+              </div>
+              <ul className="mt-4 text-sm space-y-2 list-disc pl-5 text-gray-900 mb-3">
                 {exp.description.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
-              
+
               <div className="flex flex-wrap gap-0">
-                    {exp.tags.map((tag, i) => (
-                      <span key={i} className="px-1 py-1 text-sm text-gray-600">
-                        {tag}{i !== exp.tags.length - 1 && ' / '}
-                      </span>
-                    ))}
-                  </div>
+                {exp.tags.map((tag, i) => (
+                  <span key={i} className="px-1 py-1 text-sm text-gray-600">
+                    {tag}{i !== exp.tags.length - 1 && ' / '}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
