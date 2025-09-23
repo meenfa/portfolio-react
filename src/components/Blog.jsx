@@ -8,14 +8,10 @@ const Blog = () => {
       link: "https://lmsfisheryatesshuffledemopaper.karkiankit.com.np/",
      
     },
-    {
-      title: "How to Integrate Tailwind CSS v4 in React Vite Project",
-      link: "https://lmsfisheryatesshuffledemopaper.karkiankit.com.np/",
-    },
   ];
 
   return (
-    <section id="blog" className="py-16 bg-white pt-2">
+    <section id="blog" className="py-16 bg-white pt-0">
       <div className="mx-auto px-2 max-w-3xl">
         <h2 className="text-2xl font-bold mb-2 text-black">Writings</h2>
         <div className="space-y-6">
@@ -24,7 +20,7 @@ const Blog = () => {
               key={index}
               className="p-0  transition"
             >
-              <hp className="font-noral text-sm text-gray-700 text-wrap ">
+              <h className="font-noral text-sm text-gray-700 text-wrap it">
                 <a
                   href={blog.link}
                   target="_blank"
@@ -33,7 +29,7 @@ const Blog = () => {
                 >
                   {blog.title}
                 </a>
-              </hp>
+              </h>
              
             </div>
           ))}
