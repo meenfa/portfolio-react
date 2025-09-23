@@ -5,7 +5,7 @@ const Portfolio = () => {
   const skills = [
     "Python", "Django", "Laravel", "React", "PostgreSQL", "MySQL", 
     "RESTful APIs", "Git", "Tailwind CSS", "JavaScript", "PHP"
-  ];
+  ];s
 
   const experience = [
     {

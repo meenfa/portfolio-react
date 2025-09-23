@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, DownloadIcon, Mail, Phone, MapPin, Youtube, YoutubeIcon, Instagram } from 'lucide-react';
+import { Github, Linkedin, DownloadIcon, Mail, Phone, MapPin, Youtube, YoutubeIcon, Instagram, Send, SendIcon, LucideBatteryMedium } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -11,16 +11,16 @@ const Contact = () => {
             <h3 className="font-semibold text-black">Get in touch</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-gray-600" />
-                <span className="text-gray-600 text-sm">ankitkarki8088@gmail.com</span>
+                <Mail className="w-4 h-4 text-gray-900" />
+                <span className="text-gray-900 text-sm">ankitkarki8088@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-gray-600" />
-                <span className="text-gray-600 text-sm">+977 9745941262, +977 9823645664</span>
+                <Phone className="w-4 h-4 text-gray-900" />
+                <span className="text-gray-900 text-sm">+977 9745941262, +977 9823645664</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-gray-600" />
-                <span className="text-gray-600 text-sm">Kathmandu, Nepal</span>
+                <MapPin className="w-4 h-4 text-gray-900" />
+                <span className="text-gray-900 text-sm">Open to remote opportunities</span>
               </div>
             </div>
             <div className="flex space-x-2 pt-2">
@@ -28,7 +28,7 @@ const Contact = () => {
                 href="https://github.com/ankitkarki27"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-800 hover:text-black transition-colors"
               >
                 <Github className="w-6 h-6" />
               </a>
@@ -36,7 +36,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/ankitkarki27/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-800 hover:text-blue-800 transition-colors"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -44,7 +44,7 @@ const Contact = () => {
                 href="https://www.instagram.com/meenfaforlife/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-800 hover:text-pink-600 transition-colors"
               >
                 <Instagram className="w-6 h-6" />
               </a>
@@ -52,16 +52,16 @@ const Contact = () => {
                 href="https://www.youtube.com/@meenfaforlifeyt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-800 hover:text-red-600 transition-colors"
               >
                 <YoutubeIcon className="w-6 h-6 " />
                 {/* <span>Resume</span> */}
               </a>
               <a
-                href="https://drive.google.com/file/d/1Dpxxay05_CvITZHxbg1IAcxX7aNgME35/view?usp=sharing"
+                href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-800 hover:text-red-800 transition-colors"
               >
                 <DownloadIcon className="w-6 h-6" />
                 {/* <span>Resume</span> */}
@@ -70,7 +70,7 @@ const Contact = () => {
           </div>
 
           <div className="p-4 rounded">
-            <h3 className="font-semibold text-black mb-3">Send me a message</h3>
+            <h3 className="font-semibold text-black mb-3">Send me a message <LucideBatteryMedium className="w-6 h-6 inline-block mr-2" /></h3>
             <form
               action="https://formspree.io/f/xdkzgjjl"
               method="POST"
@@ -98,7 +98,7 @@ const Contact = () => {
                   placeholder="example@gmail.com"
                 />
               </div>
-              <div>
+              {/* <div>
                 <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">Phone No.</label>
                 <input
                   type="tel"
@@ -110,23 +110,24 @@ const Contact = () => {
                   className="w-full px-3 py-2 sm:py-3 bg-white border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
                   placeholder="+9779800000000"
                 />
-              </div>
+              </div> */}
               <div>
-                <label htmlFor="message" className="block text-xs font-medium text-gray-700 mb-1">Message</label>
+                <label htmlFor="project" className="block text-xs font-medium text-gray-700 mb-1">Message</label>
                 <textarea
-                  id="message"
-                  name="message"
-                  rows="3"
+                  id="project"
+                  name="project"
+                  rows="4"
                   required
                   className="w-full px-3 py-2 bg-white border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
-                  placeholder="Your message here..."
+                  placeholder="Describe your project idea..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="px-4 py-2 bg-black hover:bg-gray-800 border border-gray-300 rounded text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm font-medium transition-colors cursor-pointer"
+                className="px-4 py-2 bg-black hover:bg-gray-800 border-1 border-gray-300 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm font-medium transition-colors cursor-pointer"
               >
-                Send Message
+
+                Send Message <SendIcon className="w-4 h-4 inline-block mr-2" />
               </button>
             </form>
           </div>

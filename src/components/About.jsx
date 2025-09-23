@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail, MapPin, Download, MailIcon } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, MapPin, Download, MailIcon, Hash, HandshakeIcon, X } from 'lucide-react';
 
 const About = () => {
   return (
@@ -22,8 +22,8 @@ const About = () => {
                 <div>
                   <h1 className="text-3xl font-semibold text-black">
                     Ankit Karki
-                    <span className="ml-4 text-xs bg-black hover:bg-gray-800 text-white font-thin px-2 py-2 rounded-lg cursor-pointer border-1 border-gray-200">
-                      Available for Work
+                    <span className="ml-4 text-xs bg-black hover:bg-gray-800 text-white font-thin px-2 py-2 rounded-lg cursor-pointer ">
+                      Open to Opportunities
                     </span>
                   </h1>
                   <p className="text-gray-600 text-base">Backend Developer</p>
@@ -60,7 +60,7 @@ const About = () => {
 
           <div className="flex flex-wrap gap-0 space-x-0 pt-0">
             <a
-              href="https://drive.google.com/file/d/1Dpxxay05_CvITZHxbg1IAcxX7aNgME35/view?usp=sharing"
+              href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2  px-4 py-2 rounded-lg text-black transition-colors border border-gray-800 text-sm hover:bg-gray-50"
@@ -73,7 +73,7 @@ const About = () => {
               href="https://github.com/ankitkarki27"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-600 hover:text-black transition-colors"
+              className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-800 hover:text-black transition-colors"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -82,7 +82,7 @@ const About = () => {
               href="https://www.linkedin.com/in/ankitkarki27/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-600 hover:text-black transition-colors"
+              className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-800 hover:text-blue-600 transition-colors"
             >
               <Linkedin className="w-5 h-5" />
             </a>
@@ -91,16 +91,17 @@ const About = () => {
               href="https://x.com/meenfaforlife"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-black transition-colors"
+              className="flex items-center justify-center w-10 h-10 text-gray-800 hover:text-black transition-colors"
             >
               <Twitter className="w-5 h-5" />
             </a>
             <a
               href="mailto:ankitkarki8088@gmail.com"
-              className="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-black transition-colors"
+              className="flex items-center justify-center w-10 h-10 text-gray-800 hover:text-red-700 transition-colors"
             >
               <Mail className="w-5 h-5" />
             </a>
+            
           </div>
         </div>
       </div>

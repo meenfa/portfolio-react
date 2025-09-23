@@ -20,7 +20,7 @@ const Blog = () => {
               key={index}
               className="p-0  transition"
             >
-              <h className="font-noral text-sm text-gray-700 text-wrap it">
+              <h className="font-noral text-sm text-gray-700 text-wrap it font-mono">
                 <a
                   href={blog.link}
                   target="_blank"
