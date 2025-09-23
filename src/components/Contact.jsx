@@ -40,7 +40,7 @@ const Contact = () => {
               >
                 <Linkedin className="w-6 h-6" />
               </a>
-               <a
+              <a
                 href="https://www.instagram.com/meenfaforlife/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const Contact = () => {
                   name="name"
                   required
                   className="w-full px-3 py-2 bg-white border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
-                  placeholder="Ankit"
+                  placeholder="Ram Bahadur"
                 />
               </div>
               <div>
@@ -96,6 +96,19 @@ const Contact = () => {
                   required
                   className="w-full px-3 py-2 bg-white border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
                   placeholder="example@gmail.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">Phone No.</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  pattern="^\+977\d{10}$"
+                  title="Phone number should start with +977 followed by 10 digits"
+                  className="w-full px-3 py-2 sm:py-3 bg-white border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
+                  placeholder="+9779800000000"
                 />
               </div>
               <div>

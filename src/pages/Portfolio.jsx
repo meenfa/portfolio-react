@@ -207,27 +207,12 @@ const Portfolio = () => {
                         alt="Ankit Karki"
                         className="w-24 h-24 object-cover rounded-full shadow-lg border border-gray-700"
                       />
-                      {/* Floating Tech Badges with Animation */}
-                      {/* <div className="absolute -top-2 -left-6 animate-float-vertical">
-                        <span className="px-2 py-1 bg-black text-white font-mono rounded-lg border border-gray-700 text-xs shadow-md">
-                          Django
-                        </span>
-                      </div>
-                      <div className="absolute -bottom-2 -left-4 animate-float-horizontal-reverse">
-                        <span className="px-2 py-1 bg-black text-white text-xs font-mono rounded-lg border border-gray-700 shadow-md">
-                          React
-                        </span>
-                      </div>
-                      <div className="absolute -bottom-2 -right-4 animate-float-vertical-reverse">
-                        <span className="px-2 py-1 bg-black text-white text-xs font-mono rounded-lg border border-gray-700 shadow-md">
-                          Laravel
-                        </span>
-                      </div> */}
+                     
                     </div>
 
                     <div>
                       <h1 className="text-3xl font-bold text-white">Ankit Karki <span className="ml-2 text-sm bg-black hover:bg-gray-900 border-lg border border-gray-700 text-white font-thin px-2 py-1 rounded-lg cursor-pointer">Available for Work</span></h1>
-                      <p className="text-gray-400 text-lg">Backend Developer</p>
+                      <p className="text-gray-400 text-sm">Backend Developer</p>
                       {/* <p className="text-gray-400 text-sm">ankitkarki8088@gmail.com</p> */}
                     </div>
                   </div>

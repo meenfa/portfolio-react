@@ -6,6 +6,7 @@ import Education from '../components/Education';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
 import Blog from '../components/Blog';
+import Footer from '../components/Footer';
 
 const Portfolio = () => {
     const [activeSection, setActiveSection] = useState('about');
@@ -15,7 +16,7 @@ const Portfolio = () => {
     useEffect(() => {
         const handleHashChange = () => {
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['about', 'skills', 'experience', 'projects', 'education', 'contact','blog'].includes(hash)) {
+            if (hash && ['about', 'skills', 'experience', 'projects', 'education', 'contact', 'blog'].includes(hash)) {
                 setActiveSection(hash);
                 scrollToSection(hash);
             }
@@ -45,46 +46,69 @@ const Portfolio = () => {
                 behavior: 'smooth'
             });
 
-            // Update URL hash without scrolling
             window.history.replaceState(null, null, `#${sectionId}`);
         }
         setMobileMenuOpen(false);
     };
 
     const handleNavClick = (sectionId) => {
-        // Update URL for direct navigation
         window.location.hash = sectionId;
         scrollToSection(sectionId);
     };
 
+    // Close mobile menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (mobileMenuOpen && !event.target.closest('nav')) {
+                setMobileMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+        return () => document.removeEventListener('click', handleClickOutside);
+    }, [mobileMenuOpen]);
+
     return (
-        <div className="min-h-screen bg-white/80 text-gray-800 ">
-            <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 h-16 ">
-                <div className="mx-auto px-2 max-w-3xl h-full">
+        <div className="min-h-screen bg-white/85 text-gray-900">
+            <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 h-16 ">
+                <div className="mx-auto px-4 sm:px-4 max-w-3xl h-full">
                     <div className="flex justify-between items-center h-full">
+                        {/* Logo */}
                         <div
                             className="flex items-center cursor-pointer"
                             onClick={() => handleNavClick('about')}
                         >
-                            <span className="text-xl font-bold text-black">अंकित.</span>
+                            <span className="text-xl font-bold text-black hover:text-gray-700 transition-colors">
+                                अंकित.
+                            </span>
                         </div>
 
-                        <div className="hidden md:flex items-center space-x-6">
-                            {['about',  'skills', 'experience','projects','contact'].map((section) => (
+                        
+                        <div className="hidden md:flex items-center space-x-8">
+                            {['about', 'skills', 'experience', 'projects',  'contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
-                                    className={`text-sm font-medium cursor-pointer transition-colors ${activeSection === section ? 'text-black' : 'text-gray-500 hover:text-black'}`}
+                                    className={`text-base font-medium cursor-pointer transition-all duration-200 ${
+                                        activeSection === section 
+                                            ? 'text-black border-b-2 border-black' 
+                                            : 'text-gray-500 hover:text-black'
+                                    }`}
                                 >
                                     {section.charAt(0).toUpperCase() + section.slice(1)}
                                 </button>
                             ))}
                         </div>
 
+                       
                         <div className="md:hidden">
                             <button
-                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                                className="text-black hover:text-black focus:outline-none"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setMobileMenuOpen(!mobileMenuOpen);
+                                }}
+                                className="p-2 text-gray-600 hover:text-black transition-colors"
+                                aria-label="Toggle menu"
                             >
                                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     {mobileMenuOpen ? (
@@ -96,40 +120,39 @@ const Portfolio = () => {
                             </button>
                         </div>
                     </div>
-                </div>
 
-                {mobileMenuOpen && (
-                    <div className="md:hidden bg-white absolute top-16 w-full border-b border-gray-200">
-                        <div className="px-6 py-2 space-y-2">
-                            {['about', 'experience', 'skills', 'projects','contact'].map((section) => (
+                    {/* Mobile Dropdown Menu */}
+                    <div className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${
+                        mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                    }`}>
+                        <div className="px-6 py-4 space-y-1">
+                            {['about', 'skills', 'experience', 'projects', 'blog', 'contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
-                                    className={`block w-full text-left py-2 text-sm font-medium ${activeSection === section ? 'text-black' : 'text-gray-500 hover:text-black'}`}
+                                    className={`block w-full text-left py-3 px-4 text-sm font-medium rounded-lg transition-all duration-200 ${
+                                        activeSection === section 
+                                            ? 'bg-gray-100 text-black border-l-4 border-black' 
+                                            : 'text-gray-600 hover:text-black hover:bg-gray-50'
+                                    }`}
                                 >
                                     {section.charAt(0).toUpperCase() + section.slice(1)}
                                 </button>
                             ))}
                         </div>
                     </div>
-                )}
+                </div>
             </nav>
 
-            <div className="pt-12">
+            <div className="pt-16">
                 <About />
                 <Skills />
                 <Experience />
                 <Projects />
-               
+                <Blog />
                 <Contact />
-                
+                <Footer />
             </div>
-
-            <footer className="border-t border-gray-300 py-4 text-gray-500 bg-white">
-                <div className="mx-auto px-6 text-center text-xs max-w-3xl">
-                    © {new Date().getFullYear()} Ankit Karki. All rights reserved.
-                </div>
-            </footer>
         </div>
     );
 };
