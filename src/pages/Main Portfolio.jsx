@@ -70,37 +70,41 @@ const Portfolio = () => {
 
     return (
         <div className="min-h-screen bg-white/85 text-gray-900">
-            <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 h-16 ">
-                <div className="mx-auto px-4 sm:px-4 max-w-3xl h-full">
+            {/* <div className="min-h-screen bg-[#EBF9FF] text-gray-900"> */}
+            {/* <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 h-16"> */}
+            <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 h-16">
+                <div className="mx-auto px-2 sm:px-2 max-w-3xl h-full">
                     <div className="flex justify-between items-center h-full">
                         {/* Logo */}
                         <div
                             className="flex items-center cursor-pointer"
                             onClick={() => handleNavClick('about')}
                         >
-                            <span className="text-xl font-bold text-black hover:text-gray-700 transition-colors">
+                            <span className="text-xl font-bold text-black">
                                 अंकित.
+
+                                {/* Ankit Karki */}
                             </span>
+
                         </div>
 
-                        
+
                         <div className="hidden md:flex items-center space-x-8">
-                            {['about', 'skills', 'experience', 'projects',  'contact'].map((section) => (
+                            {['about', 'skills', 'experience', 'projects', 'contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
-                                    className={`text-sm font-medium cursor-pointer transition-colors duration-600 ${
-                                        activeSection === section 
-                                            ? 'text-black border-b-2 border-black' 
+                                    className={`text-sm font-medium cursor-pointer transition-colors duration-600 ${activeSection === section
+                                            ? 'text-black border-b-2 border-black'
                                             : 'text-gray-500 hover:text-black'
-                                    }`}
+                                        }`}
                                 >
                                     {section.charAt(0).toUpperCase() + section.slice(1)}
                                 </button>
                             ))}
                         </div>
 
-                       
+
                         <div className="md:hidden">
                             <button
                                 onClick={(e) => {
@@ -122,19 +126,17 @@ const Portfolio = () => {
                     </div>
 
                     {/* Mobile Dropdown Menu */}
-                    <div className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${
-                        mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                    }`}>
+                    <div className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                        }`}>
                         <div className="px-6 py-4 space-y-1">
                             {['about', 'skills', 'experience', 'projects', 'blog', 'contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
-                                    className={`block w-full text-left py-3 px-4 text-sm font-medium rounded-lg transition-all duration-200 ${
-                                        activeSection === section 
-                                            ? 'bg-gray-100 text-black border-l-4 border-black' 
+                                    className={`block w-full text-left py-3 px-4 text-sm font-medium rounded-lg transition-all duration-200 ${activeSection === section
+                                            ? 'bg-gray-100 text-black border-l-4 border-black'
                                             : 'text-gray-600 hover:text-black hover:bg-gray-50'
-                                    }`}
+                                        }`}
                                 >
                                     {section.charAt(0).toUpperCase() + section.slice(1)}
                                 </button>

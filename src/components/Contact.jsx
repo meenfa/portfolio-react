@@ -61,7 +61,7 @@ const Contact = () => {
                 href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-800 hover:text-red-800 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-800 hover:text-green-800 transition-colors"
               >
                 <DownloadIcon className="w-6 h-6" />
                 {/* <span>Resume</span> */}

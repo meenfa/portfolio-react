@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter, Mail, MapPin, Download, MailIcon, Hash, Hand
 
 const About = () => {
   return (
-    <section id="about" className="flex items-center py-12 bg-white/85">
+    <section id="about" className="flex items-center py-12 bg-white">
       {/* <section className="flex items-center py-16 bg-white"> */}
       <div className="mx-auto px-2 w-full max-w-3xl">
         <div className="space-y-8">
@@ -22,8 +22,8 @@ const About = () => {
                 <div>
                   <h1 className="text-3xl font-semibold text-black">
                     Ankit Karki
-                    <span className="ml-4 text-xs bg-black hover:bg-gray-800 text-white font-thin px-2 py-2 rounded-lg cursor-pointer ">
-                      Open to Opportunities
+                    <span className="ml-4 text-xs bg-gray-900 hover:bg-gray-800 text-white font-thin px-2 py-2 rounded-lg cursor-pointer ">
+                      Available for Work
                     </span>
                   </h1>
                   <p className="text-gray-600 text-base">Backend Developer</p>
