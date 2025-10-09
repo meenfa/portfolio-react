@@ -35,7 +35,7 @@ const Projects = () => {
     },
     {
       title: "Trend-e-vision: E-commerce App",
-      description: "Shopping platform with product browsing, cart, and checkout functionality.",
+      description: "A Shopping platform with product browsing, cart, and checkout functionality.",
       tags: ["Django", "Tailwind CSS", "PostgreSQL"],
       github: "https://github.com/ankitkarki27/dj-ecomstore.git",
       link: "https://ankitkarki27.pythonanywhere.com/",
@@ -80,17 +80,17 @@ const Projects = () => {
     : projects.filter(p => p.project_type === filter);
 
   return (
-    <section id="projects" className="py-16 bg-white/100 pt-2">
+    <section id="projects" className="py-16 bg-white/100 pt-0">
       <div className="mx-auto px-2 max-w-3xl">
-        <h2 className="text-2xl font-bold text-black mb-4">Projects</h2>
+        <h2 className="text-2xl font-bold text-black mb-2">Projects</h2>
 
         {/* Sorting Buttons */}
-        <div className="flex gap-2 mb-6">
+        <div className="flex gap-2 mb-4">
           {["All", "Full Stack", "Frontend", "Backend"].map(type => (
             <button
               key={type}
               onClick={() => setFilter(type)}
-              className={`px-3 py-1 rounded text-sm transition-colors cursor-pointer ${
+              className={`px-2 py-1 rounded text-sm transition-colors cursor-pointer ${
                 filter === type ? "bg-black text-white" : "bg-gray-200 text-gray-800 hover:bg-gray-300"
               }`}
             >
@@ -99,7 +99,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="grid gap-8">
+        <div className="grid gap-4">
           {filteredProjects.map((project, index) => (
             <div key={index} className="group">
               <div className="flex flex-col lg:flex-row gap-8 items-start">
@@ -107,7 +107,7 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-auto object-cover transition-all duration-500 hover:bg-blue-50 hover:scale-102"
+                    className="w-full h-auto object-cover transition-all duration-500 hover:bg-blue-50 hover:scale-102 cursor-pointer"
                   />
                 </div>
                 <div className="w-full lg:w-7/12">
@@ -121,7 +121,7 @@ const Projects = () => {
                       {project.status === "ongoing" ? "Ongoing" : "Completed"}
                     </span>
                   </div>
-                  <p className="text-gray-900 mb-2 text-sm text-wrap">{project.description}</p>
+                  <p className="text-gray-900 mb-2 text-base text-wrap">{project.description}</p>
                   <div className="flex flex-wrap gap-0 mb-1">
                     {project.tags.map((tag, i) => (
                       <span key={i} className="px-0 py-2 text-sm text-gray-700 text-wrap">
@@ -161,7 +161,11 @@ const Projects = () => {
               {index !== filteredProjects.length - 1 && (
                 <div className="mt-12 border-t border-gray-300"></div>
               )}
-            </div>
+
+               </div>
+               
+              
+
           ))}
         </div>
       </div>

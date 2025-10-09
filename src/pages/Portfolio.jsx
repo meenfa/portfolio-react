@@ -79,15 +79,29 @@ const Portfolio = () => {
       image: "/image/project-uthaoo.jpg"
     }
   ];
+
+  const blogs = [
+    {
+      title:
+        "Enhancing Assessment Security and Fairness in Learning Management Systems through Fisher-Yates Shuffle Algorithm",
+      link: "https://lmsfisheryatesshuffledemopaper.karkiankit.com.np/",
+
+    },
+
+
+
+  ];
   const experience = [
     {
-      role: "Laravel Developer (Intern)",
+      role: "Laravel Developer (Interned)",
       company: "NepBigyapan",
       period: "Dec 2024 – April 2025",
+      location: "Remote",
+      tags: ["Laravel", "RESTful APIs", "React.js", "MySQL", "Git"],
       description: [
 
         "Gained hands-on experience with Laravel and React",
-        "Built a Construction Company Website using both backend and frontend using Laravel and React.js.",
+        "Built a Construction Company Website with a Laravel backend and a React.js frontend.",
         "Developed backend APIs and managed database integration efficiently.",
         // "Designed responsive UI with HTML, CSS, and JavaScript.",
 
@@ -190,7 +204,7 @@ const Portfolio = () => {
           <div className="mx-auto px-2 py-16 w-full max-w-3xl">
             <div className="space-y-8">
 
-              <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
+              {/* <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
 
                 <div className="sm:hidden flex justify-center">
                   <div className="bg-black hover:bg-gray-900 border-lg border border-gray-400 text-white px-4 py-2 rounded-lg text-sm font-thin shadow-lg flex items-center space-x-2 cursor-pointer">
@@ -207,17 +221,16 @@ const Portfolio = () => {
                         alt="Ankit Karki"
                         className="w-24 h-24 object-cover rounded-full shadow-lg border border-gray-700"
                       />
-                     
+
                     </div>
 
                     <div>
                       <h1 className="text-3xl font-bold text-white">Ankit Karki <span className="ml-2 text-sm bg-black hover:bg-gray-900 border-lg border border-gray-700 text-white font-thin px-2 py-1 rounded-lg cursor-pointer">Available for Work</span></h1>
                       <p className="text-gray-400 text-sm">Backend Developer</p>
-                      {/* <p className="text-gray-400 text-sm">ankitkarki8088@gmail.com</p> */}
-                    </div>
+                       </div>
                   </div>
 
-                  {/* Contact Info - Removed location */}
+                 
                   <div className="flex flex-wrap gap-4 items-center pt-2">
                     <div className="flex items-center space-x-2">
                       <Mail className="w-4 h-4 text-gray-400" />
@@ -229,18 +242,18 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Bio Text */}
               <div className="space-y-4 text-gray-200 pt-0">
                 <p className='text-base text-wrap'>
                   Hi, I'm Ankit, a passionate <span className="text-white">Backend Developer</span> with very good knowledge in
                   <span className="text-white font-base"> Django, Python, Laravel and React.js</span> and building scalable web applications.
-                  
+
                 </p>
 
                 <p className='text-base text-wrap'>
-                My focus is on developing efficient APIs, optimizing database performance, and implementing
+                  My focus is on developing efficient APIs, optimizing database performance, and implementing
                   secure authentication systems.
                 </p>
                 <p className='text-base text-wrap'>
@@ -323,13 +336,24 @@ const Portfolio = () => {
                     <h3 className="font-semibold">{exp.role}</h3>
                     <span className="text-gray-400 text-sm">{exp.period}</span>
                   </div>
-                  <p className="text-gray-400 text-sm mb-2">{exp.company}</p>
-                  <ul className="mt-4 text-sm space-y-2 list-disc pl-5">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                    <p className="text-gray-400 text-sm ">{exp.company}</p>
+                    <span className="text-gray-400 text-sm">{exp.location}</span>
+                  </div>
+                  <ul className="mt-2 text-sm space-y-2 list-disc pl-5">
                     {exp.description.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
+                  <div className="flex flex-wrap gap-0">
+                    {exp.tags.map((tag, i) => (
+                      <span key={i} className="px-1 py-1 text-sm text-gray-500 italic">
+                        {tag}{i !== exp.tags.length - 1 && ' / '}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+
               ))}
             </div>
           </section>
@@ -399,7 +423,7 @@ const Portfolio = () => {
 
           </section>
 
-          <section
+          {/* <section
             id="education"
             style={sectionStyle}
           >
@@ -410,6 +434,32 @@ const Portfolio = () => {
                   <h3 className="font-semibold text-white">{edu.level}</h3>
                   <p className="text-gray-400 text-sm">{edu.school}</p>
                   <p className="text-gray-500 text-xs mt-1">{edu.date}</p>
+                </div>
+              ))}
+            </div>
+          </section> */}
+
+          <section
+            id="blog"
+            style={sectionStyle}
+          >
+            <h2 className="text-2xl font-bold mb-6 text-white">Blogs</h2>
+            <div className="space-y-4">
+              {blogs.map((blog, index) => (
+                <div
+                  key={index}
+                  className="p-0 transition"
+                >
+                  <h className="font-stretch-normal text-base text-gray-400 text-wrap it font-mono">
+                    <a
+                      href={blog.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {blog.title}
+                    </a>
+                  </h>
                 </div>
               ))}
             </div>
