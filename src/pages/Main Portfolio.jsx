@@ -5,8 +5,10 @@ import Projects from '../components/Projects';
 import Education from '../components/Education';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
-import Blog from '../components/Blog';
+import Blog from '../components/Blogs';
 import Footer from '../components/Footer';
+import Home from '../components/Home';
+import Blogs from '../components/Blogs';
 
 const Portfolio = () => {
     const [activeSection, setActiveSection] = useState('about');
@@ -16,7 +18,7 @@ const Portfolio = () => {
     useEffect(() => {
         const handleHashChange = () => {
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['about', 'skills', 'experience', 'projects', 'education', 'contact', 'blog'].includes(hash)) {
+            if (hash && ['about', 'experience', 'projects', 'education', 'contact', 'blogs'].includes(hash)) {
                 setActiveSection(hash);
                 scrollToSection(hash);
             }
@@ -90,11 +92,11 @@ const Portfolio = () => {
 
 
                         <div className="hidden md:flex items-center space-x-8">
-                            {['about', 'skills', 'experience', 'projects', 'contact'].map((section) => (
+                            {['about', 'experience', 'projects', 'blogs','contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
-                                    className={`text-sm font-medium cursor-pointer transition-colors duration-600 ${activeSection === section
+                                    className={`text-base font-medium cursor-pointer transition-colors duration-600 ${activeSection === section
                                             ? 'text-black border-b-2 border-black'
                                             : 'text-gray-500 hover:text-black'
                                         }`}
@@ -129,7 +131,7 @@ const Portfolio = () => {
                     <div className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                         }`}>
                         <div className="px-6 py-4 space-y-1">
-                            {['about', 'skills', 'experience', 'projects', 'blog', 'contact'].map((section) => (
+                            {['about', 'experience', 'projects', 'blogs', 'contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
@@ -147,11 +149,12 @@ const Portfolio = () => {
             </nav>
 
             <div className="pt-16">
+              
                 <About />
                 <Skills />
                 <Experience />
                 <Projects />
-                <Blog />
+                <Blogs />
                 <Contact />
                 <Footer />
             </div>

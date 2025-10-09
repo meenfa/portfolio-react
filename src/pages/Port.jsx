@@ -5,7 +5,7 @@ const Portfolio = () => {
   const skills = [
     "Python", "Django", "Laravel", "React", "PostgreSQL", "MySQL", 
     "RESTful APIs", "Git", "Tailwind CSS", "JavaScript", "PHP"
-  ];s
+  ];
 
   const experience = [
     {
@@ -23,49 +23,49 @@ const Portfolio = () => {
   const projects = [
     { 
       name: 'Digital Padhai', 
-      desc: 'LMS platform with assessment security and student tracking',
+      desc: "An online education platform for course enrollment and student progress tracking, designed to support community discussion forums and an AI-powered text interview module in future releases.",
       github: 'https://github.com/ankitkarki27/eLearning-Platform-django-react',
       live: null,
       tags: ['React', 'Django', 'PostgreSQL']
     },
     { 
       name: 'Rainbow Constructions', 
-      desc: 'Company website with admin dashboard for project management',
+      desc: "Company site with admin dashboard for managing projects, blogs, and services. Fully responsive for all devices.",
       github: 'https://github.com/ankitkarki27/Construction-backend',
       live: 'https://rainbowconstructions.vercel.app/',
       tags: ['React', 'Laravel', 'MySQL']
     },
     { 
       name: 'Jobs Nepal', 
-      desc: 'Job portal for companies to post openings and users to apply',
+      desc: "Job portal where companies can post openings and users can browse and apply with ease.",
       github: 'https://github.com/ankitkarki27/job-portal',
       live: null,
       tags: ['Laravel', 'MySQL', 'Tailwind']
     },
     { 
       name: 'Trend-e-vision', 
-      desc: 'E-commerce platform with product browsing and checkout',
+      desc: "A Shopping platform with product browsing, cart, and checkout functionality.",
       github: 'https://github.com/ankitkarki27/dj-ecomstore.git',
       live: 'https://ankitkarki27.pythonanywhere.com/',
       tags: ['Django', 'PostgreSQL', 'Tailwind']
     },
     { 
       name: 'Bookmarker', 
-      desc: 'Tool to save, organize and manage bookmarks',
+      desc: "Tool to save, organize, and manage bookmarks in one place with a clean UI.",
       github: 'https://github.com/ankitkarki27/bookmarker',
       live: 'https://bookmarker-theta.vercel.app/',
       tags: ['React', 'Local Storage']
     },
     { 
       name: 'Donors Nepal', 
-      desc: 'Connects blood seekers with nearby donors',
+      desc: "Connects blood seekers with nearby donors using location-based matching.",
       github: 'https://github.com/ankitkarki27/Donors-Nepal.git',
       live: null,
-      tags: ['PHP', 'Laravel', 'MySQL']
+      tags: ['PHP','MySQL']
     },
     { 
       name: 'Uthaoo', 
-      desc: 'Online scrap collection system with scheduling',
+      desc: "Lets users schedule and manage household scrap pickups through an online dashboard.",
       github: 'https://github.com/ankitkarki27/uthaoo-Online-Scrap-Collection-System.git',
       live: null,
       tags: ['PHP', 'MySQL']
@@ -190,7 +190,7 @@ const Portfolio = () => {
                     title="View Code"
                   >
                     <Github size={14} />
-                    <span className="text-sm">Code</span>
+                    <span className="text-sm">Github</span>
                   </a>
                   {project.live && (
                     <a 
