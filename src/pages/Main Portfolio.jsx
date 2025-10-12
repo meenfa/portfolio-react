@@ -71,10 +71,10 @@ const Portfolio = () => {
     }, [mobileMenuOpen]);
 
     return (
-        <div className="min-h-screen bg-white/85 text-gray-900">
+        <div className="min-h-screen bg-black text-gray-200">
             {/* <div className="min-h-screen bg-[#EBF9FF] text-gray-900"> */}
             {/* <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 h-16"> */}
-            <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 h-16">
+            <nav className="fixed top-0 w-full bg-black backdrop-blur-md z-50 h-16">
                 <div className="mx-auto px-2 sm:px-2 max-w-3xl h-full">
                     <div className="flex justify-between items-center h-full">
                         {/* Logo */}
@@ -82,7 +82,7 @@ const Portfolio = () => {
                             className="flex items-center cursor-pointer"
                             onClick={() => handleNavClick('about')}
                         >
-                            <span className="text-xl font-bold text-black">
+                            <span className="text-xl font-bold text-white">
                                 अंकित.
 
                                 {/* Ankit Karki */}
@@ -97,8 +97,8 @@ const Portfolio = () => {
                                     key={section}
                                     onClick={() => handleNavClick(section)}
                                     className={`text-base font-medium cursor-pointer transition-colors duration-600 ${activeSection === section
-                                            ? 'text-black border-b-2 border-black'
-                                            : 'text-gray-500 hover:text-black'
+                                            ? 'text-white border-b-2 border-white'
+                                            : 'text-gray-500 hover:text-white'
                                         }`}
                                 >
                                     {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -113,7 +113,7 @@ const Portfolio = () => {
                                     e.stopPropagation();
                                     setMobileMenuOpen(!mobileMenuOpen);
                                 }}
-                                className="p-2 text-gray-600 hover:text-black transition-colors"
+                                className="p-2 text-white hover:text-gray-300 transition-colors cursor-pointer"
                                 aria-label="Toggle menu"
                             >
                                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,16 +128,16 @@ const Portfolio = () => {
                     </div>
 
                     {/* Mobile Dropdown Menu */}
-                    <div className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                    <div className={`md:hidden absolute top-16 left-0 w-full bg-black border-b border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                         }`}>
                         <div className="px-6 py-4 space-y-1">
                             {['about', 'experience', 'projects', 'blogs', 'contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => handleNavClick(section)}
-                                    className={`block w-full text-left py-3 px-4 text-sm font-medium rounded-lg transition-all duration-200 ${activeSection === section
-                                            ? 'bg-gray-100 text-black border-l-4 border-black'
-                                            : 'text-gray-600 hover:text-black hover:bg-gray-50'
+                                    className={`block w-full text-left py-3 px-4 text-sm font-medium rounded-lg transition-all cursor-pointer duration-200 ${activeSection === section
+                                            ? 'bg-gray-900 text-gray-200 border-l-4 border-white'
+                                            : 'text-gray-600 hover:text-white hover:bg-gray-800'
                                         }`}
                                 >
                                     {section.charAt(0).toUpperCase() + section.slice(1)}
