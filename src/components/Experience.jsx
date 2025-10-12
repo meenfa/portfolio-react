@@ -17,21 +17,21 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 bg-white pt-2">
+    <section id="experience" className="py-16 bg-black pt-2">
       <div className="mx-auto px-2 max-w-3xl">
-        <h2 className="text-2xl font-bold mb-4 text-black">Experience</h2>
+        <h2 className="text-2xl font-bold mb-4 text-white">Experience</h2>
         <div className="space-y-6">
           {experience.map((exp, index) => (
             <div key={index} className="pl-4 border-l-1 border-gray-400 relative">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                <h3 className="font-semibold text-black text-base">{exp.role}</h3>
-                <span className="text-gray-500 text-sm">{exp.period}</span>
+                <h3 className="font-semibold text-white text-base">{exp.role}</h3>
+                <span className="text-gray-400 text-sm">{exp.period}</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                <p className="text-gray-700 text-base mb-0">{exp.company}</p>
+                <p className="text-gray-300 text-base mb-0">{exp.company}</p>
                 <span className="text-gray-500 text-sm">{exp.location}</span>
               </div>
-              <ul className="mt-4 text-text-base space-y-2 list-disc pl-5 text-gray-900 mb-3">
+              <ul className="mt-4 text-text-base space-y-2 list-disc pl-5 text-gray-200 mb-3">
                 {exp.description.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
@@ -39,7 +39,7 @@ const Experience = () => {
 
               <div className="flex flex-wrap gap-0">
                 {exp.tags.map((tag, i) => (
-                  <span key={i} className="px-1 py-1 text-sm text-gray-700">
+                  <span key={i} className="px-1 py-1 text-sm text-gray-500">
                     {tag}{i !== exp.tags.length - 1 && ' / '}
                   </span>
                 ))}

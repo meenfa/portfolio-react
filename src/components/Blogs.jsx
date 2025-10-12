@@ -17,16 +17,16 @@ const Blogs = () => {
   ];
 
   return (
-    <section id="blogs" className="py-16 bg-white pt-0">
+    <section id="blogs" className="py-16 bg-black pt-0">
       <div className="mx-auto px-2 max-w-3xl">
-        <h2 className="text-2xl font-bold mb-2 text-black">Blogs</h2>
+        <h2 className="text-2xl font-bold mb-2 text-white">Blogs</h2>
         <div className="space-y-6">
           {blogss.map((blog, index) => (
             <div
               key={index}
               className="p-0 transition"
             >
-              <h className="font-noral text-base text-gray-700 text-wrap font-mono">
+              <h className="font-noral text-base text-gray-200 text-wrap font-mono">
                 <a
                   href={blog.link}
                   target="_blank"
