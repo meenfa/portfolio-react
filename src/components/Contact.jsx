@@ -14,7 +14,7 @@ const Contact = () => {
                 <Mail className="w-4 h-4 text-gray-200" />
                 <span className="text-gray-200 text-base">ankitkarki8088@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-gray-200" />
                 <span className="text-gray-200 text-base">+977 9745941262, +977 9823645664</span>
               </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                   name="project"
                   rows="4"
                   required
-                  className="w-full px-3 py-2 bg-gray-200 border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
+                  className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
                   placeholder="Describe your project idea..."
                 ></textarea>
               </div>

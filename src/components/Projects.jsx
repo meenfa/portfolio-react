@@ -34,7 +34,7 @@ const Projects = () => {
       project_type: "Full Stack",
     },
     {
-      title: "Trend-e-vision: E-commerce App",
+      title: "Trendy: E-commerce App",
       description: "A Shopping platform with product browsing, cart, and checkout functionality.",
       tags: ["Django", "Tailwind CSS", "PostgreSQL"],
       github: "https://github.com/ankitkarki27/dj-ecomstore.git",

@@ -15,8 +15,9 @@ const About = () => {
               </span>
               
             </h1>
+            
             <p className='text-base text-wrap'>
-              Hi, I'm Ankit, a <span className="text-blue-400 font-bold">Backend Developer</span> from Kathmandu, Nepal 🇳🇵. I enjoy turning ideas into reality through code and love taking on challenges that push me to grow.
+              Hi, I'm Ankit, a <span className="text-blue-400 font-bold">Backend Developer</span> and occasional poet from Kathmandu, Nepal 🇳🇵. I enjoy turning ideas into reality through code and love taking on challenges that push me to grow.
             </p>
             <p className='text-base text-wrap'>
               I work mainly with <span className="text-blue-400 font-bold">Django, Python, React.js, and Laravel</span>, focusing on building scalable, reliable, and well-structured web applications.
@@ -24,6 +25,7 @@ const About = () => {
             <p className='text-base text-wrap'>
               Right now, I'm working on <span className="text-blue-400 font-bold underline"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Digital Padhai</a></span>, a Full Stack LMS platform where I'm handling both backend and frontend development.
             </p>
+            
           </div>
 
           <div className="flex flex-wrap gap-0 space-x-0 pt-0">
@@ -50,7 +52,7 @@ const About = () => {
               href="https://www.linkedin.com/in/ankitkarki27/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-200 hover:text-blue-600 transition-colors"
+              className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-200 hover:text-blue-400 transition-colors"
             >
               <Linkedin className="w-5 h-5" />
             </a>
