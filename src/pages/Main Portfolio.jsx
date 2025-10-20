@@ -70,8 +70,8 @@ const Portfolio = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <div className="min-h-screen bg-black text-gray-200">
-      <nav className="fixed top-0 w-full bg-black backdrop-blur-md z-50 h-16">
+    <div className="min-h-screen bg-white text-gray-900">
+      <nav className="fixed top-0 w-full bg-white backdrop-blur-md z-50 h-16">
         <div className="mx-auto px-2 sm:px-2 max-w-3xl h-full">
           <div className="flex justify-between items-center h-full">
             {/* Logo */}
@@ -79,7 +79,7 @@ const Portfolio = () => {
               className="flex items-center cursor-pointer"
               onClick={() => handleNavClick('about')}
             >
-              <span className="text-xl font-bold text-white">अंकित.</span>
+              <span className="text-xl font-bold text-black">अंकित.</span>
             </div>
 
             {/* Desktop Menu */}
@@ -90,8 +90,8 @@ const Portfolio = () => {
                   onClick={() => handleNavClick(section)}
                   className={`text-base font-medium cursor-pointer transition-colors duration-600 ${
                     activeSection === section
-                      ? 'text-white border-b-2 border-white'
-                      : 'text-gray-500 hover:text-white'
+                      ? 'text-black border-b-2 border-black'
+                      : 'text-gray-500 hover:text-black hover:border-b-2 hover:border-gray-400'
                   }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -106,7 +106,7 @@ const Portfolio = () => {
                   e.stopPropagation();
                   setMobileMenuOpen(!mobileMenuOpen);
                 }}
-                className="p-2 text-white hover:text-gray-300 transition-colors cursor-pointer"
+                className="p-2 text-black hover:text-gray-900 transition-colors cursor-pointer"
                 aria-label="Toggle menu"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

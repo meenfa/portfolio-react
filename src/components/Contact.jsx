@@ -3,24 +3,24 @@ import { Github, Linkedin, DownloadIcon, Mail, Phone, MapPin, Youtube, YoutubeIc
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 bg-black pt-2">
+    <section id="contact" className="py-16 bg-white pt-2">
       <div className="mx-auto px-2 max-w-3xl">
-        <h2 className="text-2xl font-bold mb-6 text-white">Contact</h2>
+        <h2 className="text-2xl font-bold mb-6 text-black">Contact</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
-            <h3 className="font-semibold text-xl text-white">Get in touch</h3>
+            <h3 className="font-semibold text-xl text-black">Get in touch</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-gray-200" />
-                <span className="text-gray-200 text-base">ankitkarki8088@gmail.com</span>
+                <Mail className="w-4 h-4 text-gray-900" />
+                <span className="text-gray-900 text-base">ankitkarki8088@gmail.com</span>
               </div>
                 <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-gray-200" />
-                <span className="text-gray-200 text-base">+977 9745941262, +977 9823645664</span>
+                <Phone className="w-4 h-4 text-gray-900" />
+                <span className="text-gray-900 text-base">+977 9745941262, +977 9823645664</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-gray-200" />
-                <span className="text-gray-200 text-base">Open to remote opportunities</span>
+                <MapPin className="w-4 h-4 text-gray-900" />
+                <span className="text-gray-900 text-base">Open to remote opportunities</span>
               </div>
             </div>
             <div className="flex space-x-2 pt-2">
@@ -28,7 +28,7 @@ const Contact = () => {
                 href="https://github.com/ankitkarki27"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-200 hover:text-gray-500 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg  text-gray-800 hover:text-gray-900 transition-colors"
               >
                 <Github className="w-6 h-6" />
               </a>
@@ -36,7 +36,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/ankitkarki27/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-200 hover:text-blue-800 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-800 hover:text-blue-800 transition-colors"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -44,7 +44,7 @@ const Contact = () => {
                 href="https://www.instagram.com/meenfaforlife/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-200 hover:text-pink-600 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-800 hover:text-pink-600 transition-colors"
               >
                 <Instagram className="w-6 h-6" />
               </a>
@@ -52,7 +52,7 @@ const Contact = () => {
                 href="https://www.youtube.com/@meenfaforlifeyt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-200 hover:text-red-600 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-800 hover:text-red-600 transition-colors"
               >
                 <YoutubeIcon className="w-6 h-6 " />
                
@@ -61,7 +61,7 @@ const Contact = () => {
                 href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-200 hover:text-gray-400 transition-colors"
+                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-800 hover:text-gray-900 transition-colors"
               >
                 <File className="w-6 h-6" />
              
@@ -70,7 +70,7 @@ const Contact = () => {
           </div>
 
           <div className="p-4 rounded">
-            <h3 className="font-semibold text-gray-200 text-base mb-3">Send me a message
+            <h3 className="font-semibold text-gray-900 text-base mb-3">Send me a message
               <LucideBatteryMedium className="w-6 h-6 inline-block mr-2" /></h3>
             <form
               action="https://formspree.io/f/xdkzgjjl"
@@ -78,30 +78,30 @@ const Contact = () => {
               className="space-y-3"
             >
               <div>
-                <label htmlFor="name" className="block text-base font-medium text-gray-200 mb-1">Name</label>
+                <label htmlFor="name" className="block text-base font-medium text-gray-900 mb-1">Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
                   className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
-                  placeholder="Ram Bahadur"
+                  placeholder="Your Name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-base font-medium text-gray-200 mb-1">Email</label>
+                <label htmlFor="email" className="block text-base font-medium text-gray-900 mb-1">Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
                   className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
-                  placeholder="ram@gmail.com"
+                  placeholder="yourname@gmail.com"
                 />
               </div>
             
               <div>
-                <label htmlFor="project" className="block text-base font-medium text-gray-200 mb-1">Message</label>
+                <label htmlFor="project" className="block text-base font-medium text-gray-900 mb-1">Message</label>
                 <textarea
                   id="project"
                   name="project"
