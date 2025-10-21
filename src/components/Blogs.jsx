@@ -19,6 +19,12 @@ const Blogs = () => {
       link: "https://lmsfisheryatesshuffledemopaper.karkiankit.com.np/",
      
     },
+    {
+      title:
+        "Find best developers portfolios here for your inspiration",
+      link: "https://best-developers-portfolios.vercel.app/",
+     
+    },
   ];
 
   return (
