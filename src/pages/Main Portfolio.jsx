@@ -51,7 +51,7 @@ const Portfolio = () => {
   const handleNavClick = (sectionId) => {
     if (sectionId === 'poetry') {
       // navigate to poetry route
-      window.location.href = '/poetry';
+       navigate('/poetry');
     } else {
       window.location.hash = sectionId;
       scrollToSection(sectionId);
@@ -79,7 +79,7 @@ const Portfolio = () => {
               className="flex items-center cursor-pointer"
               onClick={() => handleNavClick('about')}
             >
-              <span className="text-xl font-bold text-black">अंकित.</span>
+              <span className="text-2xl font-bold text-black nepali">अंकित.</span>
             </div>
 
             {/* Desktop Menu */}
