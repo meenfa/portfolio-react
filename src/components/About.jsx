@@ -3,17 +3,15 @@ import { Github, Linkedin, Twitter, Mail, Download, X, } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="flex items-center py-8 bg-white px-4 sm:px-6 lg:px-8">
+    <section id="about" className="flex items-center py-8 bg-white px-0 sm:px-6 lg:px-8">
       <div className="mx-auto px-2 w-full max-w-3xl">
         <div className="space-y-8">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
             {/* Image - Above on mobile, Right on desktop */}
             <div className="w-full lg:w-1/3 flex justify-left order-first lg:order-last">
-              <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden border-1 border-blue-600 shadow-lg">
+              <div className="w-32 h-32 lg:w-42 lg:h-42 rounded-full overflow-hidden border-1 border-gray-900 shadow-lg">
                 <img
                   src="/image/myphoto.jpg"
-                  //  image: "/image/project-jobsnepal.png",
-                 
                   alt="Ankit Karki"
                   className="w-full h-full object-cover"
                 />
