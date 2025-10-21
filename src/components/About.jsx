@@ -11,7 +11,9 @@ const About = () => {
             <div className="w-full lg:w-1/3 flex justify-left order-first lg:order-last">
               <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden border-1 border-blue-600 shadow-lg">
                 <img
-                  src="=/image/myphoto.jpg"
+                  src="/image/myphoto.jpg"
+                  //  image: "/image/project-jobsnepal.png",
+                 
                   alt="Ankit Karki"
                   className="w-full h-full object-cover"
                 />
