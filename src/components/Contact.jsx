@@ -69,7 +69,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="p-4 rounded">
+          <div className="p-0 rounded">
             <h3 className="font-semibold text-gray-900 text-base mb-3">Send me a message
               <LucideBatteryMedium className="w-6 h-6 inline-block mr-2" /></h3>
             <form
