@@ -1,21 +1,22 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-// import Main from './pages/Port';
-import Main from './pages/Main Portfolio';
+import { Routes, Route } from 'react-router-dom'; // Remove BrowserRouter import
+import Main from './pages/Portfolio';
 import PoetryPage from './components/PoetryPage';
 import './App.css';
 
 const App = () => {
   return (
-    <div>
-      <Routes>
-        {/* Main portfolio page */}
-        <Route path="/" element={<Main />} />
+    // Remove <Router> wrapper here since it's already in main.jsx
+    <Routes>
+      {/* portfolio page */}
+      <Route path="/" element={<Main />} />
 
-        {/* Poetry page */}
-        <Route path="/poetry" element={<PoetryPage />} />
-      </Routes>
-    </div>
+      {/* Poetry page */}
+      <Route path="/poetry" element={<PoetryPage />} />
+      
+      {/* Add a catch-all route for 404 */}
+      <Route path="*" element={<div>Page not found</div>} />
+    </Routes>
   );
 };
 

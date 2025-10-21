@@ -89,10 +89,11 @@ const Projects = () => {
             <button
               key={type}
               onClick={() => setFilter(type)}
-              className={`px-3 py-1 text-sm border rounded-lg cursor-pointer ${filter === type
+              className={`px-3 py-1 text-sm border rounded-lg cursor-pointer ${
+                filter === type
                   ? "border-white text-blue-600 bg-gray-200"
                   : "border-gray-600 text-gray-400 hover:text-black"
-                }`}
+              }`}
             >
               {type}
             </button>
@@ -107,24 +108,24 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-auto border border-gray-800 rounded-lg object-cover hover:scale-100 transition-transform duration-200 cursor-pointer"
-                    onClick={() => window.open(project.github, "_blank")}
+                    className="w-full h-auto border border-gray-800 rounded-lg object-cover"
                   />
                 </div>
-
+                
                 <div className="w-full lg:w-7/12">
                   <div className="flex items-center gap-2 mb-2">
                     <h3 className="text-2xl font-bold text-black">{project.title}</h3>
-                    <span className={`text-xs px-2 py-1 border rounded-lg cursor-pointer ${project.status === "ongoing" ? "text-yellow-800" : "text-green-400"
-                      }`}>
+                    <span className={`text-xs px-2 py-1 border rounded-lg cursor-pointer ${
+                      project.status === "ongoing" ? "text-yellow-800" : "text-green-400"
+                    }`}>
                       {project.status === "ongoing" ? "Ongoing" : "Completed"}
                     </span>
                   </div>
-
+                  
                   <p className="text-gray-900 mb-2 text-sm leading-relaxed">
                     {project.description}
                   </p>
-
+                  
                   <div className="mb-3">
                     {project.tags.map((tag, i) => (
                       <span key={i} className="text-sm text-gray-600">
@@ -132,7 +133,7 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-
+                  
                   <div className="flex gap-4">
                     <a
                       href={project.github}
