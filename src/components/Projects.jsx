@@ -102,7 +102,7 @@ const Projects = () => {
 
         <div className="space-y-8 mt-2">
           {filteredProjects.map((project, index) => (
-            <div key={index} className="border-b border-gray-800 pb-8 last:border-0">
+            <div key={index} className="border-b border-gray-400 pb-8 last:border-0">
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="w-full lg:w-5/12">
                   <img
