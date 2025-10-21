@@ -17,13 +17,13 @@ const About = () => {
             </h1>
             
             <p className='text-base text-wrap'>
-              Hi, I'm Ankit, a <span className="text-blue-400 font-bold">Backend Developer</span> and occasional poet from Kathmandu, Nepal 🇳🇵. I enjoy turning ideas into reality through code and love taking on challenges that push me to grow.
+              Hi, I'm Ankit, a <span className="text-blue-600 font-bold">Backend Developer</span> and occasional poet from Kathmandu, Nepal 🇳🇵. I enjoy turning ideas into reality through code and love taking on challenges that push me to grow.
             </p>
             <p className='text-base text-wrap'>
-              I work mainly with <span className="text-blue-400 font-bold">Django, Python, React.js, and Laravel</span>, focusing on building scalable, reliable, and well-structured web applications.
+              I work mainly with <span className="text-blue-600 font-bold">Django, Python, React.js, and Laravel</span>, focusing on building scalable, reliable, and well-structured web applications.
             </p>
             <p className='text-base text-wrap'>
-              Right now, I'm working on <span className="text-blue-400 font-bold underline"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Digital Padhai</a></span>, a Full Stack LMS platform where I'm handling both backend and frontend development.
+              Right now, I'm working on <span className="text-blue-600 font-bold underline"><a href="https://github.com/ankitkarki27/eLearning-Platform-django-react">Digital Padhai</a></span>, a Full Stack LMS platform where I'm handling both backend and frontend development.
             </p>
             
           </div>
