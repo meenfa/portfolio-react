@@ -8,18 +8,18 @@ const Contact = () => {
         <h2 className="text-2xl font-bold mb-6 text-black">Contact</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
-            <h3 className="font-semibold text-xl text-black">Get in touch</h3>
+            <h3 className="font-semibold text-base text-black">Get in touch</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-gray-900" />
+                {/* <Mail className="w-4 h-4 text-gray-900" /> */}
                 <span className="text-gray-900 text-base">ankitkarki8088@gmail.com</span>
               </div>
                 <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-gray-900" />
+                {/* <Phone className="w-4 h-4 text-gray-900" /> */}
                 <span className="text-gray-900 text-base">+977 9745941262, +977 9823645664</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-gray-900" />
+                {/* <MapPin className="w-4 h-4 text-gray-900" /> */}
                 <span className="text-gray-900 text-base">Open to remote opportunities</span>
               </div>
             </div>
@@ -70,8 +70,8 @@ const Contact = () => {
           </div>
 
           <div className="p-0 rounded">
-            <h3 className="font-semibold text-gray-900 text-base mb-3">Send me a message
-              <LucideBatteryMedium className="w-6 h-6 inline-block mr-2" /></h3>
+            <h3 className="font-semibold text-gray-900 text-base mb-3">Send me a message.
+              <Send className="w-4 h-4 inline-block mr-4" /></h3>
             <form
               action="https://formspree.io/f/xdkzgjjl"
               method="POST"
