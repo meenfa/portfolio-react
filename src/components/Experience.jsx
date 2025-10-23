@@ -14,6 +14,7 @@ const Experience = () => {
       ],
       tags: ["Laravel", "RESTful APIs", "React.js", "MySQL", "Git"],
     },
+    
   ];
 
   return (
@@ -31,7 +32,7 @@ const Experience = () => {
                 <p className="text-gray-900 text-base mb-0">{exp.company}</p>
                 <span className="text-gray-800 text-sm">{exp.location}</span>
               </div>
-              <ul className="mt-4 text-text-base space-y-2 list-disc pl-5 text-gray-900 mb-2">
+              <ul className="mt-4 text-sm space-y-2 list-disc pl-5 text-gray-900 mb-2">
                 {exp.description.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
