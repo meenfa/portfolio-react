@@ -9,8 +9,9 @@ const Experience = () => {
       period: "Dec 2024 – April 2025",
       description: [
         "Gained hands-on experience with Laravel and React",
-        "Built a Construction Company Website with a Laravel backend and a React.js frontend.",
-        "Developed backend APIs and managed database integration efficiently.",
+        "Worked on a College Management System project built with Laravel.",
+        "Developed backend features for student enrollment and course management.",
+        "Implemented authentication, validation, and database relationships.",
       ],
       tags: ["Laravel", "RESTful APIs", "React.js", "MySQL", "Git"],
     },
