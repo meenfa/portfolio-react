@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter, Mail, File, Download, X, FileBadge } from 'l
 
 const About = () => {
   return (
-    <section id="about" className="relative flex items-center py-8 bg-white px-0 sm:px-6 lg:px-8">
+    <section id="about" className="relative flex items-center py-8 grain-backgroundpx-0 sm:px-6 lg:px-8">
 
       <div className="mx-auto px-2 w-full max-w-3xl relative z-10">
         <div className="space-y-8">
@@ -77,7 +77,7 @@ const About = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:text-black transition-all hover:bg-white/80 backdrop-blur-sm border border-transparent hover:border-gray-300"
             >
-              <img src="/image/x.svg" alt="Twitter" className="w-5 h-5" />
+              <img src="/image/x.svg" alt="Twitter" className="w-4 h-4" />
             </a>
 
             <a
