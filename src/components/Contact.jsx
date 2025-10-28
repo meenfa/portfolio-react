@@ -14,7 +14,7 @@ const Contact = () => {
                 {/* <Mail className="w-4 h-4 text-gray-900" /> */}
                 <span className="text-gray-900 text-base">ankitkarki8088@gmail.com</span>
               </div>
-                <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3">
                 {/* <Phone className="w-4 h-4 text-gray-900" /> */}
                 <span className="text-gray-900 text-base">+977 9745941262, +977 9823645664</span>
               </div>
@@ -23,7 +23,7 @@ const Contact = () => {
                 <span className="text-gray-900 text-base">Open to remote opportunities</span>
               </div>
             </div>
-            <div className="flex space-x-2 pt-2">
+            <div className="flex space-x-4 pt-2">
               <a
                 href="https://github.com/ankitkarki27"
                 target="_blank"
@@ -55,18 +55,27 @@ const Contact = () => {
                 className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-800 hover:text-red-600 transition-colors"
               >
                 <YoutubeIcon className="w-6 h-6 " />
-               
+
               </a>
-              <a
+              {/* <a
                 href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-800 hover:text-gray-900 transition-colors"
               >
                 <File className="w-6 h-6" />
-             
-              </a>
+
+              </a> */}
+
             </div>
+            <a
+              href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-fit px-4 py-2 bg-black hover:bg-gray-800 border border-gray-300 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-medium transition-colors cursor-pointer"
+            >
+              Download My Resume
+            </a>
           </div>
 
           <div className="p-0 rounded">
@@ -99,7 +108,7 @@ const Contact = () => {
                   placeholder="yourname@gmail.com"
                 />
               </div>
-            
+
               <div>
                 <label htmlFor="project" className="block text-base font-medium text-gray-900 mb-1">Message</label>
                 <textarea
