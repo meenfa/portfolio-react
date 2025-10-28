@@ -8,7 +8,7 @@ const About = () => {
       <div className="mx-auto px-2 w-full max-w-3xl relative z-10">
         <div className="space-y-8">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
-            {/* Image - Above on mobile, Right on desktop */}
+
             <div className="w-full lg:w-1/3 flex justify-left order-first lg:order-last">
               <div className="w-32 h-32 lg:w-38 lg:h-42 rounded-full overflow-hidden border-1 border-gray-800 shadow-lg shadow-gray-400/20">
                 <img
@@ -19,7 +19,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Text Content - Below on mobile, Left on desktop */}
+         
             <div className="w-full lg:w-4/3 space-y-4 text-black order-last lg:order-first">
               <h1 className='text-3xl font-bold text-wrap text-left lg:text-left flex items-center gap-3'>
                 Ankit Karki
@@ -32,10 +32,10 @@ const About = () => {
                 </span>
               </h1>
 
-              <p className='text-base text-gray-700 text-wrap text-left lg:text-left leading-relaxed'>
+              <p className='text-lg text-gray-700 text-wrap text-left lg:text-left leading-relaxed'>
                 Hi, I'm Ankit, a <span className="text-gray-900 font-semibold">Backend Developer</span> and occasional poet from Bhaktapur, Nepal 🇳🇵. I enjoy turning ideas into reality through code and love taking on challenges that push me to grow.
               </p>
-              <p className='text-base text-gray-700 text-wrap text-left lg:text-left leading-relaxed'>
+              <p className='text-lg text-gray-700 text-wrap text-left lg:text-left leading-relaxed'>
                 I am working mainly with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span>, focusing on building scalable, reliable, and well-structured web applications.
               </p>
             </div>

@@ -5,41 +5,41 @@ const poems = [
     {
         title: 'बोलचाल',
         content: `दिनदिनै बोलचाल हैन,
-म अन्त्यमा सम्म साथ दिन्छु
+                म अन्त्यमा सम्म साथ दिन्छु
 
-तिम्रो भागको दु:ख,
-मेरो सुखसंग साँद दिन्छु
+                तिम्रो भागको दु:ख,
+                मेरो सुखसंग साँद दिन्छु
 
-लक्ष्य तिम्रो तिर्मिराए,
-सम्हालिन यो काध दिन्छु
+                लक्ष्य तिम्रो तिर्मिराए,
+                सम्हालिन यो काध दिन्छु
 
-पन्छी बनी उड्नु तिमी ,
-तल तान्नेको हात काट् दिन्छु`,
+                पन्छी बनी उड्नु तिमी ,
+                तल तान्नेको हात काट् दिन्छु`,
     },
     {
         title: 'तिम्रो बोलीमा जादु छ',
         content: `भरोसा,
-सबै तिमी माथि
-सधै तिमी माथि
-आफैलाई आफुमा भरोसा हुन छोडीसक्यो
-तिम्रो आगमन भएदेखि,
-यो मन तिम्रो भैसक्यो
+                सबै तिमी माथि
+                सधै तिमी माथि
+                आफैलाई आफुमा भरोसा हुन छोडीसक्यो
+                तिम्रो आगमन भएदेखि,
+                यो मन तिम्रो भैसक्यो
 
-तिम्रो बोलीमा जादु छ,
-तिमी आफैसंग अन्जान जादु
-जसले मलाई मात्र काबु गर्छ
-मात्र मलाई
-मात्र मलाई,
+                तिम्रो बोलीमा जादु छ,
+                तिमी आफैसंग अन्जान जादु
+                जसले मलाई मात्र काबु गर्छ
+                मात्र मलाई
+                मात्र मलाई,
 
-तिम्रो जादुमा आत्मियता छ,
-न्यानोपन छ,रिस छ, गाली छ,
-नखरा छ, हासो छ, दुख छ
-तर माया पनी टन्न छ
-म हरिसके तिम्रो जादुमा
+                तिम्रो जादुमा आत्मियता छ,
+                न्यानोपन छ,रिस छ, गाली छ,
+                नखरा छ, हासो छ, दुख छ
+                तर माया पनी टन्न छ
+                म हरिसके तिम्रो जादुमा
 
-बस एउटै इच्छा छ
-तिम्रो जादुमा परेर
-कहिले तिमीलाई नै हार्नु नपरोस`,
+                बस एउटै इच्छा छ
+                तिम्रो जादुमा परेर
+                कहिले तिमीलाई नै हार्नु नपरोस`,
     },
     {
         title: 'धुँवाको उच्चाई',
@@ -124,7 +124,7 @@ const poems = [
     },
 ];
 
-const ebook =[
+const ebook = [
     {
         title: 'मेरा कविताहरू (My Poems) - Ebook',
         link: 'https://drive.google.com/file/d/1KXJH1b0kYV7j9Z8uYl4g6jz1F2N6X9Ih/view?usp=sharing',
@@ -207,9 +207,8 @@ const PoetryPage = () => {
 
                     {/* Mobile Dropdown Menu */}
                     <div
-                        className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-300 shadow-lg transition-all duration-300 ease-in-out ${
-                            mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                        }`}
+                        className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-300 shadow-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                            }`}
                     >
                         <div className="px-6 py-4 space-y-1">
                             {navItems.map((item) => (
@@ -273,8 +272,8 @@ const PoetryPage = () => {
                         );
                     })}
                 </div>
-                    {/* Ebook Section */}
-{/* <div id="ebook" className="mt-20 pt-12 border-t border-gray-300">
+                {/* Ebook Section */}
+                {/* <div id="ebook" className="mt-20 pt-12 border-t border-gray-300">
     <div className="text-left mb-12">
         <h3 className="nepali text-3xl font-bold text-black mb-4">My Ebook</h3>
         <p className="text-gray-700 text-lg leading-relaxed">
