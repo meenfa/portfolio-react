@@ -44,7 +44,7 @@ const About = () => {
           {/* Social Links */}
           <div className="flex flex-wrap gap-2 items-center pt-2">
             <a
-              href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg text-black transition-all border border-gray-700 text-sm hover:bg-gray-50 hover:shadow-sm bg-white/80 backdrop-blur-sm"

@@ -1,82 +1,10 @@
 import React, { useState } from 'react';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowLeft, Heart, ExternalLink } from 'lucide-react';
 
 const poems = [
-    {
-        title: 'बोलचाल',
-        content: `दिनदिनै बोलचाल हैन,
-                म अन्त्यमा सम्म साथ दिन्छु
-
-                तिम्रो भागको दु:ख,
-                मेरो सुखसंग साँद दिन्छु
-
-                लक्ष्य तिम्रो तिर्मिराए,
-                सम्हालिन यो काध दिन्छु
-
-                पन्छी बनी उड्नु तिमी ,
-                तल तान्नेको हात काट् दिन्छु`,
-    },
-    {
-        title: 'तिम्रो बोलीमा जादु छ',
-        content: `भरोसा,
-                सबै तिमी माथि
-                सधै तिमी माथि
-                आफैलाई आफुमा भरोसा हुन छोडीसक्यो
-                तिम्रो आगमन भएदेखि,
-                यो मन तिम्रो भैसक्यो
-
-                तिम्रो बोलीमा जादु छ,
-                तिमी आफैसंग अन्जान जादु
-                जसले मलाई मात्र काबु गर्छ
-                मात्र मलाई
-                मात्र मलाई,
-
-                तिम्रो जादुमा आत्मियता छ,
-                न्यानोपन छ,रिस छ, गाली छ,
-                नखरा छ, हासो छ, दुख छ
-                तर माया पनी टन्न छ
-                म हरिसके तिम्रो जादुमा
-
-                बस एउटै इच्छा छ
-                तिम्रो जादुमा परेर
-                कहिले तिमीलाई नै हार्नु नपरोस`,
-    },
-    {
-        title: 'धुँवाको उच्चाई',
-        content: `के तिमी सुन्छौ?
-    फेरिपनि
-    
-    यो धुँवाको कहानी 
-    मैले एउटा पोको खोले 
-    अनि फेरी उसकै सामु
-    अर्को एक फाँसी लाए
-
-    जति समय बित्दै जादैछ  
-    म त्यतिनै गल्दै जादैछु
-    म आशा बिनाको इच्छा हु 
-    म बर्बाराउन थाले 
-
-    के तिमी लुक्छौ???
-    शैतानको साथमा मैले
-    झुटको साहारा लिन सिकेको छु 
-    मलाई आतंक को पुरा रूप थाहा छ
-    तिम्रो आँखामा डर छ
-    मलाई सत्य थाहा छ
-
-    हानिकारक धुवा,
-    बेफिक्री उडान 
-    एक सर्को लि
-    एकछिन रामदिम न त 
-    तिम्रो जल्दै गरेको
-    त्यो कलिलो मनमस्तिस्कको
-    धुवाले उचाई छुदै गर्दा
-    म हल्का फिक्किएको महसुस गर्छु..
-
-    म शान्त छु`,
-    },
-    {
-        title: 'चिसो (Cold)',
-        content: `मेरो आँखामा चिसोपन छ,
+  {
+    title: 'चिसो (Cold)',
+    content: `मेरो आँखामा चिसोपन छ,
 म लाश जस्तै चिसो छु,
 म चिसोसंग रमाउछु,
 किनकि म चिसो छु
@@ -102,10 +30,11 @@ const poems = [
 मलाई दिनको सुन्दरताले लोब्याउँन छाडेको छ
 
 म रातमा रमाउछु,`,
-    },
-    {
-        title: 'अधुरा पंक्तिहरु',
-        content: `उसको अन्तिम घडीमा 
+    date: 'July 2025',
+  },
+  {
+    title: 'अधुरा पंक्तिहरु (Incomplete Lines)',
+    content: `उसको अन्तिम घडीमा 
 तिमी आई उभिनु है 
 तिमीले लत्याएको त्यो भत्केको आगनको एक कुनामा
 ताकि थाहा होस् सबैलाई,
@@ -121,237 +50,148 @@ const poems = [
 न तिमी रुन्छौ, कराउछौउ 
 कहिले कहिँ अलि बेस्सरी आसु 
 बगाउ जस्तो लाग्दैन तिमीलाई??`,
-    },
-];
-
-const ebook = [
-    {
-        title: 'मेरा कविताहरू (My Poems) - Ebook',
-        link: 'https://drive.google.com/file/d/1KXJH1b0kYV7j9Z8uYl4g6jz1F2N6X9Ih/view?usp=sharing',
-        description: 'A collection of my poems in Nepali language, expressing emotions and thoughts through verses.',
-        image: '/image/poetry/khalti.jpg',
-    },
-];
-
-const donations = [
-    { name: 'eSewa', qr: '/image/poetry/esewa.jpg', id: '9823645664', link: 'https://esewa.com.np' },
-    { name: 'Khalti', qr: '/image/poetry/khalti.jpg', id: '9823645664', link: 'https://khalti.com' },
+    date: 'July 2024',
+  },
 ];
 
 const PoetryPage = () => {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [expandedPoems, setExpandedPoems] = useState({});
+  const [expandedPoems, setExpandedPoems] = useState({});
 
-    const togglePoem = (index) => {
-        setExpandedPoems(prev => ({ ...prev, [index]: !prev[index] }));
-    };
+  const togglePoem = (index) => {
+    setExpandedPoems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
 
-    const handleNavClick = (section) => {
-        if (section === 'portfolio') {
-            window.location.href = '/';
-        } else if (section === 'support') {
-            document.getElementById('support').scrollIntoView({ behavior: 'smooth' });
-        }
-        setMobileMenuOpen(false);
-    };
+  const navigateToPortfolio = () => {
+    window.location.href = '/';
+  };
 
-    const navItems = ['portfolio', 'support'];
-
-    return (
-        <div className="min-h-screen bg-white text-gray-900">
-            {/* Original Navbar */}
-            <nav className="fixed top-0 w-full bg-white backdrop-blur-md z-50 h-16 border-b border-gray-300">
-                <div className="mx-auto px-4 max-w-3xl h-full">
-                    <div className="flex justify-between items-center h-full">
-                        {/* Logo */}
-                        <div
-                            className="flex items-center cursor-pointer"
-                            onClick={() => handleNavClick('portfolio')}
-                        >
-                            <span className="text-2xl font-bold text-black nepali">अंकित.</span>
-                        </div>
-
-                        {/* Desktop Menu */}
-                        <div className="hidden md:flex items-center space-x-8">
-                            {navItems.map((item) => (
-                                <button
-                                    key={item}
-                                    onClick={() => handleNavClick(item)}
-                                    className="text-base font-medium cursor-pointer transition-colors duration-300 text-gray-600 hover:text-black"
-                                >
-                                    {item === 'portfolio' ? 'Portfolio' : 'Support'}
-                                </button>
-                            ))}
-                        </div>
-
-                        {/* Mobile Menu Button */}
-                        <div className="md:hidden">
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setMobileMenuOpen(!mobileMenuOpen);
-                                }}
-                                className="p-2 text-black hover:text-gray-900 transition-colors cursor-pointer"
-                                aria-label="Toggle menu"
-                            >
-                                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    {mobileMenuOpen ? (
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                    ) : (
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                                    )}
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    {/* Mobile Dropdown Menu */}
-                    <div
-                        className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-300 shadow-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                            }`}
-                    >
-                        <div className="px-6 py-4 space-y-1">
-                            {navItems.map((item) => (
-                                <button
-                                    key={item}
-                                    onClick={() => handleNavClick(item)}
-                                    className="block w-full text-left py-3 px-4 text-sm font-medium rounded-lg transition-all cursor-pointer duration-200 text-gray-600 hover:text-black hover:bg-gray-100"
-                                >
-                                    {item === 'portfolio' ? 'Portfolio' : 'Support'}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            {/* Main Content */}
-            <div className="pt-20 px-4 pb-16 max-w-3xl mx-auto">
-                {/* Header */}
-                <div className="text-left mb-4 border-b border-gray-300 pb-8">
-                    <h1 className="nepali text-4xl font-bold text-black mb-4 mt-4">मेरा कविताहरू</h1>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                        The expression of emotions in the world of words
-                    </p>
-                </div>
-
-                {/* Poems List - With Read Full functionality */}
-                <div className="space-y-16">
-                    {poems.map((poem, index) => {
-                        const isExpanded = expandedPoems[index];
-                        const preview = poem.content.split('\n').slice(0, 2).join('\n');
-                        const hasMoreContent = poem.content.split('\n').length > 4;
-
-                        return (
-                            <div key={index} className="border-b border-gray-300 pb-4 last:border-b-0">
-                                <div className="flex items-start justify-between mb-2">
-                                    <h2 className="nepali text-3xl font-bold text-black">
-                                        {poem.title}
-                                    </h2>
-                                    {poem.date && (
-                                        <span className="text-gray-500 text-sm font-normal">
-                                            {poem.date}
-                                        </span>
-                                    )}
-                                </div>
-
-                                <pre className="nepali whitespace-pre-line text-gray-900 leading-relaxed text-xl font-normal">
-                                    {isExpanded ? poem.content : preview}
-                                </pre>
-
-                                {hasMoreContent && (
-                                    <button
-                                        onClick={() => togglePoem(index)}
-                                        className="mt-2 text-blue-600 hover:text-blue-800 flex items-center gap-2 transition-colors cursor-pointer"
-                                    >
-                                        {isExpanded ? 'Show Less' : 'Read Full'}
-                                        <ArrowRight className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
-                                    </button>
-                                )}
-                            </div>
-                        );
-                    })}
-                </div>
-                {/* Ebook Section */}
-                {/* <div id="ebook" className="mt-20 pt-12 border-t border-gray-300">
-    <div className="text-left mb-12">
-        <h3 className="nepali text-3xl font-bold text-black mb-4">My Ebook</h3>
-        <p className="text-gray-700 text-lg leading-relaxed">
-            Download my poetry collection and immerse yourself in the world of words and emotions.
-        </p>
-    </div>
-
-    <div className="flex flex-wrap justify-left gap-12">
-        {ebook.map((book) => (
-            <div key={book.title} className="text-left">
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-300 mb-4">
-                    <img
-                        src={book.image}
-                        alt={book.title}
-                        className="w-48 h-64 object-cover rounded border border-gray-400"
-                    />
-                </div>
-                <h4 className="text-xl font-bold text-gray-800 mb-2">{book.title}</h4>
-                <p className="text-gray-600 text-base mb-4 max-w-xs">{book.description}</p>
-                <a
-                    href={book.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-lg"
-                >
-                    <Download className="w-5 h-5" />
-                    Download Ebook
-                </a>
-            </div>
-        ))}
-    </div>
-</div> */}
-                {/* Support Section */}
-                <div id="support" className="mt-20 pt-12 border-t border-gray-300">
-                    <div className="text-left mb-12">
-                        <h3 className="nepali text-3xl font-bold text-black mb-4">Support</h3>
-                        <p className="text-gray-700 text-lg leading-relaxed">
-                            If you love my poems, you can support me via:
-                        </p>
-                    </div>
-
-                    <div className="flex flex-wrap justify-left gap-12">
-                        {donations.map((donation) => (
-                            <div key={donation.name} className="text-left">
-                                <div className="bg-gray-50 p-6 rounded-lg border border-gray-300 mb-4">
-                                    <img
-                                        src={donation.qr}
-                                        alt={`${donation.name} QR`}
-                                        className="w-48 h-48 rounded border border-gray-400"
-                                    />
-                                </div>
-                                <p className="text-gray-700 text-lg mb-1">{donation.name}:</p>
-                                <p className="text-gray-600 text-base mb-4 font-mono">{donation.id}</p>
-                                <a
-                                    href={donation.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors text-lg"
-                                >
-                                    Support
-                                    <ArrowRight className="w-4 h-4" />
-                                </a>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Footer */}
-            <footer className="border-t border-gray-300 py-8 bg-gray-50">
-                <div className="max-w-3xl mx-auto px-4 text-center">
-                    <p className="text-gray-600 text-base">
-                        © {new Date().getFullYear()} Ankit Karki. All rights reserved.
-                    </p>
-                </div>
-            </footer>
+  return (
+    <div className="min-h-screen bg-white text-gray-900">
+      {/* Minimal Header */}
+      <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div className="max-w-2xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <button
+              onClick={navigateToPortfolio}
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              <span className="text-sm font-medium">Back to Portfolio</span>
+            </button>
+            <div className="text-xs text-gray-500 font-medium">POETRY</div>
+          </div>
         </div>
-    );
+      </header>
+
+      {/* Main Content */}
+      <main className="pt-24 pb-16 max-w-2xl mx-auto px-6">
+        {/* Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">
+            Poems & Verses
+          </h1>
+          <p className="text-gray-600 text-lg max-w-md mx-auto leading-relaxed">
+            A collection of thoughts and emotions expressed through words
+          </p>
+        </div>
+
+        {/* Poems List */}
+        <div className="space-y-12">
+          {poems.map((poem, index) => {
+            const isExpanded = expandedPoems[index];
+            const lines = poem.content.split('\n');
+            const preview = lines.slice(0, 4).join('\n');
+            const hasMore = lines.length > 4;
+
+            return (
+              <article key={index} className="group">
+                {/* Poem Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h2 className="text-xl font-normal text-gray-900 mb-1">
+                      {poem.title}
+                    </h2>
+                    <time className="text-xs text-gray-500 font-medium tracking-wide">
+                      {poem.date}
+                    </time>
+                  </div>
+                </div>
+
+                {/* Poem Content */}
+                <div className="relative">
+                  <pre className={`whitespace-pre-line text-gray-950 leading-relaxed font-light tracking-wide ${
+                    !isExpanded && hasMore ? 'max-h-96 overflow-hidden' : ''
+                  }`}>
+                    {isExpanded ? poem.content : preview}
+                  </pre>
+                  
+                  {/* Read More Button */}
+                  {hasMore && (
+                    <div className={`mt-4 ${!isExpanded ? 'flex items-center gap-2' : ''}`}>
+                      <button
+                        onClick={() => togglePoem(index)}
+                        className="text-sm text-gray-600 hover:text-gray-900 font-medium transition-colors flex items-center gap-1 group"
+                      >
+                        {isExpanded ? (
+                          'Show less'
+                        ) : (
+                          <>
+                            Read full poem
+                            <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Divider */}
+                {index < poems.length - 1 && (
+                  <div className="mt-12 pt-8 border-t border-gray-100"></div>
+                )}
+              </article>
+            );
+          })}
+        </div>
+
+        {/* Support Section */}
+        <section className="mt-20 pt-12 border-t border-gray-100">
+          <div className="text-center">
+            <div className="flex justify-center mb-4">
+              <Heart className="w-5 h-5 text-gray-400" />
+            </div>
+            <h3 className="text-lg font-normal text-gray-900 mb-3">
+              Support the Art
+            </h3>
+            <p className="text-gray-600 text-sm max-w-md mx-auto mb-6 leading-relaxed">
+              If these poems resonate with you, consider supporting my creative journey
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors text-sm font-medium">
+                Buy Me a Coffee
+              </button>
+              <button className="px-6 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                Support Monthly
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-100 py-8">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <p className="text-xs text-gray-500">
+            © {new Date().getFullYear()} All rights reserved • Written with purpose
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default PoetryPage;
