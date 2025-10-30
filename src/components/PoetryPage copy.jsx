@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send } from 'lucide-react'; // assuming lucide-react is installed
+import { ArrowLeft, Heart, ExternalLink } from 'lucide-react';
 
 const poems = [
   {
@@ -29,9 +29,8 @@ const poems = [
 मैले त्यहि दिन देखि दिनमा रमाउने छोडीसके
 मलाई दिनको सुन्दरताले लोब्याउँन छाडेको छ
 
-म रातमा रमाउछु,
-`,
-    date: 'Jul, 2025',
+म रातमा रमाउछु,`,
+    date: 'July 2025',
   },
   {
     title: 'अधुरा पंक्तिहरु (Incomplete Lines)',
@@ -51,171 +50,146 @@ const poems = [
 न तिमी रुन्छौ, कराउछौउ 
 कहिले कहिँ अलि बेस्सरी आसु 
 बगाउ जस्तो लाग्दैन तिमीलाई??`,
-    date: 'Jul, 2024',
+    date: 'July 2024',
   },
 ];
 
-const donations = [
-  { name: 'eSewa', qr: '/image/poetry/esewa.jpg', id: '9823645664', link: 'https://esewa.com.np' },
-  { name: 'Khalti', qr: '/image/poetry/khalti.jpg', id: '9823645664', link: 'https://khalti.com' },
-  { name: 'Bank Transfer', qr: '/image/poetry/bank.jpg', id: '9823645664', link: '#' },
-];
-
 const PoetryPage = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedPoems, setExpandedPoems] = useState({});
 
   const togglePoem = (index) => {
-    setExpandedPoems({ ...expandedPoems, [index]: !expandedPoems[index] });
+    setExpandedPoems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
   };
 
-  const handleNavClick = (section) => {
-    if (section === 'portfolio') window.location.href = '/';
-    else if (section === 'poetry') window.location.href = '/poetry';
-    else window.location.hash = section;
-    setMobileMenuOpen(false);
+  const navigateToPortfolio = () => {
+    window.location.href = '/';
   };
 
   return (
-    <div className="min-h-screen bg-black text-gray-200">
-      {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-black backdrop-blur-md z-50 h-16 shadow-md">
-        <div className="mx-auto px-4 max-w-4xl h-full flex justify-between items-center">
-          <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('poetry')}>
-            <span className="text-xl font-bold text-white">अंकित.</span>
-          </div>
-          <div className="hidden md:flex items-center space-x-6">
-            {['portfolio', 'poetry', 'blogs', 'contact'].map((section) => (
-              <button
-                key={section}
-                onClick={() => handleNavClick(section)}
-                className="text-gray-400 hover:text-white font-medium transition-colors duration-300"
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </button>
-            ))}
-          </div>
-          <div className="md:hidden">
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2 text-white hover:text-gray-300 transition-colors cursor-pointer">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+    <div className="min-h-screen bg-white text-gray-900">
+      {/* Minimal Header */}
+      <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div className="max-w-2xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <button
+              onClick={navigateToPortfolio}
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              <span className="text-sm font-medium">Back to Portfolio</span>
             </button>
+            <div className="text-xs text-gray-500 font-medium">POETRY</div>
           </div>
         </div>
+      </header>
 
-        {mobileMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-black border-b border-gray-700 shadow-lg">
-            <div className="px-6 py-4 space-y-1">
-              {['portfolio', 'poetry', 'blogs', 'contact'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => handleNavClick(section)}
-                  className="block w-full text-left py-3 px-4 text-sm font-medium rounded-lg text-gray-400 hover:text-white hover:bg-gray-800"
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-      </nav>
+      {/* Main Content */}
+      <main className="pt-24 pb-16 max-w-2xl mx-auto px-6">
+        {/* Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">
+            Poems & Verses
+          </h1>
+          <p className="text-gray-600 text-lg max-w-md mx-auto leading-relaxed">
+            A collection of thoughts and emotions expressed through words
+          </p>
+        </div>
 
-      {/* Poetry Section */}
-      
-      <div className="pt-24 px-4 pb-16 max-w-4xl mx-auto">
-        <h1 className="text-2xl font-bold mb-6 text-left">My Poetries</h1>
-
-        <div className="space-y-10">
-             
+        {/* Poems List */}
+        <div className="space-y-12">
           {poems.map((poem, index) => {
             const isExpanded = expandedPoems[index];
-            const preview = poem.content.split('\n').slice(0, 2).join('\n');
+            const lines = poem.content.split('\n');
+            const preview = lines.slice(0, 4).join('\n');
+            const hasMore = lines.length > 4;
 
             return (
-              <div key={index} className="p-4 text-left border-b border-gray-800 pb-4">
-                <h2 className="text-xl font-semibold mb-4 text-white">{poem.title}</h2>
-                <p className="text-gray-400 text-sm mb-4">{poem.date}</p>
-                <pre className="whitespace-pre-line text-gray-300 leading-relaxed">{isExpanded ? poem.content : preview}</pre>
-                <button
-                  onClick={() => togglePoem(index)}
-                  className="mt-2 text-blue-400 hover:text-blue-400 font-normal"
-                >
-                  {isExpanded ? 'Show Less' : 'Read Full'}
-                </button>
-              </div>
+              <article key={index} className="group">
+                {/* Poem Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h2 className="text-xl font-normal text-gray-900 mb-1">
+                      {poem.title}
+                    </h2>
+                    <time className="text-xs text-gray-500 font-medium tracking-wide">
+                      {poem.date}
+                    </time>
+                  </div>
+                </div>
+
+                {/* Poem Content */}
+                <div className="relative">
+                  <pre className={`whitespace-pre-line text-gray-950 leading-relaxed font-light tracking-wide ${
+                    !isExpanded && hasMore ? 'max-h-96 overflow-hidden' : ''
+                  }`}>
+                    {isExpanded ? poem.content : preview}
+                  </pre>
+                  
+                  {/* Read More Button */}
+                  {hasMore && (
+                    <div className={`mt-4 ${!isExpanded ? 'flex items-center gap-2' : ''}`}>
+                      <button
+                        onClick={() => togglePoem(index)}
+                        className="text-sm text-gray-600 hover:text-gray-900 font-medium transition-colors flex items-center gap-1 group"
+                      >
+                        {isExpanded ? (
+                          'Show less'
+                        ) : (
+                          <>
+                            Read full poem
+                            <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Divider */}
+                {index < poems.length - 1 && (
+                  <div className="mt-12 pt-8 border-t border-gray-100"></div>
+                )}
+              </article>
             );
           })}
         </div>
 
-        {/* Donations */}
-        <div className="mt-16 text-left">
-          <h3 className="text-2xl font-semibold mb-4 text-left">Support My Poetry</h3>
-          <p className="text-gray-400 mb-6">
-            If you enjoy my poems, you can support me via eSewa, Khalti, or Bank transfer.
-          </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            {donations.map((donation) => (
-              <div key={donation.name} className="text-center">
-                <img src={donation.qr} alt={`${donation.name} QR`} className="mx-auto w-48 rounded-lg border border-gray-700 mb-2" />
-                <p className="text-gray-300 mb-1">{donation.name}</p>
-                <p className="text-sm text-gray-500">{donation.id}</p>
-                <a
-                  href={donation.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-600 text-sm"
-                >
-                  Donate
-                </a>
-              </div>
-            ))}
+        {/* Support Section */}
+        <section className="mt-20 pt-12 border-t border-gray-100">
+          <div className="text-center">
+            <div className="flex justify-center mb-4">
+              <Heart className="w-5 h-5 text-gray-400" />
+            </div>
+            <h3 className="text-lg font-normal text-gray-900 mb-3">
+              Support the Art
+            </h3>
+            <p className="text-gray-600 text-sm max-w-md mx-auto mb-6 leading-relaxed">
+              If these poems resonate with you, consider supporting my creative journey
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors text-sm font-medium">
+                Buy Me a Coffee
+              </button>
+              <button className="px-6 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                Support Monthly
+              </button>
+            </div>
           </div>
-        </div>
+        </section>
+      </main>
 
-        {/* Message Form */}
-        {/* <div id="message-form" className="mt-16 p-6 rounded-2xl bg-gray-900 shadow-md max-w-2xl mx-auto">
-          <h3 className="font-semibold text-gray-200 text-lg mb-4">Send Me a Message</h3>
-          <form
-            action="https://formspree.io/f/xdkzgjjl"
-            method="POST"
-            className="space-y-4"
-          >
-            <div>
-              <label htmlFor="contact" className="block text-base font-medium text-gray-200 mb-1">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
-                placeholder="Ram Bahadur"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-base font-medium text-gray-200 mb-1">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-                className="w-full px-3 py-2 bg-gray-200 border border-gray-300 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
-                placeholder="Write your message..."
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="px-4 py-2 bg-black hover:bg-gray-800 border border-gray-300 rounded-lg text-white font-medium transition-colors"
-            >
-              Send Message <Send className="w-4 h-4 inline-block ml-2" />
-            </button>
-          </form>
-        </div> */}
-      </div>
+      {/* Footer */}
+      <footer className="border-t border-gray-100 py-8">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <p className="text-xs text-gray-500">
+            © {new Date().getFullYear()} All rights reserved • Written with purpose
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

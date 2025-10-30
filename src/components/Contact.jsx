@@ -57,19 +57,11 @@ const Contact = () => {
                 <YoutubeIcon className="w-6 h-6 " />
 
               </a>
-              {/* <a
-                href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-8 h-8 rounded-lg text-gray-800 hover:text-gray-900 transition-colors"
-              >
-                <File className="w-6 h-6" />
-
-              </a> */}
+          
 
             </div>
             <a
-              href="https://drive.google.com/file/d/1BSCrZHHkZtsSkV5M2qYXZ4f9Fx-aoh45/view?usp=sharing"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-fit px-4 py-2 bg-black hover:bg-gray-800 border border-gray-300 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-medium transition-colors cursor-pointer"
