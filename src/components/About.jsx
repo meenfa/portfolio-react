@@ -6,43 +6,40 @@ const About = () => {
     <section id="about" className="relative flex items-center py-8 grain-backgroundpx-0 sm:px-6 lg:px-8">
 
       <div className="mx-auto px-2 w-full max-w-3xl relative z-10">
-        <div className="space-y-8">
+        <div className="space-y-2">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
 
             <div className="w-full lg:w-1/3 flex justify-left order-first lg:order-last">
-              <div className="w-32 h-32 lg:w-38 lg:h-42 rounded-full overflow-hidden border-1 border-gray-800 shadow-lg shadow-gray-400/20">
+              <div className="w-32 h-32 lg:w-38 lg:h-42 rounded-full overflow-hidden border-1 border-gray-300">
                 <img
-                  src="/image/a.png"
+                  src="/image/ankitdotnp.png"
                   alt="Ankit Karki"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
 
-         
-            <div className="w-full lg:w-4/3 space-y-4 text-black order-last lg:order-first">
-              <h1 className='text-3xl font-bold text-wrap text-left lg:text-left flex items-center gap-3'>
+            <div className="w-full lg:w-4/3 space-y-2 text-gray-800 order-last lg:order-first">
+              <h1 className='text-2xl font-bold text-wrap text-left lg:text-left flex items-center gap-2'>
                 Ankit Karki
                 <span
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className='text-xs px-2 py-1 text-black font-normal border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black transition-colors self-start mt-1 '
+                  className='text-xs px-2 py-1 text-blue-600 font-normal border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-50 hover:text-blue-500 transition-colors self-start mt-1 '
                 >
                   Available for work
-                 
+
                 </span>
               </h1>
 
-              <p className='text-lg text-gray-700 text-wrap text-left lg:text-left leading-relaxed'>
-                Hi, I'm Ankit, a <span className="text-gray-900 font-semibold">Backend Developer</span> and occasional poet from Bhaktapur, Nepal 🇳🇵. I enjoy turning ideas into reality through code and love taking on challenges that push me to grow.
+              <p className='text-lg text-gray-500 leading-relaxed text-wrap'>
+                Hi, I'm Ankit, a <span className="text-gray-800 font-semibold">Backend Developer</span> from Bhaktapur, Nepal 🇳🇵. I build scalable, reliable web applications with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span>, turning ideas into functional solutions.
               </p>
-              <p className='text-lg text-gray-700 text-wrap text-left lg:text-left leading-relaxed'>
-                I am working mainly with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span>, focusing on building scalable, reliable, and well-structured web applications.
-              </p>
+
             </div>
           </div>
 
           {/* Social Links */}
-          <div className="flex flex-wrap gap-2 items-center pt-2">
+          <div className="flex flex-wrap gap-2 items-center pt-0">
             <a
               href="#"
               target="_blank"
@@ -54,7 +51,7 @@ const About = () => {
             </a>
 
             <a
-              href="https://github.com/ankitkarki27"
+              href="https://github.com/ankitdotnp"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:text-black transition-all hover:bg-white/80 backdrop-blur-sm border border-transparent hover:border-gray-300"
@@ -63,7 +60,7 @@ const About = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/ankitkarki27/"
+              href="https://www.linkedin.com/in/ankitdotnp/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:text-blue-600 transition-all hover:bg-white/80 backdrop-blur-sm border border-transparent hover:border-gray-300"
