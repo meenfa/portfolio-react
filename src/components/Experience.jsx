@@ -3,7 +3,7 @@ import React from 'react';
 const Experience = () => {
   const experience = [
     {
-      role: "Laravel Developer (Intern)",
+      role: "Backend Developer (Intern)",
       company: "NepBigyapan",
       location: "Remote",
       period: "Dec 2024 – April 2025",
@@ -19,9 +19,9 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 bg-white pt-2">
+    <section id="experience" className="py-12 bg-white pt-0">
       <div className="mx-auto px-2 max-w-3xl">
-        <h2 className="text-2xl font-bold mb-4 text-black">Experience</h2>
+        <h2 className="text-2xl font-bold mb-2 text-black">Experience</h2>
         <div className="space-y-6">
           {experience.map((exp, index) => (
             <div key={index} className="pl-4 border-l-1 border-gray-400 relative">
