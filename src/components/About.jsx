@@ -12,7 +12,7 @@ const About = () => {
             <div className="w-full lg:w-1/3 flex justify-left order-first lg:order-last">
               <div className="w-32 h-32 lg:w-38 lg:h-42 rounded-full overflow-hidden border-1 border-gray-300">
                 <img
-                  src="/image/ankitdotnp.png"
+                  src="/image/ankit1.png"
                   alt="Ankit Karki"
                   className="w-full h-full object-cover"
                 />
@@ -31,7 +31,7 @@ const About = () => {
                 </span>
               </h1>
 
-              <p className='text-lg text-gray-500 leading-relaxed text-wrap'>
+              <p className='text-base text-gray-500 leading-relaxed text-wrap'>
                 Hi, I'm Ankit, a <span className="text-gray-800 font-semibold">Backend Developer</span> from Bhaktapur, Nepal 🇳🇵. I build scalable, reliable web applications with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span>, turning ideas into functional solutions.
               </p>
 
