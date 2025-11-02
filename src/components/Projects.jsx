@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Digital Padhai",
-      description: "An online education platform for course enrollment and student progress tracking, designed to support community discussion forums and an AI-powered text interview module in future releases.",
+      description: "An online learning platform for course enrollment and progress tracking, built with plans for forums and AI interview features.",
       tags: ["React", "Django", "PostgreSQL", "RTK", "Tailwind"],
       github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
       image: "/image/padhai.png",
@@ -82,8 +82,6 @@ const Projects = () => {
     <section id="projects" className="py-16 bg-white pt-0">
       <div className="mx-auto px-2 max-w-3xl">
         <h2 className="text-2xl font-bold text-black mb-4">Projects</h2>
-
-        {/* Sorting Buttons */}
         <div className="flex gap-1 mb-4">
           {["All", "Full Stack", "Frontend", "Backend"].map(type => (
             <button
@@ -101,7 +99,7 @@ const Projects = () => {
 
         <div className="space-y-8 mt-2">
           {filteredProjects.map((project, index) => (
-            <div key={index} className="border-b border-gray-400 pb-8 last:border-0">
+            <div key={index} className="border-b border-gray-700 pb-6 last:border-0">
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="w-full lg:w-5/12">
                   <img
@@ -114,7 +112,7 @@ const Projects = () => {
 
                 <div className="w-full lg:w-7/12">
                   <div className="flex items-center gap-2 mb-2">
-                    <h3 className="text-2xl font-bold text-black">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-black">{project.title}</h3>
                     <span className={`text-xs px-2 py-1 border rounded-lg cursor-pointer ${project.status === "ongoing" ? "text-yellow-800" : "text-green-400"
                       }`}>
                       {project.status === "ongoing" ? "Ongoing" : "Completed"}
