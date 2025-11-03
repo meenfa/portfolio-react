@@ -93,7 +93,7 @@ const Portfolio = () => {
                   onClick={() => handleNavClick(section)}
                   className={`text-base font-medium cursor-pointer transition-colors duration-600 ${
                     activeSection === section
-                      ? 'text-black border-b-2 border-black'
+                      ? 'text-black border-b-2 border-gray-900'
                       : 'text-gray-500 hover:text-black hover:border-b-2 hover:border-gray-400'
                   }`}
                 >

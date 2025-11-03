@@ -81,7 +81,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 bg-white pt-0">
       <div className="mx-auto px-2 max-w-3xl">
-        <h2 className="text-2xl font-bold text-black mb-4">Projects</h2>
+        <h2 className="text-xl font-bold text-black mb-4">Projects</h2>
         <div className="flex gap-1 mb-4">
           {["All", "Full Stack", "Frontend", "Backend"].map(type => (
             <button
@@ -99,13 +99,13 @@ const Projects = () => {
 
         <div className="space-y-8 mt-2">
           {filteredProjects.map((project, index) => (
-            <div key={index} className="border-b border-gray-700 pb-6 last:border-0">
+            <div key={index} className="border-b border-gray-400 pb-6 last:border-0">
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="w-full lg:w-5/12">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-auto border border-gray-800 rounded-lg object-cover hover:scale-100 transition-transform duration-200 cursor-pointer"
+                    className="w-full h-auto border border-gray-800 rounded-lg object-cover hover:scale-105 transition-transform duration-200 cursor-pointer"
                     onClick={() => window.open(project.github, "_blank")}
                   />
                 </div>
@@ -146,7 +146,7 @@ const Projects = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-gray-900 hover:text-black"
+                        className="flex items-center gap-1 text-sm text-gray-900 hover:text-blue-600"
                       >
                         <ExternalLink className="w-4 h-4" />
                         <span>Live</span>

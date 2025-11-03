@@ -32,7 +32,7 @@ const About = () => {
               </h1>
 
               <p className='text-base text-gray-500 leading-relaxed text-wrap'>
-                Hi, I'm Ankit, a <span className="text-gray-800 font-semibold">Backend Developer</span> from Bhaktapur, Nepal 🇳🇵. I build scalable, reliable web applications with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span>, turning ideas into functional solutions.
+                Hi, I'm Ankit, a <span className="text-gray-800 font-semibold">Full Stack Developer</span> from Bhaktapur, Nepal 🇳🇵. I build scalable, reliable web applications with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span>, turning ideas into functional solutions.
               </p>
 
             </div>
