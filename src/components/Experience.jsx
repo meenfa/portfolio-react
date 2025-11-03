@@ -21,7 +21,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-12 bg-white pt-0">
       <div className="mx-auto px-2 max-w-3xl">
-        <h2 className="text-2xl font-bold mb-2 text-black">Experience</h2>
+        <h2 className="text-xl font-bold mb-2 text-black">Experience</h2>
         <div className="space-y-6">
           {experience.map((exp, index) => (
             <div key={index} className="pl-4 border-l-1 border-gray-400 relative">
