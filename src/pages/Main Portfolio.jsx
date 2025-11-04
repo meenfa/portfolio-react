@@ -87,7 +87,7 @@ const Portfolio = () => {
                 <button
                   key={section}
                   onClick={() => handleNavClick(section)}
-                  className={`text-base font-medium cursor-pointer transition-colors duration-600 ${
+                  className={`text-base font-normal cursor-pointer transition-colors duration-600 ${
                     activeSection === section
                       ? 'text-black border-b-1 border-gray-800ay-'
                       : 'text-gray-500 hover:text-black hover:border-b-1 hover:border-gray-400'
