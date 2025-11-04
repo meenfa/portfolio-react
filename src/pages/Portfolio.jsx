@@ -82,19 +82,19 @@ const Portfolio = () => {
               className="flex items-center cursor-pointer"
               onClick={() => handleNavClick('about')}
             >
-              <span className="text-2xl font-bold text-black nepali">अंकित.</span>
+              <span className="text-2xl font-bold text-black  ">अंकित.</span>
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6">
               {['about', 'experience', 'projects', 'blogs', 'contact', 'poetry'].map((section) => (
                 <button
                   key={section}
                   onClick={() => handleNavClick(section)}
-                  className={`text-base font-medium cursor-pointer transition-colors duration-600 ${
+                  className={`text-sm cursor-pointer transition-colors duration-600 ${
                     activeSection === section
-                      ? 'text-black border-b-2 border-gray-900'
-                      : 'text-gray-500 hover:text-black hover:border-b-2 hover:border-gray-400'
+                      ? 'text-black border-b-2 border-gray-900 font-medium'
+                      : 'text-gray-7  00 hover:text-black hover:border-b-2 hover:border-gray-400'
                   }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
