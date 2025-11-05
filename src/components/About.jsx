@@ -22,22 +22,28 @@ const About = () => {
             <div className="w-full lg:w-4/3 space-y-2 text-gray-800 order-last lg:order-first">
               <h1 className='text-xl font-bold text-wrap text-left lg:text-left flex items-center gap-2'>
                 Hi, I'm Ankit Karki
-                <span
+                {/* <span
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className='text-xs px-2 py-1 text-blue-600 font-normal border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-50 hover:text-blue-500 transition-colors self-start mt-1 '
                 >
                   Available for work
+                </span> */}
+                <span
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className='flex items-center gap-1 text-xs px-3 py-1 text-blue-600 font-semibold border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-200 hover:text-blue-600 transition-all duration-200'
+                >
+                  <span className='w-2 h-2 bg-blue-500 rounded-full inline-block'></span>
+                  Available for work
                 </span>
               </h1>
 
-              <p className='text-base text-gray-500 leading-relaxed text-wrap'>
-                I'm  a <span className="text-gray-800 font-semibold">Full Stack Developer</span> from Bhaktapur, Nepal 🇳🇵. I build scalable, reliable web applications with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span>, turning ideas into functional solutions.
+              <p className='text-gray-500 leading-relaxed text-wrap'>
+                I'm a <span className="text-gray-800 font-semibold">Full Stack Developer</span> from Bhaktapur, Nepal 🇳🇵. I build functional web applications with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span> that are reliable, scalable, and impactful.
               </p>
 
             </div>
           </div>
 
-          {/* Social Links */}
           <div className="flex flex-wrap gap-1 items-center pt-0">
             <a
               href="#"
@@ -77,7 +83,7 @@ const About = () => {
               className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:text-blue-600 transition-all hover:bg-white/80 backdrop-blur-sm border border-transparent hover:border-gray-300 relative group"
             >
               <Linkedin className="w-5 h-5" />
-               <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-gray-300 text-gray-800 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-gray-300 text-gray-800 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 Linkedin
                 <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-300"></div>
               </div>
