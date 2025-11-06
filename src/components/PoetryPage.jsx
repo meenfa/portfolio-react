@@ -311,7 +311,7 @@ const PoetryPage = () => {
                     <div className="text-left mb-12">
                         {/* <h3 className="nepali text-2xl font-bold text-black mb-2">Support</h3> */}
                         <p className="text-gray-700 text-lg leading-relaxed">
-                             you can support me,if you love my poems, via:
+                            you can support me,if you love my poems, via:
                         </p>
                     </div>
 

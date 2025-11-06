@@ -82,7 +82,7 @@ const Portfolio = () => {
               className="flex items-center cursor-pointer"
               onClick={() => handleNavClick('about')}
             >
-              <span className="text-2xl font-bold text-black  ">अंकित.</span>
+              <span className="text-xl font-normal text-black">Ankit Karki.</span>
             </div>
 
             {/* Desktop Menu */}
