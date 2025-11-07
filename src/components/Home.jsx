@@ -4,7 +4,7 @@ import { Github, Linkedin, Twitter, Mail, Download, Dot } from 'lucide-react';
 const Home = () => {
   return (
     <section id="home" className="flex items-center py-12 bg-white">
-      <div className="mx-auto px-2 w-full max-w-3xl">
+      <div className="mx-auto px-2 w-full max-w-2xl">
         <div className="space-y-8">
           {/* <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
             <div className="space-y-2 flex-1">

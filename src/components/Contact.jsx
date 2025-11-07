@@ -13,7 +13,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-16 bg-white pt-0">
-      <div className="mx-auto px-2 max-w-3xl">
+      <div className="mx-auto px-2 max-w-2xl">
         <h2 className='text-2xl mb-4 font-bold text-wrap text-left lg:text-left flex items-center gap-2'>
           Stay Connected.
           <span

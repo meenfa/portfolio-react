@@ -20,11 +20,11 @@ const Experience = () => {
 
   return (
     <section id="experience" className="py-12 bg-white pt-0">
-      <div className="mx-auto px-2 max-w-3xl">
+      <div className="mx-auto px-2 max-w-2xl">
         <h2 className="text-xl font-bold mb-2 text-black">Experience</h2>
         <div className="space-y-6">
           {experience.map((exp, index) => (
-            <div key={index} className="pl-4 border-l-1 border-gray-400 relative">
+            <div key={index} className="pl-4 border-l-2 border-gray-600 relative">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
                 <h3 className="font-semibold text-black text-base">{exp.role}</h3>
                 <span className="text-gray-800 text-sm">{exp.period}</span>

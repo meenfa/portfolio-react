@@ -24,7 +24,7 @@ const Blogs = () => {
 
   return (
     <section id="blogs" className="py-12 bg-white pt-0">
-      <div className="mx-auto px-2 max-w-3xl">
+      <div className="mx-auto px-2 max-w-2xl">
         <h2 className="text-xl font-bold mb-2 text-black">Blogs</h2>
         <div className="space-y-6">
           {blogss.map((blog, index) => (

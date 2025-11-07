@@ -1,16 +1,16 @@
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail, File, Download, X, FileBadge } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, File, Download, X, FileBadge, LucideFileX, LucideFile } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="relative flex items-center py-8 grain-backgroundpx-0 sm:px-6 lg:px-8">
+    <section id="about" className="relative flex items-center py-8  sm:px-6 lg:px-8">
 
-      <div className="mx-auto px-2 w-full max-w-3xl relative z-10">
+      <div className="mx-auto px-2 w-full max-w-2xl relative z-10">
         <div className="space-y-2">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
 
             <div className="w-full lg:w-1/3 flex justify-left order-first lg:order-last">
-              <div className="w-32 h-32 lg:w-38 lg:h-42 rounded-full overflow-hidden border-1 border-gray-300">
+              <div className="w-32 h-32 lg:w-32 lg:h-38 rounded-full overflow-hidden border-1 border-gray-300">
                 <img
                   src="/image/ankit1.png"
                   alt="Ankit Karki"
@@ -19,15 +19,9 @@ const About = () => {
               </div>
             </div>
 
-            <div className="w-full lg:w-4/3 mb-2 space-y-2 text-gray-800 order-last lg:order-first">
+            <div className="w-full lg:w-4/3 mb-2 space-y-2 text-black order-last lg:order-first">
               <h1 className='text-xl font-medium text-wrap text-left lg:text-left flex items-center gap-2'>
-                Hi, I'm Ankit
-                {/* <span
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className='text-xs px-2 py-1 text-blue-600 font-normal border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-50 hover:text-blue-500 transition-colors self-start mt-1 '
-                >
-                  Available for work
-                </span> */}
+                Hi, I'm Ankit  
                 <span
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className='flex items-center gap-1 text-xs px-3 py-1 text-blue-600 font-semibold border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-200 hover:text-blue-600 transition-all duration-200'
@@ -36,15 +30,20 @@ const About = () => {
                   Available for work
                 </span>
               </h1>
+              <p className='text-gray-500 leading-relaxed text-wrap mt-4'>
+                I'm a <span className="text-gray-900 font-medium">Full Stack Developer</span> from Bhaktapur, Nepal 🇳🇵. I craft modern web applications using <span className="text-gray-900 font-medium">Django, React.js, Python,</span> and <span className="text-gray-900 font-medium">Laravel</span>.
+              </p>
 
-              <p className='text-gray-500 leading-relaxed text-wrap'>
-                I'm a <span className="text-gray-800 font-bold">Full Stack Developer</span> from Bhaktapur, Nepal 🇳🇵. I build functional web applications with <span className="text-gray-900 font-bold">Django, Python, React.js, and Laravel</span> that are reliable, scalable, and impactful.
+              <p className='text-gray-400 leading-relaxed text-wrap'>
+                Say hi at{' '}
+                <a
+                  href="mailto:ankitkarki8088@gmail.com"
+                  className="text-gray-900  font-medium border-b-2 border-black transition-all"
+                >
+                  ankitkarki8088@gmail.com
+                </a>
               </p>
-              
-              <p className='text-gray-500 leading-relaxed text-wrap'>
-                Say hi at <span className="text-gray-900 font-normal underline">ankitkarki8088@gmail.com</span> 
-              </p>
-              
+
             </div>
           </div>
 
@@ -53,10 +52,10 @@ const About = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-black transition-all border border-gray-700 text-sm hover:bg-gray-50 hover:shadow-sm bg-white/80 backdrop-blur-sm relative group"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-black transition-all border-1 border-gray-700 text-sm hover:bg-gray-200 hover:shadow-sm bg-white/80 backdrop-blur-sm relative group"
             >
-              {/* <File className="w-5 h-5" /> */}
-              <span>Resume</span>
+              <LucideFile  className='w-4 h-4'/>
+              <span>Resume / CV</span>
 
               {/* Tooltip */}
               <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-gray-300 text-black text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
