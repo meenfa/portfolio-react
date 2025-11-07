@@ -5,6 +5,16 @@ const Projects = () => {
   const [filter, setFilter] = useState("All");
 
   const projects = [
+    // {
+    //   title: "Flatbook",
+    //   description: "Your AI research and study partner. Chat with documents, generate questions, and unlock insights from your PDFs instantly.",
+    //   link: "https://flatbookai.karkiankit.com.np/",
+    //   tags: ["React", "Django", "PostgreSQL", "RTK", "Tailwind"],
+    //   github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
+    //   image: "/image/padhai.png",
+    //   status: "ongoing",
+    //   project_type: "Frontend",
+    // },
     {
       title: "Digital Padhai",
       description: "An online learning platform for course enrollment and progress tracking, built with plans for forums and AI interview features.",
@@ -43,16 +53,16 @@ const Projects = () => {
       status: "ongoing",
       project_type: "Full Stack",
     },
-    {
-      title: "Bookmarker",
-      description: "Tool to save, organize, and manage bookmarks in one place with a clean UI.",
-      tags: ["React", "Tailwind CSS", "Vercel"],
-      github: "https://github.com/ankitkarki27/bookmarker",
-      link: "https://bookmarker-theta.vercel.app/",
-      image: "/image/project-bookmarker.jpg",
-      status: "completed",
-      project_type: "Frontend",
-    },
+    // {
+    //   title: "Bookmarker",
+    //   description: "Tool to save, organize, and manage bookmarks in one place with a clean UI.",
+    //   tags: ["React", "Tailwind CSS", "Vercel"],
+    //   github: "https://github.com/ankitkarki27/bookmarker",
+    //   link: "https://bookmarker-theta.vercel.app/",
+    //   image: "/image/project-bookmarker.jpg",
+    //   status: "completed",
+    //   project_type: "Frontend",
+    // },
     {
       title: "Donors Nepal",
       description: "Connects blood seekers with nearby donors using location-based matching.",
@@ -62,16 +72,16 @@ const Projects = () => {
       status: "completed",
       project_type: "Backend"
     },
-    {
-      title: "Uthaoo: Online Scrap Collection System",
-      description: "Lets users schedule and manage household scrap pickups through an online dashboard.",
-      tags: ["PHP", "MySQL"],
-      github: "https://github.com/ankitkarki27/uthaoo-Online-Scrap-Collection-System.git",
-      date: "2023",
-      image: "/image/project-uthaoo.jpg",
-      status: "completed",
-      project_type: "Backend"
-    }
+    // {
+    //   title: "Uthaoo: Online Scrap Collection System",
+    //   description: "Lets users schedule and manage household scrap pickups through an online dashboard.",
+    //   tags: ["PHP", "MySQL"],
+    //   github: "https://github.com/ankitkarki27/uthaoo-Online-Scrap-Collection-System.git",
+    //   date: "2023",
+    //   image: "/image/project-uthaoo.jpg",
+    //   status: "completed",
+    //   project_type: "Backend"
+    // }
   ];
 
   const filteredProjects = filter === "All"
@@ -80,7 +90,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-16 bg-white pt-0">
-      <div className="mx-auto px-2 max-w-3xl">
+      <div className="mx-auto px-2 max-w-2xl">
         <h2 className="text-xl font-bold text-black mb-4">Projects</h2>
         <div className="flex gap-1 mb-4">
           {["All", "Full Stack", "Frontend", "Backend"].map(type => (
@@ -88,8 +98,8 @@ const Projects = () => {
               key={type}
               onClick={() => setFilter(type)}
               className={`px-3 py-1 text-sm border rounded-lg cursor-pointer ${filter === type
-                  ? "border-white text-blue-600 bg-gray-200"
-                  : "border-gray-600 text-gray-400 hover:text-black"
+                ? "border-white text-blue-600 bg-gray-200"
+                : "border-gray-600 text-gray-400 hover:text-black"
                 }`}
             >
               {type}
@@ -153,11 +163,23 @@ const Projects = () => {
                       </a>
                     )}
                   </div>
+
                 </div>
+
               </div>
             </div>
           ))}
         </div>
+        {/* <p>For more projects visit my <a>github</a></p> */}
+        <p className='text-gray-600 leading-relaxed text-wrap'>
+          For more projects visit my{' '}
+          <a
+            href="https://github.com/ankitkarki27"
+            className="text-gray-900 font-medium border-b-2 border-black transition-all"
+          >
+            Github
+          </a>
+        </p>
       </div>
     </section>
   );

@@ -161,7 +161,7 @@ const PoetryPage = () => {
         <div className="min-h-screen bg-white text-gray-900">
             {/* Original Navbar */}
             <nav className="fixed top-0 w-full bg-white backdrop-blur-md z-50 h-16 ">
-                <div className="mx-auto px-4 max-w-3xl h-full">
+                <div className="mx-auto px-4 max-w-2xl h-full">
                     <div className="flex justify-between items-center h-full">
                         {/* Logo */}
                         <div
@@ -226,7 +226,7 @@ const PoetryPage = () => {
             </nav>
 
 
-            <div className="pt-20 px-4 pb-16 max-w-3xl mx-auto">
+            <div className="pt-20 px-4 pb-16 max-w-2xl mx-auto">
 
                 <div className="text-left mb-4 pb-4">
                     <h1 className="nepali text-4xl font-bold text-black mb-2 mt-4">मेरा कविताहरू</h1>
@@ -344,7 +344,7 @@ const PoetryPage = () => {
 
             {/* Footer */}
             <footer className="border-t border-gray-300 py-8 bg-gray-50">
-                <div className="max-w-3xl mx-auto px-4 text-center">
+                <div className="max-w-2xl mx-auto px-4 text-center">
                     <p className="text-gray-600 text-base">
                         © {new Date().getFullYear()} Ankit Karki. All rights reserved.
                     </p>

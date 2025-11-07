@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 h-16 border-b border-gray-200">
-        <div className="mx-auto px-2 max-w-3xl h-full">
+        <div className="mx-auto px-2 max-w-2xl h-full">
           <div className="flex justify-between items-center h-full">
             <Link to="/" className="flex items-center cursor-pointer">
               <span className="text-xl font-bold text-black">अंकित.</span>
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
       </div>
 
       <footer className="border-t border-gray-300 py-4 text-gray-500 bg-white">
-        <div className="mx-auto px-6 text-center text-xs max-w-3xl">
+        <div className="mx-auto px-6 text-center text-xs max-w-2xl">
           © {new Date().getFullYear()} Ankit Karki. All rights reserved.
         </div>
       </footer>

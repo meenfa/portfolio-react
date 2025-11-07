@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="border-t border-gray-200 py-6 text-black bg-white mt-12">
-      <div className="mx-auto px-6 max-w-3xl">
+      <div className="mx-auto px-6 max-w-2xl">
         <div className="text-center space-y-2">
           {/* Copyright */}
           <p className="text-base font-medium">
