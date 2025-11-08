@@ -7,7 +7,6 @@ import Experience from '../components/Experience';
 import Footer from '../components/Footer';
 import Blogs from '../components/Blogs';
 import { useNavigate } from 'react-router-dom';
-import About from '../components/About';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
