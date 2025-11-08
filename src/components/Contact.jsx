@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Instagram, YoutubeIcon, Send, SendIcon, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Instagram, YoutubeIcon, Send, SendIcon, Mail, Phone, File, Workflow } from 'lucide-react';
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -17,9 +17,9 @@ const Contact = () => {
         <h2 className='text-2xl mb-4 font-bold text-wrap text-left lg:text-left flex items-center gap-2'>
           Stay Connected.
           <span
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className='text-xs px-2 py-1 text-blue-600 font-normal border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-100 hover:text-blue-500 transition-colors self-start mt-1 '
+            className='flex items-center gap-1 text-xs px-3 py-1 text-blue-600 font-semibold border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-100 transition-all duration-200 animate-bounce'
           >
+            <span className='w-2 h-2 bg-blue-500 rounded-full inline-block '></span>
             Available for work
           </span>
         </h2>
@@ -39,7 +39,8 @@ const Contact = () => {
                 <span className="text-gray-900 text-sm">+977 9745941262</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className="text-gray-600 text-sm">Open to any opportunities</span>
+                <Workflow className="w-4 h-4 text-gray-900" />
+                <span className="text-gray-900 text-sm">Open to any opportunities</span>
               </div>
             </div>
 
@@ -58,7 +59,8 @@ const Contact = () => {
               </a>
             </div>
 
-            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-fit px-4 py-2 bg-white hover:bg-gray-200 border border-gray-600 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm font-normal transition-colors cursor-pointer">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-fit px-4 py-2 bg-white hover:bg-gray-200 border border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm font-normal transition-colors cursor-pointer">
+            
               Download my CV
             </a>
           </div>

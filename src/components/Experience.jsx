@@ -1,11 +1,13 @@
 import React from 'react';
 
 const Experience = () => {
-  const experience = [
+  const experience = [  
     {
-      role: "Backend Developer (Intern)",
+      role: "Backend Developer Intern",
       company: "NepBigyapan",
-      location: "Remote",
+      companyUrl: "https://www.nepbigyapan.com.np",
+      location: "Kathmandu, Nepal (Hybrid)",
+      image: "/image/nepbigyapan.png",
       period: "Dec 2024 – April 2025",
       description: [
         "Gained hands-on experience with Laravel and React",
@@ -19,19 +21,26 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-12 bg-white pt-0">
+    <section id="work" className="py-12 bg-white pt-0">
       <div className="mx-auto px-2 max-w-2xl">
         <h2 className="text-xl font-bold mb-2 text-black">Experience</h2>
         <div className="space-y-6">
           {experience.map((exp, index) => (
-            <div key={index} className="pl-4 border-l-2 border-gray-600 relative">
+            <div key={index} className="pl-0 relative">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                <h3 className="font-semibold text-black text-base">{exp.role}</h3>
-                <span className="text-gray-800 text-sm">{exp.period}</span>
+                <h3 className="font-normal text-black text-base">{exp.role}</h3>
+                <span className="text-gray-500 text-sm">{exp.period}</span>
               </div>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                <p className="text-gray-900 text-base mb-0">{exp.company}</p>
-                <span className="text-gray-800 text-sm">{exp.location}</span>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                 <a 
+                    href={exp.companyUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm text-gray-500 hover:underline hover:text-gray-700 transition-colors"
+                  >
+                     {exp.company} ↗
+                  </a>
+                <span className="text-gray-500 text-sm">{exp.location}</span>
               </div>
               <ul className="mt-4 text-sm space-y-2 list-disc pl-5 text-gray-900 mb-2">
                 {exp.description.map((item, i) => (
