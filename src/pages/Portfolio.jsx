@@ -85,7 +85,7 @@ const Portfolio = () => {
 
   return (
   <div className="min-h-screen bg-white text-gray-900">
-    <nav className="fixed top-0 w-full bg-white backdrop-blur-md z-50 h-16">
+    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-lg z-50 h-20">
       <div className="mx-auto px-2 sm:px-2 max-w-2xl h-full">
         <div className="flex justify-between items-center h-full">
           {/* Logo */}
