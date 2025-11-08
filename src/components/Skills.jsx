@@ -2,26 +2,28 @@ import React from 'react';
 
 const Skills = () => {
   const skills = [
-    "Python", "Django", "Laravel", "React", "PostgreSQL",
-    "MySQL", "Postman", "Github"
+    "Python", "Django", "Laravel", "PHP", "RESTful APIs",
+    "React", "JavaScript", "GitHub", "Docker",
+    "PostgreSQL", "MySQL", "Redis",
+    "Postman", "Figma", "Canva"
   ];
 
   return (
     <section id="skills" className="py-12 bg-white pt-0">
       <div className="mx-auto px-2 max-w-2xl">
         <h2 className="text-xl font-bold mb-4 text-black">Skills</h2>
-        <div className="flex flex-wrap gap-2">
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="px-2 py-1 rounded-lg border border-gray-600 text-gray-900 text-sm"
-            
-              // className="px-3 py-1 rounded-lg border border-gray-600 bg-gray-800 text-gray-200 text-sm cursor-pointer transition-colors"
+              className="px-3 py-2 rounded border border-gray-400 text-gray-800 text-sm text-center cursor-pointer"
             >
               {skill}
             </span>
           ))}
         </div>
+
+
       </div>
     </section>
   );

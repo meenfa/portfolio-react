@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Main from './pages/Portfolio';
 import PoetryPage from './components/PoetryPage';
 import './App.css';
-// import Portfolio from './pages/port';
+import Portfolio from './pages/port';
 
 const App = () => {
   return (
