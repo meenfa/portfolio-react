@@ -157,13 +157,11 @@ const Portfolio = () => {
 
     <div className="pt-16">
       <Hero />
-
       <Experience />
       <Skills />
       <Projects />
       {/* <About /> */}
       <Blogs />
-
       <Contact />
       <Footer />
     </div>
