@@ -92,7 +92,7 @@ const Portfolio = () => {
             className="flex items-center cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <span className="text-xl font-normal text-black">Ankit Karki</span>
+            <span className="text-xl font-bold text-black">Ankit Karki</span>
           </div>
 
           {/* Desktop Menu */}

@@ -28,7 +28,7 @@ const Experience = () => {
           {experience.map((exp, index) => (
             <div key={index} className="pl-0 relative">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                <h3 className="font-normal text-black text-base">{exp.role}</h3>
+                <h3 className="font-medium text-black text-base">{exp.role}</h3>
                 <span className="text-gray-500 text-sm">{exp.period}</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
@@ -36,13 +36,13 @@ const Experience = () => {
                     href={exp.companyUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-sm text-gray-500 hover:underline hover:text-gray-700 transition-colors"
+                    className="text-base text-gray-500 hover:underline hover:text-gray-800 transition-colors"
                   >
                      {exp.company} ↗
                   </a>
                 <span className="text-gray-500 text-sm">{exp.location}</span>
               </div>
-              <ul className="mt-4 text-sm space-y-2 list-disc pl-5 text-gray-900 mb-2">
+              <ul className="mt-2 text-base space-y-2 list-disc pl-5 text-gray-900 mb-2">
                 {exp.description.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}

@@ -18,7 +18,7 @@ const Hero = () => {
             </div>
 
             <div className="w-full lg:w-4/3 mb-2 space-y-2 text-black order-last lg:order-first">
-              <h1 className='text-2xl font-medium text-wrap text-left lg:text-left flex items-center gap-2'>
+              <h1 className='text-2xl font-bold text-wrap text-left lg:text-left flex items-center gap-2'>
                 Hi, I'm Ankit👋
                 <span
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -28,11 +28,11 @@ const Hero = () => {
                   Available for work
                 </span>
               </h1>
-              <p className='text-gray-500 text-wrap leading-normal text-sm mt-4'>
-                I'm a passionate <span className="text-black text-base font-medium">Full Stack Developer</span> and occasional
-                {' '}<Link to="/poetry" className="text-gray-500 font-medium hover:text-black hover:border-b-2 hover:border-black cursor-pointer">
+              <p className='text-gray-500 text-wrap leading-normal text-base mt-4'>
+                I'm a passionate <span className="text-black text-base font-bold">Full Stack Developer</span> and occasional
+                {' '}<Link to="/poetry" className="text-gray-500 font-bold hover:text-black hover:border-b-2 hover:border-black cursor-pointer">
                   poet </Link>{' '}
-                from Nepal 🇳🇵. I develop modern web applications using <span className="text-gray-900 font-medium">Django, React.js, Python,</span> and <span className="text-gray-900 font-medium">Laravel</span>.
+                from Nepal 🇳🇵. I develop modern web applications using <span className="text-gray-900 font-bold">Django, React.js, Python,</span> and <span className="text-gray-900 font-bold">Laravel</span>.
               </p>
 
               <p className='text-gray-500 leading-relaxed text-sm'>
