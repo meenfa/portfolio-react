@@ -97,7 +97,8 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-auto border border-gray-800 rounded-lg object-cover hover:scale-105 transition-transform duration-200 cursor-pointer"
+                     
+                    className="w-full h-auto border border-gray-800 rounded-lg object-cover opacity-95 hover:opacity-100 transition-opacity duration-200 cursor-pointer"
                     onClick={() => window.open(project.github, "_blank")}
                   />
                 </div>
@@ -111,13 +112,13 @@ const Projects = () => {
                     </span>
                   </div>
 
-                  <p className="text-gray-900 mb-2 text-sm leading-relaxed">
+                  <p className="text-gray-900 mb-2 text-base leading-relaxed">
                     {project.description}
                   </p>
 
                   <div className="mb-3">
                     {project.tags.map((tag, i) => (
-                      <span key={i} className="text-sm text-gray-500">
+                      <span key={i} className="text-base text-gray-500">
                         {tag}{i !== project.tags.length - 1 && ' / '}
                       </span>
                     ))}

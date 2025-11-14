@@ -30,17 +30,17 @@ const Contact = () => {
               {/* Email with copy */}
               <div className="flex items-center space-x-3 cursor-pointer" onClick={copyEmail}>
                 <Mail className="w-4 h-4 text-gray-900" />
-                <span className="text-gray-900 text-sm">{email}</span>
-                {copied && <span className="text-blue-500 text-sm ml-2">Copied!</span>}
+                <span className="text-gray-900 text-base">{email}</span>
+                {copied && <span className="text-blue-500 text-base ml-2">Copied!</span>}
               </div>
 
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-gray-900" />
-                <span className="text-gray-900 text-sm">+977 9745941262</span>
+                <span className="text-gray-900 text-base">+977 9745941262</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Workflow className="w-4 h-4 text-gray-900" />
-                <span className="text-gray-900 text-sm">Open to any opportunities</span>
+                <span className="text-gray-900 text-base">Open to any opportunities</span>
               </div>
             </div>
 
@@ -59,9 +59,8 @@ const Contact = () => {
               </a>
             </div>
 
-            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-fit px-4 py-2 bg-white hover:bg-gray-200 border border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm font-normal transition-colors cursor-pointer">
-            
-              Download my CV
+            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-fit px-4 py-2 bg-white hover:bg-gray-200 border border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-normal transition-colors cursor-pointer">
+                          Download my CV
             </a>
           </div>
 
@@ -74,17 +73,17 @@ const Contact = () => {
             <form action="https://formspree.io/f/xdkzgjjl" method="POST" className="space-y-3">
               <div>
                 <label htmlFor="name" className="block text-base font-medium text-gray-900 mb-1">Name</label>
-                <input type="text" id="name" name="name" required className="w-full px-3 py-2 border-1 border-gray-900 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm" placeholder="Your Name" />
+                <input type="text" id="name" name="name" required className="w-full px-3 py-2 border-1 border-gray-900 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" placeholder="Your Name" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-base font-medium text-gray-900 mb-1">Email</label>
-                <input type="email" id="email" name="email" required className="w-full px-3 py-2 border-1 border-gray-900 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm" placeholder="yourname@gmail.com" />
+                <input type="email" id="email" name="email" required className="w-full px-3 py-2 border-1 border-gray-900 rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" placeholder="yourname@gmail.com" />
               </div>
               <div>
                 <label htmlFor="project" className="block text-base font-medium text-gray-900 mb-1">Message</label>
-                <textarea id="project" name="project" rows="4" required className="w-full px-3 py-2 border-1 border-gray-900 rounded rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm" placeholder="Describe your project idea..."></textarea>
+                <textarea id="project" name="project" rows="4" required className="w-full px-3 py-2 border-1 border-gray-900 rounded rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" placeholder="Describe your project idea..."></textarea>
               </div>
-              <button type="submit" className="px-4 py-2 bg-gray-900 hover:bg-gray-950 border-1 border-gray-300 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm font-normal transition-colors cursor-pointer">
+              <button type="submit" className="px-4 py-2 bg-gray-900 hover:bg-gray-950 border-1 border-gray-300 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-normal transition-colors cursor-pointer">
                 Send Message <SendIcon className="w-4 h-4 inline-block mr-2" />
               </button>
             </form>
