@@ -11,7 +11,7 @@ const UpcomingProjects = () => {
         //   description: "An online learning platform for course enrollment and progress tracking, built with plans for forums and AI interview features.",
         //   tags: ["React", "Django", "PostgreSQL", "Tailwind"],
         //   github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
-        //   image: "/image/project/6.png",
+        //   image: "/image/6.png",
         //   status: "ongoing",
         //   project_type: "Full Stack",
         // },
@@ -20,7 +20,7 @@ const UpcomingProjects = () => {
             description: "Currently developing a full-stack platform that connects creators and collaboration. This project involves building the entire ecosystem—from user profiles and project sharing to real-time communication features.", tags: ["Django", "Tailwind", "In Development"],
             //   github: "https://github.com/ankitkarki27/",
             link: "https://conneqtly.me/",
-            image: "/image/project/7.png",
+            image: "/image/7.png",
             status: "ongoing",
             project_type: "Full Stack",
         },
@@ -112,7 +112,7 @@ const UpcomingProjects = () => {
                             href="https://github.com/ankitkarki27"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-700 font-normal border-b-2 border-gray-500 hover:text-gray-900 hover:border-gray-900 transition-all duration-200 inline-flex items-center gap-1"
+                            className="text-gray-800 font-normal border-b-2 border-gray-800 hover:text-gray-900 hover:border-gray-900 transition-all duration-200 inline-flex items-center gap-1"
                         >
                             <Github className="w-4 h-4" />
                             ankitkarki27
