@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Github, ExternalLink, Link } from 'lucide-react';
-import UpcomingProjects from './UpcomingProjects';
+// import UpcomingProjects from './UpcomingProjects';
 
 
 const Projects = () => {
@@ -12,7 +12,7 @@ const Projects = () => {
       description: "An online learning platform for course enrollment and progress tracking, built with plans for forums and AI interview features.",
       tags: ["React", "Django", "PostgreSQL", "Tailwind"],
       github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
-      image: "/image/project/6.png",
+      image: "/image/6.png",
       status: "ongoing",
       project_type: "Full Stack",
     },
@@ -22,7 +22,7 @@ const Projects = () => {
       tags: ["React", "Laravel", "MySQL", "Tailwind"],
       github: "https://github.com/ankitkarki27/Construction-backend",
       link: "https://rainbowconstructions.vercel.app/",
-       image: "/image/project/5.png",
+       image: "/image/5.png",
       status: "completed",
       project_type: "Full Stack",
     },
@@ -31,7 +31,7 @@ const Projects = () => {
       description: "Job portal where companies can post openings and users can browse and apply with ease.",
       tags: ["Laravel", "MySQL", "Tailwind CSS"],
       github: "https://github.com/ankitkarki27/job-portal",
-       image: "/image/project/4.png",
+       image: "/image/4.png",
       status: "completed",
       project_type: "Full Stack",
     },
@@ -41,7 +41,7 @@ const Projects = () => {
       tags: ["Django", "Tailwind CSS", "PostgreSQL"],
       github: "https://github.com/ankitkarki27/dj-ecomstore.git",
       link: "https://ankitkarki27.pythonanywhere.com/",
-      image: "/image/project/2.png",
+      image: "/image/2.png",
       status: "ongoing",
       project_type: "Full Stack",
     },
@@ -50,7 +50,7 @@ const Projects = () => {
     //   description: "Connects blood seekers with nearby donors using location-based matching.",
     //   tags: ["PHP", "MySQL"],
     //   github: "https://github.com/ankitkarki27/Donors-Nepal.git",
-    //   image: "/image/project/3.png",
+    //   image: "/image/3.png",
     //   status: "completed",
     //   project_type: "Backend"
     // },
