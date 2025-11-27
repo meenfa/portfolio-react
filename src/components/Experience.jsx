@@ -6,7 +6,7 @@ const Experience = () => {
       role: "Backend Developer Intern",
       company: "NepBigyapan",
       companyUrl: "https://www.nepbigyapan.com.np",
-      location: "Kathmandu, Nepal (Hybrid)",
+      location: "Kathmandu, Nepal",
       image: "/image/nepbigyapan.png",
       period: "Dec 2024 – April 2025",
       description: [
@@ -42,7 +42,7 @@ const Experience = () => {
                   </a>
                 <span className="text-gray-500 text-sm">{exp.location}</span>
               </div>
-              <ul className="mt-2 text-base space-y-2 list-disc pl-5 text-gray-900 mb-2">
+              <ul className="mt-2 text-sm space-y-2 list-disc pl-5 text-gray-900 mb-2">
                 {exp.description.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
