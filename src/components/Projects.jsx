@@ -1,26 +1,18 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, Link } from 'lucide-react';
+import UpcomingProjects from './UpcomingProjects';
+
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
   const projects = [
-    // {
-    //   title: "Flatbook",
-    //   description: "Your AI research and study partner. Chat with documents, generate questions, and unlock insights from your PDFs instantly.",
-    //   link: "https://flatbookai.karkiankit.com.np/",
-    //   tags: ["React", "Django", "PostgreSQL", "RTK", "Tailwind"],
-    //   github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
-    //   image: "/image/padhai.png",
-    //   status: "ongoing",
-    //   project_type: "Frontend",
-    // },
     {
       title: "Digital Padhai",
       description: "An online learning platform for course enrollment and progress tracking, built with plans for forums and AI interview features.",
-      tags: ["React", "Django", "PostgreSQL", "RTK", "Tailwind"],
+      tags: ["React", "Django", "PostgreSQL", "Tailwind"],
       github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
-      image: "/image/padhai.png",
+      image: "/image/project/6.png",
       status: "ongoing",
       project_type: "Full Stack",
     },
@@ -30,7 +22,7 @@ const Projects = () => {
       tags: ["React", "Laravel", "MySQL", "Tailwind"],
       github: "https://github.com/ankitkarki27/Construction-backend",
       link: "https://rainbowconstructions.vercel.app/",
-      image: "/image/construction-company.png",
+       image: "/image/project/5.png",
       status: "completed",
       project_type: "Full Stack",
     },
@@ -39,7 +31,7 @@ const Projects = () => {
       description: "Job portal where companies can post openings and users can browse and apply with ease.",
       tags: ["Laravel", "MySQL", "Tailwind CSS"],
       github: "https://github.com/ankitkarki27/job-portal",
-      image: "/image/project-jobsnepal.png",
+       image: "/image/project/4.png",
       status: "completed",
       project_type: "Full Stack",
     },
@@ -49,21 +41,19 @@ const Projects = () => {
       tags: ["Django", "Tailwind CSS", "PostgreSQL"],
       github: "https://github.com/ankitkarki27/dj-ecomstore.git",
       link: "https://ankitkarki27.pythonanywhere.com/",
-      image: "/image/project-trendy.png",
+      image: "/image/project/2.png",
       status: "ongoing",
       project_type: "Full Stack",
     },
-    
-    {
-      title: "Donors Nepal",
-      description: "Connects blood seekers with nearby donors using location-based matching.",
-      tags: ["PHP", "MySQL"],
-      github: "https://github.com/ankitkarki27/Donors-Nepal.git",
-      image: "/image/project-dn3.jpg",
-      status: "completed",
-      project_type: "Backend"
-    },
-
+    // {
+    //   title: "Donors Nepal",
+    //   description: "Connects blood seekers with nearby donors using location-based matching.",
+    //   tags: ["PHP", "MySQL"],
+    //   github: "https://github.com/ankitkarki27/Donors-Nepal.git",
+    //   image: "/image/project/3.png",
+    //   status: "completed",
+    //   project_type: "Backend"
+    // },
   ];
 
   const filteredProjects = filter === "All"
@@ -71,7 +61,7 @@ const Projects = () => {
     : projects.filter(p => p.project_type === filter);
 
   return (
-    <section id="projects" className="py-16 bg-white pt-0">
+    <section id="projects" className="py-8 bg-white pt-0">
       <div className="mx-auto px-2 max-w-2xl">
         <h2 className="text-xl font-bold text-black mb-4">Featured Projects</h2>
         <div className="flex gap-1 mb-4">
@@ -79,9 +69,9 @@ const Projects = () => {
             <button
               key={type}
               onClick={() => setFilter(type)}
-              className={`px-3 py-1 text-sm rounded-lg cursor-pointer ${filter === type
-                ? " text-white bg-gray-900"
-                : " text-gray-400 hover:text-black"
+              className={`px-3 py-1 text-sm rounded-lg cursor-pointer transition-colors duration-200 ${filter === type
+                  ? "text-white bg-gray-900"
+                  : "text-gray-400 hover:text-black bg-gray-200 hover:bg-gray-100"
                 }`}
             >
               {type}
@@ -89,80 +79,91 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="space-y-8 mt-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((project, index) => (
-            <div key={index} className="border-b border-gray-400 pb-6 last:border-0">
-              <div className="flex flex-col lg:flex-row gap-6">
-                <div className="w-full lg:w-5/12">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                     
-                    className="w-full h-auto border border-gray-800 rounded-lg object-cover opacity-95 hover:opacity-100 transition-opacity duration-200 cursor-pointer"
-                    onClick={() => window.open(project.github, "_blank")}
-                  />
+            <div
+              key={index}
+              className="border-b border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-400 bg-white"
+            >
+              <div className="relative group">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover cursor-pointer border-y-stone-950"
+                  onClick={() => project.link ? window.open(project.link, "_blank") : window.open(project.github, "_blank")}
+                />
+                <div className="absolute top-1 left-2">
+                  <span
+                    className={`text-xs px-2 py-1 border rounded-lg ${project.status === "ongoing"
+                        ? "bg-yellow-200 text-black border-b border-gray-200"
+                        : "bg-green-200 text-black border-b border-green-300"
+                      }`}
+                  >
+                    {project.status === "ongoing" ? "Building" : "Completed"}
+                  </span>
                 </div>
+              </div>
 
-                <div className="w-full lg:w-7/12">
-                  <div className="flex items-center gap-2 mb-2">
-                    <h3 className="text-xl font-bold text-black">{project.title}</h3>
-                    <span className={`text-xs px-2 py-1 border rounded-lg cursor-pointer ${project.status === "ongoing" ? "text-yellow-800" : "text-green-400"
-                      }`}>
-                      {project.status === "ongoing" ? "Ongoing" : "Completed"}
-                    </span>
-                  </div>
-
-                  <p className="text-gray-900 mb-2 text-base leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="mb-3">
-                    {project.tags.map((tag, i) => (
-                      <span key={i} className="text-base text-gray-500">
-                        {tag}{i !== project.tags.length - 1 && ' / '}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-4">
+              <div className="p-2">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-base font-bold text-black">{project.title}</h3>
+                  <div className="flex gap-4 pt-2">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sm text-gray-900 hover:text-black"
+                      className="flex items-center gap-2 text-sm text-gray-700 hover:text-black transition-colors duration-200"
                     >
                       <Github className="w-4 h-4" />
-                      <span>Code</span>
                     </a>
                     {project.link && (
                       <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-gray-900 hover:text-blue-600"
+                        className="flex items-center gap-2 text-sm text-gray-800 hover:text-blue-800 transition-colors duration-200"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        <span>Live</span>
                       </a>
                     )}
                   </div>
-
                 </div>
 
+                <p className="text-gray-700 text-sm mb-3 line-clamp-4 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="mb-2 flex flex-wrap gap-1">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>  
               </div>
             </div>
           ))}
         </div>
-        {/* <p>For more projects visit my <a>github</a></p> */}
-        <p className='text-gray-600 text-sm text-wrap'>
-          For more projects visit my{' '}
-          <a
-            href="https://github.com/ankitkarki27"
-            className="text-gray-900 font-medium border-b-2 border-black transition-all"
-          >
-            Github
-          </a>
-        </p>
+
+       {/* <div className='mt-8'> 
+        <UpcomingProjects />
+        </div> */}
+            {/* <div className="mt-8 text-center">
+          <p className="text-gray-600 text-base">
+            See all projects at{' '}
+            <a
+              href="https://github.com/ankitkarki27"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 font-medium border-b-2 border-black hover:text-black hover:border-blue-600 transition-all duration-200"
+            >
+              
+              My Github
+            </a>
+          </p>
+        </div> */}
       </div>
     </section>
   );

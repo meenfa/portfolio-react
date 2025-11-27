@@ -59,8 +59,8 @@ const Contact = () => {
               </a>
             </div>
 
-            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-fit px-4 py-2 bg-white hover:bg-gray-200 border border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-normal transition-colors cursor-pointer">
-                          Download my CV
+            <a href="https://drive.google.com/file/d/1j-jYno5eQWka3AXmBGFwROkHjfpukQiF/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-fit px-4 py-2 bg-white hover:bg-gray-200 border-b border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-normal transition-colors cursor-pointer">
+              Download my CV
             </a>
           </div>
 
@@ -81,9 +81,9 @@ const Contact = () => {
               </div>
               <div>
                 <label htmlFor="project" className="block text-base font-medium text-gray-900 mb-1">Message</label>
-                <textarea id="project" name="project" rows="4" required className="w-full px-3 py-2 border-1 border-gray-900 rounded rounded text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" placeholder="Describe your project idea..."></textarea>
+                <textarea id="project" name="project" rows="4" required className="w-full px-3 py-2 border-1 border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" placeholder="Describe your project idea..."></textarea>
               </div>
-              <button type="submit" className="px-4 py-2 bg-gray-900 hover:bg-gray-950 border-1 border-gray-300 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-normal transition-colors cursor-pointer">
+              <button type="submit" className="px-4 py-2 bg-gray-900 hover:bg-gray-950 border-b border-gray-300 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-normal transition-colors cursor-pointer">
                 Send Message <SendIcon className="w-4 h-4 inline-block mr-2" />
               </button>
             </form>
