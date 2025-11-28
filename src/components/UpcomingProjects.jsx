@@ -20,7 +20,7 @@ const UpcomingProjects = () => {
             description: "Currently developing a full-stack platform that connects creators and collaboration. This project involves building the entire ecosystem—from user profiles and project sharing to real-time communication features.", tags: ["Django", "Tailwind", "In Development"],
             //   github: "https://github.com/ankitkarki27/",
             link: "https://conneqtly.me/",
-            image: "/image/7.png",
+           image: "/image/project/7.png",
             status: "ongoing",
             project_type: "Full Stack",
         },

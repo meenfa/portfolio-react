@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-public
+
 
 
 # Editor directories and files
@@ -24,4 +24,3 @@ public
 *.njsproj
 *.sln
 *.sw?
-/public/
