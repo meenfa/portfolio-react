@@ -36,13 +36,13 @@ const Projects = () => {
       project_type: "Full Stack",
     },
     {
-      title: "Trendy: E-commerce App",
+      title: "TrendyStore",
       description: "A Shopping platform with product browsing, cart, and checkout functionality.",
       tags: ["Django", "Tailwind CSS", "PostgreSQL"],
       github: "https://github.com/ankitkarki27/dj-ecomstore.git",
       link: "https://ankitkarki27.pythonanywhere.com/",
        image: "/image/project/2.png",
-      status: "ongoing",
+      status: "completed",
       project_type: "Full Stack",
     },
     // {
@@ -63,7 +63,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-8 bg-white pt-0">
       <div className="mx-auto px-2 max-w-2xl">
-        <h2 className="text-xl font-bold text-black mb-4">Featured Projects</h2>
+        <h2 className="text-xl font-bold text-black mb-4">Projects</h2>
         <div className="flex gap-1 mb-4">
           {["All", "Full Stack", "Frontend", "Backend"].map(type => (
             <button
