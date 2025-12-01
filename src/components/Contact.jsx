@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Github, Linkedin, Instagram, YoutubeIcon, Send, SendIcon, Mail, Phone, File, Workflow } from 'lucide-react';
-
+import { IoDocument } from "react-icons/io5";
 const Contact = () => {
   const [copied, setCopied] = useState(false);
   const email = "ankitkarki8088@gmail.com";
@@ -8,7 +8,7 @@ const Contact = () => {
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // reset after 2s
+    setTimeout(() => setCopied(false), 2000); 
   };
 
   return (
@@ -17,21 +17,20 @@ const Contact = () => {
         <h2 className='text-2xl mb-4 font-bold text-wrap text-left lg:text-left flex items-center gap-2'>
           Stay Connected.
           <span
-            className='flex items-center gap-1 text-xs px-3 py-1 text-blue-600 font-semibold border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-gray-100 transition-all duration-200 animate-bounce'
-          >
-            <span className='w-2 h-2 bg-blue-500 rounded-full inline-block '></span>
-            Available for work
+            className='flex items-center gap-1 text-xs px-3 py-1 text-gray-900 font-medium border-0 border-green-600 rounded-lg cursor-pointer bg-green-100 hover:bg-green-200 transition-all duration-200 animate-bounce'
+                >
+                  <span className='w-2 h-2 bg-green-500 rounded-full inline-block'></span>
+                  Available for work
           </span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="space-y-3">
-              {/* Email with copy */}
               <div className="flex items-center space-x-3 cursor-pointer" onClick={copyEmail}>
                 <Mail className="w-4 h-4 text-gray-900" />
                 <span className="text-gray-900 text-base">{email}</span>
-                {copied && <span className="text-blue-500 text-base ml-2">Copied!</span>}
+                {copied && <span className="text-blue-500 text-base ml-2">copied!</span>}
               </div>
 
               <div className="flex items-center space-x-3">
@@ -59,17 +58,15 @@ const Contact = () => {
               </a>
             </div>
 
-            <a href="https://drive.google.com/file/d/1j-jYno5eQWka3AXmBGFwROkHjfpukQiF/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-fit px-4 py-2 bg-white hover:bg-gray-200 border-b border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-normal transition-colors cursor-pointer">
+            <a href="https://drive.google.com/file/d/1ElmTWv9ndLmuW929sKnFkuklIZ8X4HWy/view?usp=sharing" target="_blank" rel="noopener noreferrer" 
+            className="flex items-center justify-center w-fit space-x-2 px-3 py-1.5 font-semibold hover:bg-gray-50 hover:shadow-md bg-white/80 backdrop-blur-sm border border-gray-300 shadow-sm rounded-lg text-black focus:outline-none text-sm cursor-pointer"> 
+              <IoDocument className="w-4 h-4 inline-block mr-2" />
               Download my CV
             </a>
           </div>
 
           {/* Contact Form */}
           <div className="p-0 rounded">
-            {/* <h3 className="font-semibold text-gray-900 text-base mb-3">
-              Send me a message.
-              <Send className="w-4 h-4 inline-block mr-4" />
-            </h3> */}
             <form action="https://formspree.io/f/xdkzgjjl" method="POST" className="space-y-3">
               <div>
                 <label htmlFor="name" className="block text-base font-medium text-gray-900 mb-1">Name</label>
@@ -83,8 +80,10 @@ const Contact = () => {
                 <label htmlFor="project" className="block text-base font-medium text-gray-900 mb-1">Message</label>
                 <textarea id="project" name="project" rows="4" required className="w-full px-3 py-2 border-1 border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" placeholder="Describe your project idea..."></textarea>
               </div>
-              <button type="submit" className="px-4 py-2 bg-gray-900 hover:bg-gray-950 border-b border-gray-300 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-gray-400 text-base font-normal transition-colors cursor-pointer">
-                Send Message <SendIcon className="w-4 h-4 inline-block mr-2" />
+              <button type="submit" 
+              className="flex items-center justify-center w-fit space-x-2 px-3 py-1.5 font-semibold hover:bg-gray-900 hover:shadow-md bg-gray-800 backdrop-blur-sm border border-gray-300 shadow-sm rounded-lg text-white focus:outline-none text-sm cursor-pointer">
+             
+               Send Message <SendIcon className="w-4 h-4 inline-block mr-2" />
               </button>
             </form>
           </div>
