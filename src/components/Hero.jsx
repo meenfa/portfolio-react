@@ -95,10 +95,10 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://t.me/ankitdotnp"
+               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               target="_blank"
               rel="noopener noreferrer"
-           className="flex items-center space-x-2 px-3 py-1.5 rounded-lg text-white transition-all border border-gray-700 bg-black hover:bg-gray-900 hover:shadow-md backdrop-blur-sm text-sm"
+           className="flex items-center space-x-2 px-3 py-1.5 rounded-lg text-white transition-all border border-gray-700 bg-black hover:bg-gray-900 hover:shadow-md backdrop-blur-sm text-sm cursor-pointer"
             >
               <RiTelegram2Fill className='w-4 h-4' />
               <span>Get in touch</span>

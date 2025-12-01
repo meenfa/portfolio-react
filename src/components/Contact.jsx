@@ -81,9 +81,10 @@ const Contact = () => {
                 <textarea id="project" name="project" rows="4" required className="w-full px-3 py-2 border-1 border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" placeholder="Describe your project idea..."></textarea>
               </div>
               <button type="submit" 
-              className="flex items-center justify-center w-fit space-x-2 px-3 py-1.5 font-semibold hover:bg-gray-900 hover:shadow-md bg-gray-800 backdrop-blur-sm border border-gray-300 shadow-sm rounded-lg text-white focus:outline-none text-sm cursor-pointer">
+              className="flex items-center justify-center w-fit space-x-2 px-3 py-1.5 font-semibold bg-black hover:bg-gray-900 hover:shadow-md border border-gray-300 shadow-sm rounded-lg text-white focus:outline-none text-sm cursor-pointer">
              
-               Send Message <SendIcon className="w-4 h-4 inline-block mr-2" />
+              <SendIcon className="w-4 h-4 inline-block mr-2" />
+               Send Message 
               </button>
             </form>
           </div>
