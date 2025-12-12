@@ -18,10 +18,10 @@ const Experience = () => {
   ];
 
   return (
-    <section id="work" className="py-10 bg-white pt-0 ">
+    <section className="py-10 bg-white pt-0 ">
       <div className="mx-auto px-3 max-w-2xl">
         
-        <h2 className="text-xl font-bold mb-4 text-black">Experience</h2>
+        <h2 className="text-2xl font-bold mb-4 text-black">Experience</h2>
 
         <div className="space-y-8">
           {experience.map((exp, index) => (
