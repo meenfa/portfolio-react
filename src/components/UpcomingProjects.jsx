@@ -18,7 +18,7 @@ const UpcomingProjects = () => {
         {
             title: "conneqtly.me",
             description: "Currently developing a full-stack platform that connects creators and collaboration. This project involves building the entire ecosystem—from user profiles and project sharing to real-time communication features.", 
-            tags: ["Django", "Tailwind", "In Development"],
+            tags: ["Django", "Tailwind", "In Progress"],
             //   github: "https://github.com/ankitkarki27/",
             link: "https://conneqtly.me/",
            image: "/image/project/7.png",
@@ -41,9 +41,9 @@ const UpcomingProjects = () => {
         : projects.filter(p => p.project_type === filter);
 
     return (
-        <section id="projects" className="py-8 bg-white pt-0">
+        <section className="py-8 bg-white pt-0">
             <div className="mx-auto px-2 max-w-2xl">
-                <h2 className="text-xl font-bold text-black mb-2">Upcoming Projects</h2>
+                <h2 className="text-2xl font-bold text-black mb-2">Upcoming Projects</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {projects.map((project, index) => (
@@ -116,14 +116,26 @@ const UpcomingProjects = () => {
                 </div>
                 
                 <div className="mt-4 text-center">
+
                     <p className="text-gray-600 text-base">
                         View all projects at{' '}
                         <a
                             href="https://github.com/ankitkarki27"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-800 font-normal border-b-2 border-gray-800 hover:text-gray-900 hover:border-gray-900 transition-all duration-200 inline-flex items-center gap-1"
-                        >
+                            className="
+                                text-gray-800 font-normal text-xs
+                                border border-gray-800/60 border-dashed 
+                                bg-white/20 backdrop-blur-sm
+                                rounded-lg px-3 py-1.5 
+                                shadow-[inset_0_1px_3px_rgba(0,0,0,0.12)]
+                                hover:shadow-[inset_0_0_12px_2px_rgba(0,0,0,0.24)]
+                                hover:bg-white/30 
+                                hover:text-gray-900
+                                transition-all duration-200 
+                                inline-flex items-center gap-1
+                                "
+                                >
                             <Github className="w-4 h-4" />
                             ankitkarki27
                         </a>

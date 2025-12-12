@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 import { Github, ExternalLink, Link } from 'lucide-react';
-// import UpcomingProjects from './UpcomingProjects';
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
   const projects = [
+    {
+      "title": "Postbox",
+      "description": "A real-time social network and chat app with instant messaging and secure Google OAuth login.",
+      "tags": ["Django", "Django Channels", "Google OAuth", "WebSockets"],
+      "github": "https://github.com/ankitkarki27/Postbox-social-network-chatapp",
+      "link": "",
+      "image": "/image/project/9.png",
+      "status": "completed",
+      "project_type": "Full Stack"
+    },
     {
       title: "Digital Padhai",
       description: "An online learning platform for course enrollment and progress tracking, built with plans for forums and AI interview features.",
@@ -22,7 +33,7 @@ const Projects = () => {
       tags: ["React", "Laravel", "MySQL", "Tailwind"],
       github: "https://github.com/ankitkarki27/Construction-backend",
       link: "https://rainbowconstructions.vercel.app/",
-       image: "/image/project/5.png",
+      image: "/image/project/5.png",
       status: "completed",
       project_type: "Full Stack",
     },
@@ -31,7 +42,7 @@ const Projects = () => {
       description: "Job portal where companies can post openings and users can browse and apply with ease.",
       tags: ["Laravel", "MySQL", "Tailwind CSS"],
       github: "https://github.com/ankitkarki27/job-portal",
-        image: "/image/project/4.png",
+      image: "/image/project/4.png",
       status: "completed",
       project_type: "Full Stack",
     },
@@ -41,10 +52,12 @@ const Projects = () => {
       tags: ["Django", "Tailwind CSS", "PostgreSQL"],
       github: "https://github.com/ankitkarki27/dj-ecomstore.git",
       link: "https://ankitkarki27.pythonanywhere.com/",
-       image: "/image/project/2.png",
+      image: "/image/project/2.png",
       status: "completed",
       project_type: "Full Stack",
     },
+    
+
     // {
     //   title: "Donors Nepal",
     //   description: "Connects blood seekers with nearby donors using location-based matching.",
@@ -70,8 +83,8 @@ const Projects = () => {
               key={type}
               onClick={() => setFilter(type)}
               className={`px-3 py-1 text-sm rounded-lg cursor-pointer transition-colors duration-200 ${filter === type
-                  ? "text-white bg-gray-900"
-                  : "text-gray-400 hover:text-black bg-gray-200 hover:bg-gray-100"
+                ? "text-white bg-gray-900"
+                : "text-gray-400 hover:text-black bg-gray-200 hover:bg-gray-100"
                 }`}
             >
               {type}
@@ -95,8 +108,8 @@ const Projects = () => {
                 <div className="absolute top-1 left-2">
                   <span
                     className={`text-xs px-2 py-1 border rounded-lg ${project.status === "ongoing"
-                        ? "bg-yellow-200 text-black border-b border-gray-200"
-                        : "bg-green-200 text-black border-b border-green-300"
+                      ? "bg-yellow-200 text-black border-b border-gray-200"
+                      : "bg-green-200 text-black border-b border-green-300"
                       }`}
                   >
                     {project.status === "ongoing" ? "Building" : "Completed"}
@@ -141,29 +154,15 @@ const Projects = () => {
                       {tag}
                     </span>
                   ))}
-                </div>  
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-       {/* <div className='mt-8'> 
-        <UpcomingProjects />
-        </div> */}
-            {/* <div className="mt-8 text-center">
-          <p className="text-gray-600 text-base">
-            See all projects at{' '}
-            <a
-              href="https://github.com/ankitkarki27"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-900 font-medium border-b-2 border-black hover:text-black hover:border-blue-600 transition-all duration-200"
-            >
-              
-              My Github
-            </a>
-          </p>
-        </div> */}
+        
+        {/* <UpcomingProjects /> */}
+       <Footer />
       </div>
     </section>
   );
