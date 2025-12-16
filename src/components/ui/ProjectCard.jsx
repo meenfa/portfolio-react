@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => (
         onClick={() => project.link ? window.open(project.link, "_blank") : window.open(project.github, "_blank")}
       />
       <div className="absolute top-1 left-2">
-        <span className={`text-xs px-2 py-1 border rounded-lg ${project.status === "ongoing" ? "bg-yellow-200" : "bg-green-200"}`}>
+        <span className={`text-xs px-2 py-1 border rounded-lg ${project.status === "ongoing" ? "bg-yellow-100" : "bg-green-200"}`}>
           {project.status === "ongoing" ? "Building" : "Completed"}
         </span>
       </div>
@@ -31,7 +31,7 @@ const ProjectCard = ({ project }) => (
           )}
         </div>
       </div>
-      <p className="text-gray-700 text-sm mb-2 line-clamp-4">{project.description}</p>
+      <p className="text-gray-700 text-sm mb-2 leading-relaxed">{project.description}</p>
       <div className="flex flex-wrap gap-1">
         {project.tags.map((tag, i) => (
           <span key={i} className="px-2 py-1 bg-gray-200 text-gray-900 text-xs rounded-lg ">{tag}</span>

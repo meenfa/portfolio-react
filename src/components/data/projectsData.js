@@ -6,7 +6,7 @@ export const projects = [
     github: "https://github.com/ankitkarki27/Postbox-social-network-chatapp",
     link: "",
     image: "/image/project/9.png",
-    status: "completed",
+    status: "ongoing",
     project_type: "Full Stack",
   },
   {

@@ -71,7 +71,7 @@ const Hero = () => {
                     hover:scale-105 active:scale-95
                     relative
                     group
-                  " 
+                  "
                   >
                     <FaBriefcase className="w-5 h-5 text-gray-800" />
 
@@ -112,15 +112,11 @@ const Hero = () => {
               </div>
 
               <p className="text-gray-600 text-wrap leading-relaxed text-base mt-4">
-                 <span className="text-black font-bold">
-                  Backend
-                </span>
-                {" "} by focused {" , "}
-                <span className="text-black font-bold">
-                  Full Stack
-                </span>
-                {" "} by passion {" "}
-                and occasional{" "}
+                I work in{" "}
+                <span className="text-black font-bold">Backend</span>,{" "}
+                build{" "}
+                <span className="text-black font-bold">Full Stack</span>{" "}
+                by passion, and write as an occasional{" "}
                 <Link
                   to="/poetry"
                   className="relative group text-gray-600 font-semibold cursor-pointer transition-all duration-300"
@@ -260,7 +256,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://blog.ankitkarki.com.np"
+              href="https://hashnode.com/@ankitdotnp"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center text-gray-500 hover:text-gray-900 relative group"

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Hero from '../components/Hero';
 import Skills from '../components/Skills';
-import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
 import Footer from '../components/Footer';
 import Blogs from '../components/Blogs';
+import About from '../components/About';
 import { useNavigate } from 'react-router-dom';
 import UpcomingProjects from '../components/UpcomingProjects';
 import Navbar from '../components/Navbar';
@@ -22,7 +22,7 @@ const Portfolio = () => {
         <UpcomingProjects />
         <Skills />
         <Experience />
-        {/* <About /> */}
+        <About />
         <Blogs />
         <Contact />
         <Footer />

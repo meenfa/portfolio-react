@@ -17,20 +17,20 @@ const UpcomingProjects = () => {
         // },
         {
             title: "conneqtly.me",
-            description: "Currently developing a full-stack platform that connects creators and collaboration. This project involves building the entire ecosystem—from user profiles and project sharing to real-time communication features.", 
+            description: "Currently developing a full-stack platform that connects creators and collaboration. This project involves building the entire ecosystem—from user profiles and project sharing to real-time communication features.",
             tags: ["Django", "Tailwind", "In Progress"],
             //   github: "https://github.com/ankitkarki27/",
             link: "https://conneqtly.me/",
-           image: "/image/project/7.png",
+            image: "/image/project/7.png",
             status: "ongoing",
             project_type: "Full Stack",
         },
-         {
+        {
             title: "Hamro Khata",
             description: "Developing a mobile expense tracking app that helps users record daily spending, manage categories, and keep financial habits organized. The app focuses on simplicity, secure data storage, and an easy way to view spending history and summaries.",
             github: "https://github.com/ankitkarki27/hamro-khata-mobile-app",
             tags: ["React Native", "Django", "PostgreSQL"],
-           image: "/image/project/8.png",
+            image: "/image/project/8.png",
             status: "ongoing",
             project_type: "Full Stack",
         },
@@ -114,7 +114,7 @@ const UpcomingProjects = () => {
                         </div>
                     ))}
                 </div>
-                
+
                 <div className="mt-4 text-center">
 
                     <p className="text-gray-600 text-base">
@@ -135,7 +135,7 @@ const UpcomingProjects = () => {
                                 transition-all duration-200 
                                 inline-flex items-center gap-1
                                 "
-                                >
+                        >
                             <Github className="w-4 h-4" />
                             ankitkarki27
                         </a>
