@@ -152,7 +152,7 @@ const Hero = () => {
                   </button>
                 </spanclas>
                 {copied && (
-                  <span className="text-blue-400 text-sm ml-2 animate-fade">
+                  <span className="text-gray-600 text-sm ml-2 animate-fade">
                     Copied!
                   </span>
                 )}
@@ -256,7 +256,8 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://hashnode.com/@ankitdotnp"
+              // href="https://hashnode.com/@ankitdotnp"
+              href="https://blog.karkiankit.com.np/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center text-gray-500 hover:text-gray-900 relative group"

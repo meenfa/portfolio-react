@@ -43,7 +43,7 @@ const UpcomingProjects = () => {
     return (
         <section className="py-8 bg-white pt-0">
             <div className="mx-auto px-2 max-w-2xl">
-                <h2 className="text-2xl font-bold text-black mb-2">Upcoming Projects</h2>
+                <h2 className="text-2xl font-bold text-black mb-6">Upcoming Projects</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {projects.map((project, index) => (
