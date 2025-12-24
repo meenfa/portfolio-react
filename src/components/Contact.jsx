@@ -73,17 +73,17 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="
-    inline-flex items-center justify-center w-fit space-x-2 px-3 py-2
-    font-semibold text-sm text-gray-900
-    bg-white/25 backdrop-blur-xl
-    border border-gray-300 rounded-lg
-    shadow-[inset_0_4px_10px_rgba(0,0,0,0.24)]
-    hover:shadow-[inset_0_0_25px_6px_rgba(0,0,0,0.28)]
-    hover:bg-white/40
-    transition-all duration-300
-    cursor-pointer
-    focus:outline-none
-  "
+              inline-flex items-center justify-center w-fit space-x-2 px-3 py-2
+              font-semibold text-sm text-gray-900
+              bg-white/25 backdrop-blur-xl
+              border border-gray-300 rounded-lg
+              shadow-[inset_0_4px_10px_rgba(0,0,0,0.24)]
+              hover:shadow-[inset_0_0_25px_6px_rgba(0,0,0,0.28)]
+              hover:bg-white/40
+              transition-all duration-300
+              cursor-pointer
+              focus:outline-none
+              "
             >
               <IoDocument className="w-4 h-4 mr-1 text-[#333]" />
               Download my CV
@@ -104,7 +104,8 @@ const Contact = () => {
               </div>
               <div>
                 <label htmlFor="project" className="block text-base font-medium text-gray-900 mb-1">Message</label>
-                <textarea id="project" name="project" rows="4" required className="w-full px-3 py-2 border-1 border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" placeholder="Describe your project idea..."></textarea>
+                <textarea id="project" name="project" rows="4" required className="w-full px-3 py-2 border-1 border-gray-900 rounded-lg text-black focus:outline-none focus:ring-1 focus:ring-gray-400 text-base" 
+                placeholder="Write message here..."></textarea>
               </div>
               <button type="submit"
                 className="flex items-center justify-center w-fit space-x-2 px-3 py-2 font-semibold bg-black hover:bg-gray-900 hover:shadow-md border border-gray-300 shadow-sm rounded-lg text-white focus:outline-none text-sm cursor-pointer">
