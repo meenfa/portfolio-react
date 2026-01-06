@@ -9,10 +9,10 @@ const Navbar = () => {
 
   const sections = [
     { name: 'Projects', path: '/projects' },
-    { name: 'Work', path: '/work-experience' },
+    { name: 'Work', path: '/work' },
     { name: 'Blogs', path: '/blogs' },
   ];
-
+  
   const handleNavClick = (section) => {
     if (location.pathname !== section.path) {
       navigate(section.path);

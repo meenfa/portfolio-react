@@ -3,24 +3,26 @@ import React from 'react';
 const Experience = () => {
   const experience = [
     {
-      role: "Backend Developer Intern",
+      role: "Backend Developer",
       company: "NepBigyapan",
       companyUrl: "https://www.nepbigyapan.com.np",
       location: "Kathmandu, Nepal",
-      period: "Dec 2024 – April 2025",
+      period: "Nov 2024 – September 2025",
       description: [
+       "Started as an Intern and later transitioned to a Junior Backend Developer role.",
         "Worked on backend features for a College Management System using Laravel.",
         "Implemented authentication, validation, and database relationships.",
         "Collaborated with frontend team integrating React-based interfaces.",
       ],
-      tags: ["Laravel", "React.js", "REST APIs", "MySQL", "Git"],
+      tags: ["Laravel", "REST APIs", "MySQL", "Git"],
     },
+
   ];
 
   return (
     <section className="py-10 bg-white pt-0 ">
       <div className="mx-auto px-3 max-w-2xl">
-        
+
         <h2 className="text-2xl font-bold mb-4 text-black">Experience</h2>
 
         <div className="space-y-8">
@@ -34,10 +36,7 @@ const Experience = () => {
 
               <div className="flex justify-between items-start">
                 <a
-                  href={exp.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 text-sm hover:text-gray-900 hover:underline"
+                  className="text-gray-600 text-sm hover:text-gray-900"
                 >
                   {exp.company} ↗
                 </a>
