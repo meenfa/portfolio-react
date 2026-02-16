@@ -38,10 +38,6 @@ const Blogs = () => {
                 <h3 className="font-mono font-normal text-[15px] leading-snug text-gray-900 group-hover:text-gray-700 transition-colors duration-200">
                   {blog.title}
                 </h3>
-
-              {/* <TbLogs
-                  className="text-gray-400 group-hover:text-gray-600 transition-colors duration-200 flex-shrink-0 ml-3"
-                /> */}
                 
               </div>
             </a>

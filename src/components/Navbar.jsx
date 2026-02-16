@@ -42,7 +42,7 @@ const Navbar = () => {
               navigate('/');
             }
           }}
-        >
+         >
           <span className="text-xl font-bold text-black">Ankit Karki</span>
         </div>
 

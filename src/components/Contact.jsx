@@ -17,19 +17,19 @@ const Contact = () => {
         <h2 className='text-2xl mb-4 font-bold text-wrap text-left lg:text-left flex items-center gap-2'>
           Stay Connected.
           <span
-            // className='flex items-center gap-1 text-xs px-3 py-1 text-gray-900 font-medium border-0 border-green-600 rounded-lg cursor-pointer bg-green-100 hover:bg-green-200 transition-all duration-200 animate-bounce'
+            className='flex items-center gap-1 text-xs px-3 py-1 text-gray-900 font-medium border-0 border-green-600 rounded-lg cursor-pointer bg-green-100 hover:bg-green-200 transition-all duration-200 animate-bounce'
 
-            className="
-                      inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5
-                      bg-green-100/40 backdrop-blur-sm
-                      border border-green-400/50 rounded-lg
-                      shadow-[inset_0_0_15px_4px_rgba(0,0,0,0.25)]
-                      hover:shadow-[inset_0_0_15px_4px_rgba(0,0,0,0.28)]
-                      hover:bg-green-200/50
-                      transition-all duration-300 cursor-pointer animate-bounce
-                    "
+          //   className="
+          //             inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5
+          //             bg-green-100/40 backdrop-blur-sm
+          //             border border-green-400/50 rounded-lg
+          //             shadow-[inset_0_0_15px_4px_rgba(0,0,0,0.25)]
+          //             hover:shadow-[inset_0_0_15px_4px_rgba(0,0,0,0.28)]
+          //             hover:bg-green-200/50
+          //             transition-all duration-300 cursor-pointer animate-bounce
+          //           "
           >
-            <span className='w-2 h-2 bg-green-500 rounded-full inline-block'></span>
+            {/* <span className='w-2 h-2 bg-green-500 rounded-full inline-block'></span> */}
             Available for work
           </span>
         </h2>

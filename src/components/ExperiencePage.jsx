@@ -50,7 +50,7 @@ const ExperiencePage = () => {
                   <a
                     className="text-gray-600 text-sm hover:text-gray-900"
                   >
-                    {exp.company} ↗
+                    {exp.company}
                   </a>
                   <span className="text-gray-500 text-sm">{exp.location}</span>
                 </div>

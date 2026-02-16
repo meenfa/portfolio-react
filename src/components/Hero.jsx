@@ -22,6 +22,7 @@ import {
   SiPostgresql,
 } from 'react-icons/si';
 import HeroSkillBtn from './ui/HeroSkillBtn';
+import { GoWorkflow } from 'react-icons/go';
 
 
 const Hero = () => {
@@ -39,18 +40,7 @@ const Hero = () => {
       <div className="mx-auto px-2 w-full max-w-2xl relative z-10">
         <div className="space-y-2">
           <div className="flex flex-col lg:flex-row gap-2 items-center">
-            <div className="hidden lg:block lg:w-1/4">
-              <div className="relative w-32 h-32 lg:w-24 lg:h-24">
-                <div className="w-full h-full rounded-xl overflow-hidden border-4 border-gray-100 shadow-lg">
-                  <img
-                    src="/image/ankit1.png"
-                    alt="Ankit Karki"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-              </div>
-            </div>
+            
             <div className="w-full lg:w-4/3 mb-2 space-y-2 text-black order-last lg:order-first">
               <div className="flex flex-row items-center lg:flex-row lg:items-center gap-2 lg:gap-4">
                 <h1 className='text-3xl lg:text-3xl font-bold text-wrap text-left'>
@@ -61,12 +51,12 @@ const Hero = () => {
                   className="cursor-pointer text-gray-800 text-sm font-normal flex items-center gap-2"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <span className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></span>
-                  Open to work
+                  <HeroSkillBtn icon={GoWorkflow} label="Open to work" className="w-3 h-3 mr-1 text-[#0a0f0d] " />
+                  
                 </div>
               </div>
 
-              <p className="text-gray-600 leading-relaxed text-base mt-4 flex-wrap">
+              <p className="text-gray-800 leading-relaxed text-base mt-4 flex-wrap">
                 I am a{" "}
                 <span className="text-black font-bold">Backend Developer</span>{" "}
                and an occasional {" "}
