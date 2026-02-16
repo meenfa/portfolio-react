@@ -1,4 +1,5 @@
 import React from 'react';
+import { BiRightArrow, BiRightArrowAlt } from 'react-icons/bi';
 
 const Experience = () => {
   const experience = [
@@ -36,9 +37,9 @@ const Experience = () => {
 
               <div className="flex justify-between items-start">
                 <a
-                  className="text-gray-600 text-sm hover:text-gray-900"
+                  className="text-gray-600 text-sm hover:text-gray-900 inline-flex items-center"
                 >
-                  {exp.company} ↗
+                  {exp.company} 
                 </a>
                 <span className="text-gray-500 text-sm">{exp.location}</span>
               </div>

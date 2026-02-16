@@ -1,3 +1,8 @@
+import { ArrowDownRightIcon, ArrowRightFromLineIcon } from "lucide-react";
+import { BiRightArrow } from "react-icons/bi";
+import { FaArrowRightArrowLeft } from "react-icons/fa6";
+import { HiArrowRight } from "react-icons/hi2";
+
 export default function BlogCard({ title, link }) {
   return (
     <a
@@ -10,8 +15,8 @@ export default function BlogCard({ title, link }) {
         {title}
       </h3>
 
-      <p className="text-blue-600 text-sm mt-2 font-medium">
-        Read Article →
+      <p className="text-blue-600 text-sm mt-2 font-medium inline-flex items-center">
+        Read Article <HiArrowRight className="mr-2"/>
       </p>
     </a>
   );

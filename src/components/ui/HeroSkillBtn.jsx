@@ -5,7 +5,7 @@ const HeroSkillBtn = ({ icon: Icon, label, className }) => {
     <span
       className="
         inline-flex items-center font-bold text-xs px-2 py-1
-        border rounded-lg border-dashed border-gray-400
+        border rounded-lg border-dashed border-gray-600
         bg-white
        shadow-[inset_0_0_0_rgba(0,0,0,0.24)]
      
