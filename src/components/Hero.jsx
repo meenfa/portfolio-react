@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
-import { Mail } from 'lucide-react';
+import { Check, CircleDot, CircleDotDashed, CircleIcon, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { FaXTwitter } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
-import { PiGithubLogo } from "react-icons/pi";
-import { FaYoutube } from "react-icons/fa";
-import { RiTelegram2Fill } from "react-icons/ri";
-import { FaHashnode } from "react-icons/fa6";
+import { PiCircleFill, PiCirclesFourFill, PiCirclesThreeFill, PiCirclesThreePlusLight, PiGithubLogo } from "react-icons/pi";
 import { FaInstagram } from "react-icons/fa6";
-import { IoDocument } from "react-icons/io5";
-import { IoCopyOutline } from "react-icons/io5"
-import { FaBriefcase } from "react-icons/fa";
-
+import { IoDocument, IoCopyOutline } from "react-icons/io5";
+import { RiTelegram2Fill } from "react-icons/ri";
 import {
-  FaPython,
   FaLaravel,
   FaReact,
 } from 'react-icons/fa';
@@ -23,7 +17,6 @@ import {
 } from 'react-icons/si';
 import HeroSkillBtn from './ui/HeroSkillBtn';
 import { GoWorkflow } from 'react-icons/go';
-
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -40,50 +33,66 @@ const Hero = () => {
       <div className="mx-auto px-2 w-full max-w-2xl relative z-10">
         <div className="space-y-2">
           <div className="flex flex-col lg:flex-row gap-2 items-center">
-            
-            <div className="w-full lg:w-4/3 mb-2 space-y-2 text-black order-last lg:order-first">
+            <div className="w-full lg:w-4/3 mb-2 space-y-3 text-black order-last lg:order-first">
               <div className="flex flex-row items-center lg:flex-row lg:items-center gap-2 lg:gap-4">
-                <h1 className='text-3xl lg:text-3xl font-bold text-wrap text-left'>
+                <h1 className='text-2xl lg:text-2xl font-bold text-wrap text-left'>
                   Hi, I'm Ankit
                 </h1>
-
                 <div
                   className="cursor-pointer text-gray-800 text-sm font-normal flex items-center gap-2"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <HeroSkillBtn icon={GoWorkflow} label="Open to work" className="w-3 h-3 mr-1 text-[#0a0f0d] " />
-                  
+                  <HeroSkillBtn icon={GoWorkflow} label="Open to work" className="w-3 h-3 mr-1 text-[#0a0f0d]" />
                 </div>
               </div>
 
-              <p className="text-gray-800 leading-relaxed text-base mt-4 flex-wrap">
-                I am a{" "}
-                <span className="text-black font-bold">Backend Developer</span>{" "}
-               and an occasional {" "}
-                <Link
-                  to="/poetry"
-                  className="relative group text-gray-600 font-semibold cursor-pointer transition-all duration-300"
-                >
-                  <span className="text-gray-800 hover:text-gray-900 transition-all duration-300">
-                   poet
-                  </span>
-                  <span className="absolute mt-2 bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gray-800 to-gray-900 group-hover:w-full transition-all duration-300 ease-out"></span>
-                </Link>{" "}
-                from Nepal{" "}
-                <span className="inline-block transition-transform text-gray-800">🇳🇵</span>. I develop interactive web apps using{" "}
+              <ul className="space-y-2 text-gray-800 text-sm leading-relaxed">
+                 <li className="flex flex-wrap items-center gap-1.5">
+                  <PiCircleFill className='h-2 w-3 text-gray-600'/>
+                  I am a <span className="text-black font-semibold">Backend Developer</span> from Nepal
+                  <span className="inline-block text-gray-800">🇳🇵</span>.
+                </li>
 
-                <HeroSkillBtn icon={SiDjango} label="Django" className="w-3 h-3 mr-1 text-[#032f1e] " />{" "} , {" "}
-                <HeroSkillBtn icon={FaReact} label="React.js" className="w-3 h-3 mr-1 text-[#0594bb]" />{" "},{" "}
-                <HeroSkillBtn icon={FaLaravel} label="Laravel" className="w-3 h-3 mr-1 text-[#FF2D20]" />{" "}and{" "}
-                <HeroSkillBtn icon={SiPostgresql} label="PostgreSQL" className="w-3 h-3 mr-1 text-[#0781e5]" />{" "}.
-              </p>
+                <li className="flex flex-wrap items-center gap-1">
+                  <PiCircleFill className='h-2 w-3 text-gray-600'/> I build interactive web applications using
+                  <HeroSkillBtn icon={SiDjango} label="Django" className="w-3 h-3 mr-1 text-[#032f1e]" />,
+                  <HeroSkillBtn icon={FaLaravel} label="Laravel" className="w-3 h-3 mr-1 text-[#FF2D20]" />
+                     <HeroSkillBtn icon={FaReact} label="React.js" className="w-3 h-3 mr-1 text-[#0594bb]" />,
+                  and
+                  <HeroSkillBtn icon={SiPostgresql} label="PostgreSQL" className="w-3 h-3 mr-1 text-[#0781e5]" />.
+                </li>
 
-              <p className="text-gray-500 leading-relaxed text-base flex items-center gap-2">
+                <li className="flex flex-wrap items-center gap-1">
+                  <PiCircleFill className='h-2 w-3 text-gray-600'/>{" "}Built <span className="text-black font-medium"><a
+                    href="https://potatocv.meenfa.tech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-900 hover:text-black underline underline-offset-4"
+                  >
+                    PotatoCV
+                  </a></span>,a resume roasting tool in the first week of April 2026, with <span className="text-black font-medium">5K+ organic page visits</span>.
+                </li>
+
+                <li className="flex flex-wrap items-center gap-1">
+                  <PiCircleFill className='h-2 w-3 text-gray-600'/>{" "}
+                  Built <span className="text-black font-medium"><a
+                    href="https://potatocv.meenfa.tech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-900 hover:text-black underline underline-offset-4"
+                  >
+                    Wordzo
+                  </a></span>, a word game web application.
+                </li>
+
+              </ul>
+
+              <p className="text-gray-800 leading-relaxed text-sm flex items-center gap-2 pt-1">
                 Say hi at{' '}
-                <spanclas className="flex items-center gap-1">
+                <span className="flex items-center gap-1">
                   <a
                     href={`mailto:${email}`}
-                    className="text-sm text-gray-900 border-b-1 border-dashed border-gray-700 transition-all cursor-pointer hover:text-black font-mono"
+                    className="text-sm text-gray-900 border-b border-dashed border-gray-700 transition-all cursor-pointer hover:text-black font-mono"
                   >
                     {email}
                   </a>
@@ -93,9 +102,9 @@ const Hero = () => {
                   >
                     <IoCopyOutline size={16} />
                   </button>
-                </spanclas>
+                </span>
                 {copied && (
-                  <span className="text-gray-600 text-sm ml-2 animate-fade">
+                  <span className="text-gray-600 text-xs ml-2 animate-fade">
                     Copied!
                   </span>
                 )}
@@ -109,29 +118,26 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                  group flex items-center gap-2 px-3 py-2 rounded-lg
-                  border border-white/30
-                  bg-white/25 backdrop-blur-xl
-                  shadow-[inset_0_4px_10px_rgba(0,0,0,0.24)]
-                  hover:shadow-[inset_0_0_25px_6px_rgba(0,0,0,0.28)]
-                  transition-all duration-300
-                  text-gray-900 font-medium text-sm
-                "
-
+                group flex items-center gap-2 px-3 py-2 rounded-lg
+                border border-white/30
+                bg-white/25 backdrop-blur-xl
+                shadow-[inset_0_4px_10px_rgba(0,0,0,0.24)]
+                hover:shadow-[inset_0_0_25px_6px_rgba(0,0,0,0.28)]
+                transition-all duration-300
+                text-gray-900 font-medium text-sm
+              "
             >
               <IoDocument className="w-4 h-4" />
               <span>Resume / CV</span>
             </a>
 
-
             <a
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               target="_blank"
               rel="noopener noreferrer"
-              // className="flex items-center space-x-2 px-3 py-1.5 rounded-lg text-white transition-all border-dashed border-gray-700 bg-black hover:bg-gray-900 hover:shadow-md backdrop-blur-sm text-sm cursor-pointer"
               className="
                 group flex items-center gap-2 px-3 py-2 rounded-lg
-                border border-gray-700/60 
+                border border-gray-700/60
                 bg-black backdrop-blur-md
                 shadow-[inset_0_2px_6px_rgba(255,255,255,0.12)]
                 hover:shadow-[inset_0_0_14px_4px_rgba(255,255,255,0.18)]
@@ -139,7 +145,6 @@ const Hero = () => {
                 text-white font-medium text-sm cursor-pointer
               "
             >
-
               <RiTelegram2Fill className='w-4 h-4' />
               <span>Get in touch</span>
             </a>
@@ -199,7 +204,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="mailto:ankitkarki8088@gmail.com"
+              href={`mailto:${email}`}
               className="flex items-center justify-center text-gray-500 hover:text-gray-900 relative group"
             >
               <Mail className="w-6 h-6" />
