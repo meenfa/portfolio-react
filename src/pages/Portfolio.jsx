@@ -18,11 +18,10 @@ const Portfolio = () => {
       <div className="pt-16">
         <Navbar />
         <Hero />
+        <Experience />
         <ProjectsSection />
         <UpcomingProjects />
         <Skills />
-        <Experience />
-        {/* <About /> */}
         <Blogs />
         <Contact />
         <Footer />

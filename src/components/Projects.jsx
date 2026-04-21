@@ -56,17 +56,7 @@ const Projects = () => {
       status: "completed",
       project_type: "Full Stack",
     },
-    
-
-    // {
-    //   title: "Donors Nepal",
-    //   description: "Connects blood seekers with nearby donors using location-based matching.",
-    //   tags: ["PHP", "MySQL"],
-    //   github: "https://github.com/ankitkarki27/Donors-Nepal.git",
-    //   image: "/image/3.png",
-    //   status: "completed",
-    //   project_type: "Backend"
-    // },
+  
   ];
 
   const filteredProjects = filter === "All"

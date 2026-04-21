@@ -5,6 +5,16 @@ import Navbar from './Navbar';
 
 const ExperiencePage = () => {
   const experience = [
+      {
+      role: "Django Developer",
+      company: "Vasuki Tech",
+      location: "Remote",
+      period: "Nov 2025 – Present",
+      description: [
+        "Worked as a backend developer in a startup environment, primarily using Django to build and maintain RESTful APIs. Designed database schemas, implemented business logic, and handled data validation to ensure reliable application behavior. Collaborated with frontend developers for API integration and participated in debugging, testing, and iterative development processes.",
+      ],
+      tags: ["Django", "PostgreSQL", "REST APIs"],
+    },
     {
       role: "Backend Developer",
       company: "NepBigyapan",
@@ -12,10 +22,7 @@ const ExperiencePage = () => {
       location: "Kathmandu, Nepal",
       period: "Nov 2024 – September 2025",
       description: [
-        "Started as an Intern and later transitioned to a Junior Backend Developer role.",
-        "Worked on backend features for a College Management System and other projects.",
-        "Implemented authentication, validation, and database relationships.",
-        "Collaborated with frontend team integrating React-based interfaces.",
+        "Started as an intern and progressed to a Junior Backend Developer role, contributing to backend development using Laravel. Worked on building and maintaining backend features, including authentication, data validation, and relational database design. Developed and integrated REST APIs to support frontend applications, and collaborated closely with frontend developers to ensure smooth system functionality and performance.",
       ],
       tags: ["Laravel", "REST APIs", "MySQL", "Git"],
     },
@@ -40,7 +47,7 @@ const ExperiencePage = () => {
 
           <div className="space-y-8">
             {experience.map((exp, index) => (
-              <div key={index} className="border-l-2 border-gray-300 pl-4">
+              <div key={index}>
                 <div className="flex justify-between items-start">
                   <h3 className="font-semibold text-black text-base">{exp.role}</h3>
                   <span className="text-gray-500 text-sm">{exp.period}</span>
@@ -58,7 +65,7 @@ const ExperiencePage = () => {
                 <ul className="mt-3 text-sm space-y-1.5 text-gray-700">
                   {exp.description.map((item, i) => (
                     <li key={i} className="leading-relaxed">
-                      • {item}
+                      {item}
                     </li>
                   ))}
                 </ul>
