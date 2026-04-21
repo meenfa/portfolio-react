@@ -105,7 +105,7 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-2 items-center pt-2">
             <a
-              href="https://drive.google.com/file/d/1s6eNgTA8q-7FRLtdS9VVA-oISDueN-vy/view?usp=sharing"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -147,7 +147,7 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-2 items-center pt-6">
             <a
-              href="https://github.com/ankitkarki27"
+              href="https://github.com/meenfa"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center text-gray-500 hover:text-gray-900 relative group"
@@ -160,7 +160,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/ankitdotnp/"
+              href="https://www.linkedin.com/in/meenfa/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center text-gray-500 hover:text-gray-900 relative group"
@@ -173,7 +173,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://x.com/ankitdotnp"
+              href="https://x.com/meenfax"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center text-gray-500 hover:text-gray-900 relative group"
@@ -181,33 +181,6 @@ const Hero = () => {
               <FaXTwitter className="w-6 h-6" />
               <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 Twitter / X
-                <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700"></div>
-              </div>
-            </a>
-
-            <a
-              href="https://youtube.com/@ankitdotnp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center text-gray-500 hover:text-gray-900 relative group"
-            >
-              <FaYoutube className="w-6 h-6" />
-              <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                YouTube
-                <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700"></div>
-              </div>
-            </a>
-
-            <a
-              // href="https://hashnode.com/@ankitdotnp"
-              href="https://blog.karkiankit.com.np/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center text-gray-500 hover:text-gray-900 relative group"
-            >
-              <FaHashnode className="w-6 h-6" />
-              <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                Hashnode
                 <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700"></div>
               </div>
             </a>
