@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Github, Linkedin, Instagram, YoutubeIcon, Send, SendIcon, Mail, Phone, File, Workflow } from 'lucide-react';
 import { IoDocument } from "react-icons/io5";
+import { FaXTwitter } from 'react-icons/fa6';
 const Contact = () => {
   const [copied, setCopied] = useState(false);
   const email = "ankitkarki8088@gmail.com";
@@ -16,22 +17,7 @@ const Contact = () => {
       <div className="mx-auto px-2 max-w-2xl">
         <h2 className='text-2xl mb-4 font-bold text-wrap text-left lg:text-left flex items-center gap-2'>
           Stay Connected.
-          <span
-            className='flex items-center gap-1 text-xs px-3 py-1 text-gray-900 font-medium border-0 border-green-600 rounded-lg cursor-pointer bg-green-100 hover:bg-green-200 transition-all duration-200 animate-bounce'
 
-          //   className="
-          //             inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5
-          //             bg-green-100/40 backdrop-blur-sm
-          //             border border-green-400/50 rounded-lg
-          //             shadow-[inset_0_0_15px_4px_rgba(0,0,0,0.25)]
-          //             hover:shadow-[inset_0_0_15px_4px_rgba(0,0,0,0.28)]
-          //             hover:bg-green-200/50
-          //             transition-all duration-300 cursor-pointer animate-bounce
-          //           "
-          >
-            {/* <span className='w-2 h-2 bg-green-500 rounded-full inline-block'></span> */}
-            Available for work
-          </span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -54,17 +40,16 @@ const Contact = () => {
             </div>
 
             <div className="flex space-x-2 pt-0">
-              <a href="https://github.com/ankitkarki27" target="_blank" rel="noopener noreferrer" className="flex items-center w-8 h-8 rounded-lg text-gray-800 hover:text-gray-900 transition-colors">
+              <a href="https://github.com/meenfa" target="_blank" rel="noopener noreferrer" className="flex items-center w-8 h-8 rounded-lg text-gray-800 hover:text-gray-900 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/ankitdotnp/" target="_blank" rel="noopener noreferrer" className="flex items-center w-8 h-8 rounded-lg text-gray-800 hover:text-blue-800 transition-colors">
+              <a href="https://www.linkedin.com/in/meenfa/" target="_blank" rel="noopener noreferrer" className="flex items-center w-8 h-8 rounded-lg text-gray-800 hover:text-blue-800 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/meenfaforlife/" target="_blank" rel="noopener noreferrer" className="flex items-center w-8 h-8 rounded-lg text-gray-800 hover:text-pink-600 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://www.youtube.com/@meenfaforlifeyt" target="_blank" rel="noopener noreferrer" className="flex items-center w-8 h-8 rounded-lg text-gray-800 hover:text-red-600 transition-colors">
-                <YoutubeIcon className="w-5 h-5" />
+              <a href="https://x.com/meenfax"
+              target="_blank"
+              rel="noopener noreferrer" className="flex items-center w-8 h-8 rounded-lg text-gray-800 hover:text-black transition-colors">
+                <FaXTwitter className="w-5 h-5" />
               </a>
             </div>
 

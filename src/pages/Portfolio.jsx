@@ -22,6 +22,7 @@ const Portfolio = () => {
         <ProjectsSection />
         <UpcomingProjects />
         <Skills />
+
         <Blogs />
         <Contact />
         <Footer />
