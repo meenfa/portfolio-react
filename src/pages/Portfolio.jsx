@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import Hero from '../components/Hero';
-import Skills from '../components/Skills';
-import Contact from '../components/Contact';
-import Experience from '../components/Experience';
-import Footer from '../components/Footer';
-import Blogs from '../components/Blogs';
-import About from '../components/About';
 import { useNavigate } from 'react-router-dom';
-import UpcomingProjects from '../components/UpcomingProjects';
-import Navbar from '../components/Navbar';
-import ProjectsSection from '../components/ProjectsSection';
+import Navbar from '../components/common/Navbar';
+import Footer from '../components/common/Footer';
+import Hero from '../components/landing/Hero';
+import Experience from '../components/landing/Experience';
+import ProjectsSection from '../components/landing/ProjectsSection';
+import Blogs from '../components/landing/Blogs';
+import Skills from '../components/landing/Skills';
+import Contact from '../components/landing/Contact';
+import UpcomingProjects from '../components/landing/UpcomingProjects';
 
 const Portfolio = () => {
   return (
@@ -20,7 +19,7 @@ const Portfolio = () => {
         <Hero />
         <Experience />
         <ProjectsSection />
-        {/* <UpcomingProjects /> */}
+       {/* <UpcomingProjects /> */}
         <Blogs />
         <Skills />
         <Contact />

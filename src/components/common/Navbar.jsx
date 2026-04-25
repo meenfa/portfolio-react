@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { MobileMenuButton } from './ui/MobileMenuButton';
+import { MobileMenuButton } from '../ui/MobileMenuButton';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

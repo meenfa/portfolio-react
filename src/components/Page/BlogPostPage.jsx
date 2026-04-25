@@ -5,8 +5,9 @@ import remarkGfm from "remark-gfm";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { HiArrowRight } from "react-icons/hi2";
 import { blogs } from "../data/blogsData";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "../common/Navbar";
+import Footer from "../common/Footer";
+
 
 const blogFiles = import.meta.glob("../../content/blogs/*.md", {
     query: "?raw",

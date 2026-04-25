@@ -15,9 +15,10 @@ import {
   SiDjango,
   SiPostgresql,
 } from 'react-icons/si';
-import HeroSkillBtn from './ui/HeroSkillBtn';
 import { GoWorkflow } from 'react-icons/go';
-import HeroSkillSecondaryBtn from './ui/HeroSkillSecondaryBtn';
+import HeroSkillBtn from '../ui/HeroSkillBtn';
+import HeroSkillSecondaryBtn from '../ui/HeroSkillSecondaryBtn';
+
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -36,9 +37,9 @@ const Hero = () => {
           <div className="flex flex-col lg:flex-row gap-2 items-center">
             <div className="w-full lg:w-4/3 mb-2 space-y-3 text-black order-last lg:order-first">
               <div className="flex flex-row items-center gap-4">
-                <img 
-                  src="/image/ankit1.png" 
-                  alt="Ankit Karki" 
+                <img
+                  src="/image/ankit1.png"
+                  alt="Ankit Karki"
                   className="w-16 h-16 rounded-full object-cover shadow-sm"
                 />
                 <div className="flex flex-row items-center gap-2 lg:gap-4">
@@ -55,34 +56,33 @@ const Hero = () => {
               </div>
 
               <ul className="space-y-2 text-gray-800 text-sm leading-relaxed">
-                 <li className="flex flex-wrap items-center gap-1.5">
-                  <PiCircleFill className='h-2 w-3 text-gray-600'/>
-                  I am a <span className="text-black font-bold">Backend Developer</span> from Nepal
+                <li className="flex flex-wrap items-center gap-1.5">
+                  <PiCircleFill className='h-2 w-3 text-gray-600' />
+                  I am a <span className="text-black font-bold">Backend focused</span> from Nepal
                   <span className="inline-block text-gray-800">🇳🇵</span>.
                 </li>
 
                 <li className="flex flex-wrap items-center gap-1">
-                  <PiCircleFill className='h-2 w-3 text-gray-600'/> I build interactive web applications using
-                  <HeroSkillBtn icon={SiDjango} label="Django" className="w-3 h-3 mr-1 text-[#032f1e]" />,
-                  <HeroSkillBtn icon={FaLaravel} label="Laravel" className="w-3 h-3 mr-1 text-[#FF2D20]" />
-                     <HeroSkillBtn icon={FaReact} label="React.js" className="w-3 h-3 mr-1 text-[#0594bb]" />,
+                  <PiCircleFill className='h-2 w-2 text-gray-600' />
+                  I build backend systems with
+                  <HeroSkillBtn icon={SiDjango} label="Django" className="w-3 h-3 mr-1 text-[#032f1e]" />
                   and
-                  <HeroSkillBtn icon={SiPostgresql} label="PostgreSQL" className="w-3 h-3 mr-1 text-[#0781e5]" />.
+                  <HeroSkillBtn icon={FaLaravel} label="Laravel" className="w-3 h-3 mr-1 text-[#FF2D20]" />,
+                  while shipping complete products.
                 </li>
-
                 <li className="flex flex-wrap items-center gap-1">
-                  <PiCircleFill className='h-2 w-3 text-gray-600'/>{" "}Built <span className="text-black font-medium"><a
+                  <PiCircleFill className='h-2 w-3 text-gray-600' />{" "}Built <span className="text-black font-medium"><a
                     href="https://potatocv.meenfa.tech"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-900 font-bold hover:text-black underline underline-offset-4"
+                    className="text-gray-800 font-bold hover:text-black underline underline-offset-4"
                   >
                     PotatoCV
-                  </a></span>, a resume roasting tool in the first week of April 2026, with <span className="text-black font-medium">5K+ organic page visits</span>.
+                  </a></span>, a resume roasting tool, with <span className="text-black font-medium">5K+ organic page visits</span>.
                 </li>
 
                 <li className="flex flex-wrap items-center gap-1">
-                  <PiCircleFill className='h-2 w-3 text-gray-600'/>{" "}
+                  <PiCircleFill className='h-2 w-3 text-gray-600' />{" "}
                   Built <span className="text-black font-medium"><a
                     href="https://potatocv.meenfa.tech"
                     target="_blank"
@@ -122,12 +122,12 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-2 items-center pt-2">
             <a
-               href="/doc/Ankit_Karki_resume.pdf"
+              href="/doc/Ankit_Karki_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
               <HeroSkillBtn icon={IoDocument} label="Resume / CV" className="w-4 h-6 mr-1 text-black" />
-              
+
             </a>
 
             <a

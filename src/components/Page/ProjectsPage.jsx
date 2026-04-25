@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { projects } from "../data/projectsData";
 import ProjectCard from "../ui/ProjectCard";
-import Navbar from '../Navbar';
-import Footer from '../Footer';
-import UpcomingProjects from '../UpcomingProjects';
+import Navbar from "../common/Navbar";
+import Footer from "../common/Footer";
+import UpcomingProjects from '../landing/UpcomingProjects';
+
 
 const ProjectsPage = () => {
   const [filter, setFilter] = useState("All");

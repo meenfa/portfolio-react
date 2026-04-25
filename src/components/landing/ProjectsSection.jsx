@@ -1,8 +1,9 @@
 import React from 'react';
-import { projects } from '../components/data/projectsData';
-import ProjectCard from '../components/ui/ProjectCard';
+
 import { useNavigate } from 'react-router-dom';
-import HeroSkillBtn from './ui/HeroSkillBtn';
+import HeroSkillBtn from '../ui/HeroSkillBtn';
+import ProjectCard from '../ui/ProjectCard';
+import { projects } from '../data/projectsData';
 
 const ProjectsSection = () => {
   const navigate = useNavigate();

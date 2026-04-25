@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Github, Linkedin, Instagram, YoutubeIcon, Send, SendIcon, Mail, Phone, File, Workflow } from 'lucide-react';
 import { IoDocument } from "react-icons/io5";
 import { FaXTwitter } from 'react-icons/fa6';
-import HeroSkillBtn from './ui/HeroSkillBtn';
+import HeroSkillBtn from '../ui/HeroSkillBtn';
 const Contact = () => {
   const [copied, setCopied] = useState(false);
   const email = "ankitkarki8088@gmail.com";
