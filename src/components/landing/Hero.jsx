@@ -55,44 +55,72 @@ const Hero = () => {
                 </div>
               </div>
 
-              <ul className="space-y-2 text-gray-800 text-sm leading-relaxed">
-                <li className="flex flex-wrap items-center gap-1.5">
-                  <PiCircleFill className='h-2 w-3 text-gray-600' />
-                  I am a <span className="text-black font-bold">Backend focused</span> from Nepal
-                  <span className="inline-block text-gray-800">🇳🇵</span>.
+              <ul className="space-y-3 text-gray-800 text-sm leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  <span>
+                    I am a <span className="text-black font-bold">Backend focused</span> from Nepal
+                    <span className="inline-block text-gray-800 ml-1">🇳🇵</span>.
+                  </span>
                 </li>
 
-                <li className="flex flex-wrap items-center gap-1">
-                  <PiCircleFill className='h-2 w-2 text-gray-600' />
-                  I build backend systems with
-                  <HeroSkillBtn icon={SiDjango} label="Django" className="w-3 h-3 mr-1 text-[#032f1e]" />
-                  and
-                  <HeroSkillBtn icon={FaLaravel} label="Laravel" className="w-3 h-3 mr-1 text-[#FF2D20]" />,
-                  while shipping complete products.
-                </li>
-                <li className="flex flex-wrap items-center gap-1">
-                  <PiCircleFill className='h-2 w-3 text-gray-600' />{" "}Built <span className="text-black font-medium"><a
-                    href="https://potatocv.meenfa.tech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-800 font-bold hover:text-black underline underline-offset-4"
-                  >
-                    PotatoCV
-                  </a></span>, a resume roasting tool, with <span className="text-black font-medium">5K+ organic page visits</span>.
-                </li>
-
-                <li className="flex flex-wrap items-center gap-1">
-                  <PiCircleFill className='h-2 w-3 text-gray-600' />{" "}
-                  Built <span className="text-black font-medium"><a
-                    href="https://potatocv.meenfa.tech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-900 hover:text-black font-bold underline underline-offset-4"
-                  >
-                    Wordzo
-                  </a></span>, a word game web application.
+                <li className="flex items-start gap-2">
+                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  <span>
+                    I build backend systems with{" "}
+                    <HeroSkillBtn
+                      icon={SiDjango}
+                      label="Django"
+                      className="w-3 h-3 mr-1 text-[#032f1e]"
+                    />{" "}
+                    and{" "}
+                    <HeroSkillBtn
+                      icon={FaLaravel}
+                      label="Laravel"
+                      className="w-3 h-3 mr-1 text-[#FF2D20]"
+                    />
+                    , while shipping complete products.
+                  </span>
                 </li>
 
+                <li className="flex items-start gap-2">
+                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  <span>
+                    Built{" "}
+                    <span className="text-black font-medium">
+                      <a
+                        href="https://www.potatocv.lol/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-800 font-bold hover:text-black underline underline-offset-4"
+                      >
+                        PotatoCV
+                      </a>
+                    </span>
+                    , a resume roasting tool, with{" "}
+                    <span className="text-black font-medium">
+                      5K+ organic page visits
+                    </span>.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  <span>
+                    Built{" "}
+                    <span className="text-black font-medium">
+                      <a
+                        href="https://potatocv.meenfa.tech"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-900 hover:text-black font-bold underline underline-offset-4"
+                      >
+                        Wordzo
+                      </a>
+                    </span>
+                    , a word game web application.
+                  </span>
+                </li>
               </ul>
 
               <p className="text-gray-800 leading-relaxed text-sm flex items-center gap-2 pt-1">
@@ -140,7 +168,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-2 items-center pt-2">
+          <div className="flex flex-wrap gap-2 items-center pt-4">
             <a
               href="https://github.com/meenfa"
               target="_blank"
