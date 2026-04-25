@@ -10,7 +10,7 @@ const About = () => {
           <div className="w-full lg:w-1/3 flex justify-center lg:justify-start">
             <div className="w-40 h-48 lg:w-48 lg:h-56 overflow-hidden">
               <img
-                src="/image/ankit1.png"
+                src="/image/me1.png"
                 alt="Ankit Karki"
                 className="w-full h-full rounded-lg object-cover"
               />
