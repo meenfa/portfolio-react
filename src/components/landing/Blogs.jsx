@@ -1,6 +1,6 @@
 import React from "react";
-import { blogs } from "../components/data/blogsData";
-import BlogCard from "../components/ui/BlogCard";
+import { blogs } from "../data/blogsData";
+import BlogCard from "../ui/BlogCard";
 
 const Blogs = () => {
   return (

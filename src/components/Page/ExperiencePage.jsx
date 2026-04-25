@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { experience } from "../data/experienceData";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
+import Navbar from "../common/Navbar";
+import Footer from "../common/Footer";
 
 const ExperiencePage = () => {
   const [activeIndex, setActiveIndex] = useState(null);

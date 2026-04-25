@@ -1,8 +1,8 @@
 import React from "react";
 import { blogs } from "../data/blogsData";
 import BlogCard from "../ui/BlogCard";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "../common/Navbar";
+import Footer from "../common/Footer";
 
 const BlogsPage = () => {
   return (

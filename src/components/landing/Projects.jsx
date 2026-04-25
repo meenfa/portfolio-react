@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Github, ExternalLink, Link } from 'lucide-react';
-import Footer from './Footer';
-import Navbar from './Navbar';
+import Footer from '../common/Footer';
+
+
 
 
 const Projects = () => {

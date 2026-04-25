@@ -5,12 +5,13 @@ import {
   FaPhp,
   FaReact,
   FaJs,
-  // FaGithub,
+  FaGithub,
   FaDocker,
   FaDatabase,
   FaFigma,
   FaServer
 } from 'react-icons/fa';
+import { RiNextjsFill } from "react-icons/ri";
 import {
   SiDjango,
   SiPostgresql,
@@ -28,8 +29,9 @@ const Skills = () => {
     { name: "PHP", icon: <FaPhp size={30} /> },
     { name: "RESTful APIs", icon: <FaServer size={30} /> },
     { name: "React", icon: <FaReact size={30} /> },
+    { name: "Next.js", icon: <RiNextjsFill size={30} /> },
     { name: "JavaScript", icon: <FaJs size={30} /> },
-    // { name: "GitHub", icon: <FaGithub size={30} /> },
+    { name: "GitHub", icon: <FaGithub size={30} /> },
     { name: "Docker", icon: <FaDocker size={30} /> },
     { name: "PostgreSQL", icon: <SiPostgresql size={30} /> },
     { name: "MySQL", icon: <SiMysql size={30} /> },

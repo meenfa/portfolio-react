@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronRight } from "lucide-react";
-import { experience } from "../components/data/experienceData";
+import { experience } from "../data/experienceData";
 
 const Experience = () => {
   const [activeIndex, setActiveIndex] = useState(null);
