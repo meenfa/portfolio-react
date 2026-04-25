@@ -1,23 +1,34 @@
-import { ArrowDownRightIcon, ArrowRightFromLineIcon } from "lucide-react";
-import { BiRightArrow } from "react-icons/bi";
-import { FaArrowRightArrowLeft } from "react-icons/fa6";
 import { HiArrowRight } from "react-icons/hi2";
 
-export default function BlogCard({ title, link }) {
+export default function BlogCard({ title, slug, createdOn, readTime }) {
   return (
     <a
-      href={link}
+      href={`/blog/${slug}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="block bg-white rounded-lg shadow-sm p-4 transition-all duration-300 border border-dashed border-gray-500"
+      className="block py-4 transition group"
     >
-      <h3 className="text-lg font-semibold text-gray-800">
-        {title}
-      </h3>
+      <div className="flex justify-between items-start gap-4">
+        <div className="flex-1">
+          <h3 className="text-base font-semibold text-black group-hover:text-gray-700 transition">
+            {title}
+          </h3>
+        </div>
 
-      <p className="text-blue-600 text-sm mt-2 font-medium inline-flex items-center">
-        Read Article <HiArrowRight className="mr-2"/>
-      </p>
+        <div className="shrink-0 text-right">
+          <p className="text-sm text-gray-500 inline-flex items-center gap-1 group-hover:text-black transition">
+            Read more
+            <HiArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
+          </p>
+        </div>
+      </div>
+
+      {/* Bottom section with date and read time */}
+      <div className="mt-2 flex gap-2 text-xs text-gray-400">
+        <span>{createdOn}</span>
+        {/* <span>,</span> */}
+        <span>{readTime} min read</span>
+      </div>
     </a>
   );
 }

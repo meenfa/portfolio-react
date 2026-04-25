@@ -17,6 +17,7 @@ import {
 } from 'react-icons/si';
 import HeroSkillBtn from './ui/HeroSkillBtn';
 import { GoWorkflow } from 'react-icons/go';
+import HeroSkillSecondaryBtn from './ui/HeroSkillSecondaryBtn';
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
@@ -34,22 +35,29 @@ const Hero = () => {
         <div className="space-y-2">
           <div className="flex flex-col lg:flex-row gap-2 items-center">
             <div className="w-full lg:w-4/3 mb-2 space-y-3 text-black order-last lg:order-first">
-              <div className="flex flex-row items-center lg:flex-row lg:items-center gap-2 lg:gap-4">
-                <h1 className='text-2xl lg:text-2xl font-bold text-wrap text-left'>
-                  Hi, I'm Ankit
-                </h1>
-                <div
-                  className="cursor-pointer text-gray-800 text-sm font-normal flex items-center gap-2"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <HeroSkillBtn icon={GoWorkflow} label="Open to work" className="w-3 h-3 mr-1 text-[#0a0f0d]" />
+              <div className="flex flex-row items-center gap-4">
+                <img 
+                  src="/image/ankit1.png" 
+                  alt="Ankit Karki" 
+                  className="w-16 h-16 rounded-full object-cover shadow-sm"
+                />
+                <div className="flex flex-row items-center gap-2 lg:gap-4">
+                  <h1 className='text-2xl lg:text-2xl font-bold text-wrap text-left'>
+                    Hi, I'm Ankit
+                  </h1>
+                  <div
+                    className="cursor-pointer text-gray-800 text-sm font-normal flex items-center gap-2"
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    <HeroSkillBtn icon={GoWorkflow} label="Open to work" className="w-3 h-3 mr-1 text-[#0a0f0d]" />
+                  </div>
                 </div>
               </div>
 
               <ul className="space-y-2 text-gray-800 text-sm leading-relaxed">
                  <li className="flex flex-wrap items-center gap-1.5">
                   <PiCircleFill className='h-2 w-3 text-gray-600'/>
-                  I am a <span className="text-black font-semibold">Backend Developer</span> from Nepal
+                  I am a <span className="text-black font-bold">Backend Developer</span> from Nepal
                   <span className="inline-block text-gray-800">🇳🇵</span>.
                 </li>
 
@@ -67,10 +75,10 @@ const Hero = () => {
                     href="https://potatocv.meenfa.tech"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-900 hover:text-black underline underline-offset-4"
+                    className="text-gray-900 font-bold hover:text-black underline underline-offset-4"
                   >
                     PotatoCV
-                  </a></span>,a resume roasting tool in the first week of April 2026, with <span className="text-black font-medium">5K+ organic page visits</span>.
+                  </a></span>, a resume roasting tool in the first week of April 2026, with <span className="text-black font-medium">5K+ organic page visits</span>.
                 </li>
 
                 <li className="flex flex-wrap items-center gap-1">
@@ -79,7 +87,7 @@ const Hero = () => {
                     href="https://potatocv.meenfa.tech"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-900 hover:text-black underline underline-offset-4"
+                    className="text-gray-900 hover:text-black font-bold underline underline-offset-4"
                   >
                     Wordzo
                   </a></span>, a word game web application.
@@ -114,43 +122,25 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-2 items-center pt-2">
             <a
-              href="#"
+               href="/doc/Ankit_Karki_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                group flex items-center gap-2 px-3 py-2 rounded-lg
-                border border-white/30
-                bg-white/25 backdrop-blur-xl
-                shadow-[inset_0_4px_10px_rgba(0,0,0,0.24)]
-                hover:shadow-[inset_0_0_25px_6px_rgba(0,0,0,0.28)]
-                transition-all duration-300
-                text-gray-900 font-medium text-sm
-              "
             >
-              <IoDocument className="w-4 h-4" />
-              <span>Resume / CV</span>
+              <HeroSkillBtn icon={IoDocument} label="Resume / CV" className="w-4 h-6 mr-1 text-black" />
+              
             </a>
 
             <a
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                group flex items-center gap-2 px-3 py-2 rounded-lg
-                border border-gray-700/60
-                bg-black backdrop-blur-md
-                shadow-[inset_0_2px_6px_rgba(255,255,255,0.12)]
-                hover:shadow-[inset_0_0_14px_4px_rgba(255,255,255,0.18)]
-                transition-all duration-300
-                text-white font-medium text-sm cursor-pointer
-              "
             >
-              <RiTelegram2Fill className='w-4 h-4' />
-              <span>Get in touch</span>
+              <HeroSkillSecondaryBtn icon={RiTelegram2Fill} label="Get in touch" className="w-4 h-6 mr-1 text-white" />
+
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-2 items-center pt-6">
+          <div className="flex flex-wrap gap-2 items-center pt-2">
             <a
               href="https://github.com/meenfa"
               target="_blank"

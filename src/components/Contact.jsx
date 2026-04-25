@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Github, Linkedin, Instagram, YoutubeIcon, Send, SendIcon, Mail, Phone, File, Workflow } from 'lucide-react';
 import { IoDocument } from "react-icons/io5";
 import { FaXTwitter } from 'react-icons/fa6';
+import HeroSkillBtn from './ui/HeroSkillBtn';
 const Contact = () => {
   const [copied, setCopied] = useState(false);
   const email = "ankitkarki8088@gmail.com";
@@ -54,25 +55,16 @@ const Contact = () => {
             </div>
 
             <a
-              href="https://drive.google.com/file/d/1s6eNgTA8q-7FRLtdS9VVA-oISDueN-vy/view?usp=sharing"
+              href="/doc/Ankit_Karki_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="
-              inline-flex items-center justify-center w-fit space-x-2 px-3 py-2
-              font-semibold text-sm text-gray-900
-              bg-white/25 backdrop-blur-xl
-              border border-gray-300 rounded-lg
-              shadow-[inset_0_4px_10px_rgba(0,0,0,0.24)]
-              hover:shadow-[inset_0_0_25px_6px_rgba(0,0,0,0.28)]
-              hover:bg-white/40
-              transition-all duration-300
-              cursor-pointer
-              focus:outline-none
-              "
             >
-              <IoDocument className="w-4 h-4 mr-1 text-[#333]" />
-              Download my CV
+              <HeroSkillBtn icon={IoDocument} label=" Download my CV" className="w-4 h-6 mr-1 text-black" />
+
+              {/* <IoDocument className="w-4 h-4 mr-1 text-[#333]" />
+              Download my CV */}
             </a>
+             
 
           </div>
 

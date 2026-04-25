@@ -14,7 +14,7 @@ export const projects = [
     description: "An online learning platform for course enrollment and progress tracking.",
     tags: ["React", "Django", "PostgreSQL", "Tailwind"],
     github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
-    image: "/image/project/6.png",
+    image: "/image/project/padhai.png",
     status: "completed",
     project_type: "Full Stack",
   },

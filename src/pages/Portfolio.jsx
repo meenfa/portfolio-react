@@ -20,10 +20,9 @@ const Portfolio = () => {
         <Hero />
         <Experience />
         <ProjectsSection />
-        <UpcomingProjects />
-        <Skills />
-
+        {/* <UpcomingProjects /> */}
         <Blogs />
+        <Skills />
         <Contact />
         <Footer />
       </div>
