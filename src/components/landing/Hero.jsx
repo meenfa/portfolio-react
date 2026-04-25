@@ -38,7 +38,7 @@ const Hero = () => {
             <div className="w-full lg:w-4/3 mb-2 space-y-3 text-black order-last lg:order-first">
               <div className="flex flex-row items-center gap-4">
                 <img
-                  src="/image/ankit1.png"
+                  src="/image/me1.png"
                   alt="Ankit Karki"
                   className="w-16 h-16 rounded-full object-cover shadow-sm"
                 />
