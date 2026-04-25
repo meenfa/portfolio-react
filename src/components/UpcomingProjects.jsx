@@ -1,36 +1,23 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, Link } from 'lucide-react';
-
+import { Github, ExternalLink } from 'lucide-react';
 
 const UpcomingProjects = () => {
     const [filter, setFilter] = useState("All");
 
     const projects = [
-        // {
-        //   title: "Flatbook",
-        //   description: "An online learning platform for course enrollment and progress tracking, built with plans for forums and AI interview features.",
-        //   tags: ["React", "Django", "PostgreSQL", "Tailwind"],
-        //   github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
-        //   image: "/image/6.png",
-        //   status: "ongoing",
-        //   project_type: "Full Stack",
-        // },
         {
             title: "conneqtly.me",
             description: "Currently developing a full-stack platform that connects creators and collaboration. This project involves building the entire ecosystem—from user profiles and project sharing to real-time communication features.",
             tags: ["Django", "Tailwind", "In Progress"],
-            //   github: "https://github.com/ankitkarki27/",
             link: "https://conneqtly.me/",
-            image: "/image/project/7.png",
             status: "ongoing",
             project_type: "Full Stack",
         },
         {
             title: "Hamro Khata",
             description: "Developing a mobile expense tracking app that helps users record daily spending, manage categories, and keep financial habits organized. The app focuses on simplicity, secure data storage, and an easy way to view spending history and summaries.",
-            github: "https://github.com/ankitkarki27/hamro-khata-mobile-app",
+            github: "https://github.com/meenfa/hamro-khata-mobile-app",
             tags: ["React Native", "Django", "PostgreSQL"],
-            image: "/image/project/8.png",
             status: "ongoing",
             project_type: "Full Stack",
         },
@@ -45,82 +32,68 @@ const UpcomingProjects = () => {
             <div className="mx-auto px-2 max-w-2xl">
                 <h2 className="text-2xl font-bold text-black mb-6">Upcoming Projects</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Single column layout with border separation */}
+                <div className="flex flex-col divide-y divide-gray-200">
                     {projects.map((project, index) => (
-                        <div
-                            key={index}
-                            className="border-b border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-400 bg-white"
-                        >
-                            <div className="relative group">
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-48 object-cover cursor-pointer border-y-stone-950"
-                                    onClick={() => project.link ? window.open(project.link, "_blank") : window.open(project.github, "_blank")}
-                                />
-                                <div className="absolute top-1 left-2">
-                                    <span
-                                        className={`text-xs px-2 py-1 border rounded-lg ${project.status === "ongoing"
-                                            ? "bg-yellow-200 text-black border-b border-gray-200"
-                                            : "bg-green-200 text-black border-b border-green-300"
-                                            }`}
-                                    >
-                                        {project.status === "ongoing" ? "Building" : "Completed"}
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div className="p-2">
-                                <div className="flex items-start justify-between mb-2">
-                                    <h3 className="text-base font-bold text-black">{project.title}</h3>
-                                    <div className="flex gap-4 pt-2">
+                        <div key={index} className="py-5">
+                            <div className="flex flex-col gap-2">
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-2 flex-wrap mb-1">
+                                            <h3 className="text-base font-bold text-black">{project.title}</h3>
+                                            <span className="text-[10px] px-2 py-0.5 border border-dotted rounded-full bg-amber-100 border-amber-300">
+                                                Building
+                                            </span>
+                                        </div>
+                                        
+                                        <p className="text-gray-700 text-sm leading-relaxed mb-2">
+                                            {project.description}
+                                        </p>
+                                        
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {project.tags.map((tag, i) => (
+                                                <span key={i} className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded-md">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex gap-3 shrink-0 pt-1">
                                         {project.github && (
-                                            <a
-                                                href={project.github}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center gap-2 text-sm text-gray-700 hover:text-black transition-colors duration-200"
+                                            <a 
+                                                href={project.github} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer" 
+                                                className="text-gray-600 hover:text-black transition"
+                                                title="View GitHub repository"
                                             >
                                                 <Github className="w-4 h-4" />
                                             </a>
                                         )}
                                         {project.link && (
-                                            <a
-                                                href={project.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center gap-2 text-sm text-gray-800 hover:text-blue-800 transition-colors duration-200"
+                                            <a 
+                                                href={project.link} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer" 
+                                                className="text-gray-600 hover:text-blue-600 transition"
+                                                title="View live demo"
                                             >
                                                 <ExternalLink className="w-4 h-4" />
                                             </a>
                                         )}
                                     </div>
                                 </div>
-
-                                <p className="text-gray-700 text-sm mb-3 line-clamp-3 leading-relaxed">
-                                    {project.description}
-                                </p>
-                                <div className="mb-2 flex flex-wrap gap-1">
-                                    {project.tags.map((tag, i) => (
-                                        <span
-                                            key={i}
-                                            className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-4 text-center">
-
-                    <p className="text-gray-600 text-base">
+                <div className="mt-6 text-center">
+                    <p className="text-gray-600 text-sm">
                         View all projects at{' '}
                         <a
-                            href="https://github.com/ankitkarki27"
+                            href="https://github.com/meenfa"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="
@@ -134,14 +107,13 @@ const UpcomingProjects = () => {
                                 hover:text-gray-900
                                 transition-all duration-200 
                                 inline-flex items-center gap-1
-                                "
+                            "
                         >
                             <Github className="w-4 h-4" />
-                            ankitkarki27
+                            meenfa
                         </a>
                     </p>
                 </div>
-
             </div>
         </section>
     );
