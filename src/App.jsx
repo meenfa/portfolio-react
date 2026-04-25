@@ -4,12 +4,12 @@ import Main from './pages/Portfolio';
 
 import './App.css';
 
-import PoetryPage from './components/Page/PoetryPage';
-import ProjectsPage from './components/Page/ProjectsPage';
-import ExperiencePage from './components/Page/ExperiencePage';
-import BlogsPage from './components/Page/BlogsPage';
-import PageNotFound from "./components/Page/PageNotFound";
-import BlogPostPage from './components/Page/BlogPostPage';
+import PoetryPage from './components/PageTemp/PoetryPage';
+import ProjectsPage from './components/PageTemp/ProjectsPage';
+import ExperiencePage from './components/PageTemp/ExperiencePage';
+import BlogsPage from './components/PageTemp/BlogsPage';
+import PageNotFound from "./components/PageTemp/PageNotFound";
+import BlogPostPage from './components/PageTemp/BlogPostPage';
 
 const App = () => {
   return (
