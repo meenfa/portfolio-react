@@ -1,16 +1,9 @@
 export const blogs = [
-  {
-    title: "GitHub Student Developer Pack: Essential Tools for Students",
-    slug: "github-student-developer-pack",
-    createdOn: "October 17, 2025",
-    readTime: 4,
-  },
-  {
-    title: "The Interview That Taught Me More Than Any Course",
-    slug: "interview-that-taught-me-more-than-any-course",
-    createdOn: "October 17, 2025",
-    readTime: 4,
-  },
+  // {
+  //   title: "AI Tools for Students in 2026",
+  //   slug: "ai-tools-in-2026",
+  //   createdOn: "April 25, 2026",
+  // },
   {
     title:
       "Enhancing Assessment Security in LMS using Fisher-Yates Shuffle Algorithm",
@@ -24,9 +17,17 @@ export const blogs = [
     createdOn: "October 22, 2025",
     readTime: 4,
   },
-  // {
-  //   title: " AI Tools for Students in 2026",
-  //   slug: "ai-tools-in-2026",
-  //   createdOn: "April 25, 2026",
-  // },
+  {
+    title: "The Interview That Taught Me More Than Any Course",
+    slug: "interview-that-taught-me-more-than-any-course",
+    createdOn: "October 17, 2025",
+    readTime: 4,
+  },
+  {
+    title: "GitHub Student Developer Pack: Essential Tools for Students",
+    slug: "github-student-developer-pack",
+    createdOn: "October 1, 2025",
+    readTime: 4,
+  },
+
 ];

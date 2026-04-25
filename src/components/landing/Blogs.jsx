@@ -12,7 +12,7 @@ const Blogs = () => {
         </h2>
 
         <div className="space-y-0">
-          {[...blogs].reverse().map((blog, index) => (
+           {blogs.map((blog, index) => (
             <BlogCard
               key={index}
               title={blog.title}
