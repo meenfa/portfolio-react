@@ -23,7 +23,7 @@ export const projects = [
   {
     title: "Digital Padhai",
     description:
-      "Developed an online learning platform where students can enroll in courses, access learning materials, track progress, and complete assessments through an interactive dashboard.",
+      "Developed an AI powered online learning platform where students can enroll in courses, access learning materials, track progress, and complete assessments through an interactive dashboard.",
     tags: ["React", "Django", "PostgreSQL", "Tailwind"],
     github: "https://github.com/ankitkarki27/eLearning-Platform-django-react",
     image: "/image/project/padhai.png",

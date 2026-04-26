@@ -46,7 +46,6 @@ const Navbar = () => {
           <span className="text-xl font-bold text-black">Ankit Karki</span>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-4">
           {sections.map((section) => (
             <button
@@ -54,7 +53,7 @@ const Navbar = () => {
               onClick={() => handleNavClick(section)}
               className={`text-sm cursor-pointer ${location.pathname === section.path
                 ? 'text-black border-b border-black'
-                : 'text-gray-700 hover:text-black hover:border-b hover:border-gray-800'
+                : 'text-gray-800 hover:text-black hover:border-b-2 hover:border-gray-800'
                 }`}
             >
               {section.name}

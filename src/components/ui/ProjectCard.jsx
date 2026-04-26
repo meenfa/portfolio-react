@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => (
             </span>
           </div>
           
-          <p className="text-gray-700 text-sm leading-relaxed mb-2">
+          <p className="text-gray-500 text-sm leading-relaxed mb-2">
             {project.description}
           </p>
           

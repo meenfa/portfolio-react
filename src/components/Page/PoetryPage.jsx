@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Download } from 'lucide-react';
+import PageFade from '../ui/motion/PageFade';
 
 const poems = [
     {
@@ -159,7 +160,6 @@ const PoetryPage = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900">
-            {/* Original Navbar */}
             <nav className="fixed top-0 w-full bg-white backdrop-blur-md z-50 h-16 ">
                 <div className="mx-auto px-4 max-w-2xl h-full">
                     <div className="flex justify-between items-center h-full">
@@ -225,55 +225,55 @@ const PoetryPage = () => {
                 </div>
             </nav>
 
+            <PageFade>
+                <div className="pt-20 px-4 pb-16 max-w-2xl mx-auto">
 
-            <div className="pt-20 px-4 pb-16 max-w-2xl mx-auto">
-
-                <div className="text-left mb-4 pb-4">
-                    <h1 className="nepali text-4xl font-bold text-black mb-2 mt-4">मेरा कविताहरू</h1>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                        In the small world of my words!!
-                    </p>
-                </div>
+                    <div className="text-left mb-4 pb-4">
+                        <h1 className="nepali text-4xl font-bold text-black mb-2 mt-4">मेरा कविताहरू</h1>
+                        <p className="text-gray-700 text-lg leading-relaxed">
+                            In the small world of my words!!
+                        </p>
+                    </div>
 
 
-                <div className="space-y-4">
-                    {poems.map((poem, index) => {
-                        const isExpanded = expandedPoems[index];
-                        const preview = poem.content.split('\n').slice(0, 1).join('\n');
-                        const hasMoreContent = poem.content.split('\n').length > 4;
+                    <div className="space-y-4">
+                        {poems.map((poem, index) => {
+                            const isExpanded = expandedPoems[index];
+                            const preview = poem.content.split('\n').slice(0, 1).join('\n');
+                            const hasMoreContent = poem.content.split('\n').length > 4;
 
-                        return (
-                            <div key={index} className="border-b border-gray-300 pb-4 last:border-b-1">
-                                <div className="flex items-start justify-between mb-2">
-                                    <h2 className="nepali text-2xl font-bold text-black">
-                                        {poem.title}
-                                    </h2>
-                                    {poem.date && (
-                                        <span className="text-gray-500 text-sm font-normal">
-                                            {poem.date}
-                                        </span>
+                            return (
+                                <div key={index} className="border-b border-gray-300 pb-4 last:border-b-1">
+                                    <div className="flex items-start justify-between mb-2">
+                                        <h2 className="nepali text-2xl font-bold text-black">
+                                            {poem.title}
+                                        </h2>
+                                        {poem.date && (
+                                            <span className="text-gray-500 text-sm font-normal">
+                                                {poem.date}
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    <pre className="nepali whitespace-pre-line text-gray-900 leading-relaxed text-xl font-normal">
+                                        {isExpanded ? poem.content : preview}
+                                    </pre>
+
+                                    {hasMoreContent && (
+                                        <button
+                                            onClick={() => togglePoem(index)}
+                                            className="mt-2 text-blue-600 hover:text-blue-800 flex items-center gap-2 transition-colors cursor-pointer"
+                                        >
+                                            {isExpanded ? 'Show Less' : 'Read Full'}
+                                            <ArrowRight className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+                                        </button>
                                     )}
                                 </div>
-
-                                <pre className="nepali whitespace-pre-line text-gray-900 leading-relaxed text-xl font-normal">
-                                    {isExpanded ? poem.content : preview}
-                                </pre>
-
-                                {hasMoreContent && (
-                                    <button
-                                        onClick={() => togglePoem(index)}
-                                        className="mt-2 text-blue-600 hover:text-blue-800 flex items-center gap-2 transition-colors cursor-pointer"
-                                    >
-                                        {isExpanded ? 'Show Less' : 'Read Full'}
-                                        <ArrowRight className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
-                                    </button>
-                                )}
-                            </div>
-                        );
-                    })}
-                </div>
-                {/* Ebook Section */}
-                {/* <div id="ebook" className="mt-20 pt-12 border-t border-gray-300">
+                            );
+                        })}
+                    </div>
+                    {/* Ebook Section */}
+                    {/* <div id="ebook" className="mt-20 pt-12 border-t border-gray-300">
     <div className="text-left mb-12">
         <h3 className="nepali text-3xl font-bold text-black mb-4">My Ebook</h3>
         <p className="text-gray-700 text-lg leading-relaxed">
@@ -306,43 +306,43 @@ const PoetryPage = () => {
         ))}
     </div>
 </div> */}
-                {/* Support Section */}
-                <div id="support" className="mt-2 pt-12 ">
-                    <div className="text-left mb-12">
-                        {/* <h3 className="nepali text-2xl font-bold text-black mb-2">Support</h3> */}
-                        <p className="text-gray-700 text-lg leading-relaxed">
-                            you can support me,if you love my poems, via:
-                        </p>
-                    </div>
+                    {/* Support Section */}
+                    <div id="support" className="mt-2 pt-12 ">
+                        <div className="text-left mb-12">
+                            {/* <h3 className="nepali text-2xl font-bold text-black mb-2">Support</h3> */}
+                            <p className="text-gray-700 text-lg leading-relaxed">
+                                you can support me,if you love my poems, via:
+                            </p>
+                        </div>
 
-                    <div className="flex flex-wrap justify-left gap-12">
-                        {donations.map((donation) => (
-                            <div key={donation.name} className="text-left">
-                                <div className=" p-4 rounded-sm border border-gray-300 mb-4">
-                                    <img
-                                        src={donation.qr}
-                                        alt={`${donation.name} QR`}
-                                        className="w-48 h-48 rounded border border-gray-400"
-                                    />
+                        <div className="flex flex-wrap justify-left gap-12">
+                            {donations.map((donation) => (
+                                <div key={donation.name} className="text-left">
+                                    <div className=" p-4 rounded-sm border border-gray-300 mb-4">
+                                        <img
+                                            src={donation.qr}
+                                            alt={`${donation.name} QR`}
+                                            className="w-48 h-48 rounded border border-gray-400"
+                                        />
+                                    </div>
+                                    <p className="text-gray-700 text-lg mb-1">{donation.name}:</p>
+                                    <p className="text-gray-600 text-base mb-4 font-mono">{donation.id}(Ankit Karki)</p>
+                                    <a
+                                        href={donation.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors text-sm"
+                                    >
+                                        Support
+                                        <ArrowRight className="w-4 h-4" />
+                                    </a>
                                 </div>
-                                <p className="text-gray-700 text-lg mb-1">{donation.name}:</p>
-                                <p className="text-gray-600 text-base mb-4 font-mono">{donation.id}(Ankit Karki)</p>
-                                <a
-                                    href={donation.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors text-sm"
-                                >
-                                    Support
-                                    <ArrowRight className="w-4 h-4" />
-                                </a>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Footer */}
+            </PageFade>
             <footer className="border-t border-gray-300 py-8 bg-gray-50">
                 <div className="max-w-2xl mx-auto px-4 text-center">
                     <p className="text-gray-600 text-base">

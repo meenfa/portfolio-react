@@ -33,7 +33,7 @@ const UpcomingProjects = () => {
                 <h2 className="text-2xl font-bold text-black mb-6">Upcoming Projects</h2>
 
                 {/* Single column layout with border separation */}
-                <div className="flex flex-col divide-y divide-gray-200">
+                <div className="flex flex-col divide-y divide-gray-600">
                     {projects.map((project, index) => (
                         <div key={index} className="py-5">
                             <div className="flex flex-col gap-2">
