@@ -30,85 +30,11 @@ const Hero = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const heroPoints = [
-    <>
-      I am a <span className="text-black font-bold">Backend focused</span> from Nepal
-      <span className="inline-block text-gray-800 ml-1">🇳🇵</span>.
-    </>,
-
-    <>
-      I build backend systems with{" "}
-      <HeroSkillBtn
-        icon={SiDjango}
-        label="Django"
-        className="w-3 h-3 mr-1 text-[#032f1e]"
-      />{" "}
-      and{" "}
-      <HeroSkillBtn
-        icon={FaLaravel}
-        label="Laravel"
-        className="w-3 h-3 mr-1 text-[#FF2D20]"
-      />
-      , while shipping complete products.
-    </>,
-
-    <>
-      Built{" "}
-      <span className="text-black font-medium">
-        <a
-          href="https://www.potatocv.lol/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-800 font-bold hover:text-black underline underline-offset-4"
-        >
-          PotatoCV
-        </a>
-      </span>
-      , a resume roasting tool, with{" "}
-      <span className="text-black font-medium">
-        5K+ organic page visits
-      </span>.
-    </>,
-
-    <>
-      Built{" "}
-      <span className="text-black font-medium">
-        <a
-          href="https://wordzo.meenfa.tech"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-900 hover:text-black font-bold underline underline-offset-4"
-        >
-          Wordzo
-        </a>
-      </span>
-      , a word game web application.
-    </>
-
-  ];
-
   return (
     <section id="hero" className="relative flex items-center pt-8 sm:px-6 lg:px-8">
-      <motion.div
-        className="mx-auto px-2 w-full max-w-2xl relative z-10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.8,
-          ease: [0.22, 1, 0.36, 1]
-        }}
-      >
+      <div className="mx-auto px-2 w-full max-w-2xl relative z-10">
         <div className="space-y-2">
-          <motion.div
-            className="flex flex-col lg:flex-row gap-2 items-center"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.1,
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1]
-            }}
-          >
+          <div className="flex flex-col lg:flex-row gap-2 items-center">
             <div className="w-full lg:w-4/3 mb-2 space-y-3 text-black order-last lg:order-first">
               <div className="flex flex-row items-center gap-4">
                 <img
@@ -129,12 +55,75 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="space-y-3 text-gray-800 text-sm leading-relaxed">
-                {heroPoints.map((point, index) => (
-                  <p key={index}>{point}</p>
-                ))}
-              </div>
-              <p className="text-gray-800 leading-relaxed text-sm flex flex-wrap items-center gap-2 pt-0">
+              <ul className="space-y-3 text-gray-800 text-sm leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  <span>
+                    I am a <span className="text-black font-bold">Backend focused</span> from Nepal
+                    <span className="inline-block text-gray-800 ml-1">🇳🇵</span>.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  <span>
+                    I build backend systems with{" "}
+                    <HeroSkillBtn
+                      icon={SiDjango}
+                      label="Django"
+                      className="w-3 h-3 mr-1 text-[#032f1e]"
+                    />{" "}
+                    and{" "}
+                    <HeroSkillBtn
+                      icon={FaLaravel}
+                      label="Laravel"
+                      className="w-3 h-3 mr-1 text-[#FF2D20]"
+                    />
+                    , while shipping complete products.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  <span>
+                    Built{" "}
+                    <span className="text-black font-medium">
+                      <a
+                        href="https://www.potatocv.lol/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-800 font-bold hover:text-black underline underline-offset-4"
+                      >
+                        PotatoCV
+                      </a>
+                    </span>
+                    , a resume roasting tool, with{" "}
+                    <span className="text-black font-medium">
+                      5K+ organic page visits
+                    </span>.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  <span>
+                    Built{" "}
+                    <span className="text-black font-medium">
+                      <a
+                        href="https://potatocv.meenfa.tech"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-900 hover:text-black font-bold underline underline-offset-4"
+                      >
+                        Wordzo
+                      </a>
+                    </span>
+                    , a word game web application.
+                  </span>
+                </li>
+              </ul>
+
+              <p className="text-gray-800 leading-relaxed text-sm flex items-center gap-2 pt-1">
                 Say hi at{' '}
                 <span className="flex items-center gap-1">
                   <a
@@ -157,18 +146,9 @@ const Hero = () => {
                 )}
               </p>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="flex flex-wrap gap-2 items-center pt-2"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.18,
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1]
-            }}
-          >
+          <div className="flex flex-wrap gap-2 items-center pt-2">
             <a
               href="/doc/Ankit_Karki_resume.pdf"
               target="_blank"
@@ -186,18 +166,9 @@ const Hero = () => {
               <HeroSkillSecondaryBtn icon={RiTelegram2Fill} label="Get in touch" className="w-4 h-6 mr-1 text-white" />
 
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="flex flex-wrap gap-2 items-center pt-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              delay: 0.25,
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1]
-            }}
-          >
+          <div className="flex flex-wrap gap-2 items-center pt-4">
             <a
               href="https://github.com/meenfa"
               target="_blank"
@@ -260,10 +231,10 @@ const Hero = () => {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-700"></div>
               </div>
             </a>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
-    </section >
+      </div>
+    </section>
   );
 };
 
