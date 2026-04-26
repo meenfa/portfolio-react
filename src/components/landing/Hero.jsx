@@ -74,7 +74,7 @@ const Hero = () => {
       Built{" "}
       <span className="text-black font-medium">
         <a
-          href="https://potatocv.meenfa.tech"
+          href="https://wordzo.meenfa.tech"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-900 hover:text-black font-bold underline underline-offset-4"
@@ -83,30 +83,6 @@ const Hero = () => {
         </a>
       </span>
       , a word game web application.
-    </>,
-    <>
-      <p className="text-gray-800 leading-relaxed text-sm flex items-center gap-2 pt-1">
-        Say hi at{' '}
-        <span className="flex items-center gap-1">
-          <a
-            href={`mailto:${email}`}
-            className="text-sm text-gray-900 border-b border-dashed border-gray-700 transition-all cursor-pointer hover:text-black font-mono"
-          >
-            {email}
-          </a>
-          <button
-            onClick={copyEmail}
-            className="p-1 rounded-md hover:bg-gray-200 transition-all text-gray-600 hover:text-black cursor-pointer"
-          >
-            <IoCopyOutline size={16} />
-          </button>
-        </span>
-        {copied && (
-          <span className="text-gray-600 text-xs ml-2 animate-fade">
-            Copied!
-          </span>
-        )}
-      </p>
     </>
 
   ];
@@ -118,18 +94,19 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          duration: 0.6,
-          ease: "easeOut"
+          duration: 0.8,
+          ease: [0.22, 1, 0.36, 1]
         }}
       >
         <div className="space-y-2">
           <motion.div
             className="flex flex-col lg:flex-row gap-2 items-center"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              delay: 0.15,
-              duration: 0.5
+              delay: 0.1,
+              duration: 0.7,
+              ease: [0.22, 1, 0.36, 1]
             }}
           >
             <div className="w-full lg:w-4/3 mb-2 space-y-3 text-black order-last lg:order-first">
@@ -157,7 +134,28 @@ const Hero = () => {
                   <p key={index}>{point}</p>
                 ))}
               </div>
-
+              <p className="text-gray-800 leading-relaxed text-sm flex flex-wrap items-center gap-2 pt-0">
+                Say hi at{' '}
+                <span className="flex items-center gap-1">
+                  <a
+                    href={`mailto:${email}`}
+                    className="text-sm text-gray-900 border-b border-dashed border-gray-700 transition-all cursor-pointer hover:text-black font-mono"
+                  >
+                    {email}
+                  </a>
+                  <button
+                    onClick={copyEmail}
+                    className="p-1 rounded-md hover:bg-gray-200 transition-all text-gray-600 hover:text-black cursor-pointer"
+                  >
+                    <IoCopyOutline size={16} />
+                  </button>
+                </span>
+                {copied && (
+                  <span className="text-gray-600 text-xs ml-2 animate-fade">
+                    Copied!
+                  </span>
+                )}
+              </p>
             </div>
           </motion.div>
 
@@ -166,8 +164,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              delay: 0.35,
-              duration: 0.5
+              delay: 0.18,
+              duration: 0.7,
+              ease: [0.22, 1, 0.36, 1]
             }}
           >
             <a
@@ -194,8 +193,9 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              delay: 0.5,
-              duration: 0.5
+              delay: 0.25,
+              duration: 0.7,
+              ease: [0.22, 1, 0.36, 1]
             }}
           >
             <a
