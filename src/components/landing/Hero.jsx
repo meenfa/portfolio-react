@@ -92,7 +92,7 @@ const Hero = () => {
                         href="https://www.potatocv.lol/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-800 font-bold hover:text-black underline underline-offset-4"
+                        className="text-black font-bold hover:text-gray-900 underline underline-offset-4"
                       >
                         PotatoCV
                       </a>
