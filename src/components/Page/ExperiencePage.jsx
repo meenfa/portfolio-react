@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { experience } from "../data/experienceData";
 import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
+import PageFade from "../ui/motion/PageFade";
 
 const ExperiencePage = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -14,7 +15,7 @@ const ExperiencePage = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
-
+      <PageFade>
       <header className="py-8 pt-24">
         <div className="mx-auto px-2 max-w-2xl">
           <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
@@ -26,7 +27,6 @@ const ExperiencePage = () => {
           </p>
         </div>
       </header>
-
       <section className="py-4 bg-white">
         <div className="mx-auto px-3 max-w-2xl">
           <div className="space-y-6">
@@ -98,9 +98,12 @@ const ExperiencePage = () => {
           </div>
         </div>
 
-        <Footer />
+        
       </section>
+      </PageFade>
+      <Footer />
     </div>
+
   );
 };
 
