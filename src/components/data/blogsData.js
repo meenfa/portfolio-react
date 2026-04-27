@@ -1,15 +1,9 @@
 export const blogs = [
-  // {
-  //   title: "AI Tools for Students in 2026",
-  //   slug: "ai-tools-in-2026",
-  //   createdOn: "April 25, 2026",
-  // },
   {
-    title:
-      "Enhancing Assessment Security in LMS using Fisher-Yates Shuffle Algorithm",
-    slug: "fisher-yates-assessment-security",
+    title: "The Algorithm Every Online Quiz Platform Needs: Fisher-Yates for Beginners",
+    slug: "the-algorithm-every-online-quiz-platform-needs-fisher-yates-for-beginners",
     createdOn: "December 7, 2025",
-    readTime: 4,
+    readTime: 5,
   },
   {
     title: "Getting Started with Django: Building Your First Project Step by Step",
