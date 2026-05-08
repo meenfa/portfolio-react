@@ -57,15 +57,15 @@ const Hero = () => {
 
               <ul className="space-y-3 text-gray-800 text-sm leading-relaxed">
                 <li className="flex items-start gap-2">
-                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  {/* <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" /> */}
                   <span>
-                    I am a <span className="text-black font-bold">Backend focused</span> from Nepal
+                    I am a <span className="text-black font-bold">Backend developer</span> from Nepal
                     <span className="inline-block text-gray-800 ml-1">🇳🇵</span>.
                   </span>
                 </li>
 
                 <li className="flex items-start gap-2">
-                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  {/* <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" /> */}
                   <span>
                     I build backend systems with{" "}
                     <HeroSkillBtn
@@ -79,12 +79,12 @@ const Hero = () => {
                       label="Laravel"
                       className="w-3 h-3 mr-1 text-[#FF2D20]"
                     />
-                    , while shipping complete products.
+                    , while shipping complete backend.
                   </span>
                 </li>
 
                 <li className="flex items-start gap-2">
-                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  {/* <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" /> */}
                   <span>
                     Built{" "}
                     <span className="text-black font-medium">
@@ -105,15 +105,15 @@ const Hero = () => {
                 </li>
 
                 <li className="flex items-start gap-2">
-                  <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" />
+                  {/* <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" /> */}
                   <span>
                     Built{" "}
                     <span className="text-black font-medium">
                       <a
-                        href="https://potatocv.meenfa.tech"
+                        href="https://wordzo.meenfa.tech"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-900 hover:text-black font-bold underline underline-offset-4"
+                        className="text-black hover:text-gray-900 font-bold underline underline-offset-4"
                       >
                         Wordzo
                       </a>
@@ -140,7 +140,7 @@ const Hero = () => {
                   </button>
                 </span>
                 {copied && (
-                  <span className="text-gray-600 text-xs ml-2 animate-fade">
+                  <span className="text-gray-800 text-xs ml-2 animate-fade">
                     Copied!
                   </span>
                 )}
@@ -155,7 +155,6 @@ const Hero = () => {
               rel="noopener noreferrer"
             >
               <HeroSkillBtn icon={IoDocument} label="Resume / CV" className="w-4 h-6 mr-1 text-black" />
-
             </a>
 
             <a
@@ -164,7 +163,6 @@ const Hero = () => {
               rel="noopener noreferrer"
             >
               <HeroSkillSecondaryBtn icon={RiTelegram2Fill} label="Get in touch" className="w-4 h-6 mr-1 text-white" />
-
             </a>
           </div>
 

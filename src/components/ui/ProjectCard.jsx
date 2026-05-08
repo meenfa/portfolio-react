@@ -9,9 +9,9 @@ const ProjectCard = ({ project }) => (
           <div className="flex items-center gap-2 flex-wrap mb-1">
             <h3 className="text-base font-bold text-black">{project.title}</h3>
             <span className={`text-[10px] px-2 py-0.5 border border-dotted rounded-full ${
-              project.status === "ongoing" ? "bg-gray-100 border-gray-300" : "bg-amber-100 border-amber-300"
+              project.status === "in progress" ? "bg-gray-200 border-gray-300" : "bg-amber-200 border-amber-300"
             }`}>
-              {project.status === "ongoing" ? "Building" : "Completed"}
+              {project.status === "in progress" ? "Building" : "Completed"}
             </span>
           </div>
           
