@@ -30,6 +30,18 @@ const Navbar = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [mobileMenuOpen]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <nav className="fixed top-0 w-full bg-white/30 backdrop-blur-lg z-50 h-16">
       <div className="mx-auto px-2 max-w-2xl h-full flex justify-between items-center">
@@ -61,33 +73,96 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button - Updated */}
+        {/* Mobile Menu Button */}
         <MobileMenuButton
           isOpen={mobileMenuOpen}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         />
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Professional Mobile Dropdown Menu */}
       <div
-        className={`md:hidden absolute top-20 left-8 right-10 bg-white rounded-base shadow-sm  transition-all duration-300 ease-in-out transform ${mobileMenuOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-          }`}
+        className={`md:hidden fixed top-16 left-0 right-0 bg-white shadow-xl transition-all duration-300 ease-in-out transform ${
+          mobileMenuOpen 
+            ? 'translate-y-0 opacity-100 visible' 
+            : '-translate-y-full opacity-0 invisible'
+        }`}
+        style={{ height: 'auto', maxHeight: 'calc(100vh - 4rem)' }}
       >
-        <div className="flex flex-col py-2">
-          {sections.map((section) => (
+        {/* Menu Header with subtle gradient */}
+        {/* <div className="bg-gradient-to-r from-gray-50 to-white px-6 py-4 border-b border-gray-100">
+          <p className="text-xs uppercase tracking-wider text-gray-400 font-semibold">
+            Navigation
+          </p>
+        </div> */}
+
+        {/* Menu Items */}
+        <div className="py-2">
+          {sections.map((section, index) => (
             <button
               key={section.name}
               onClick={() => handleNavClick(section)}
-              className={`w-full text-left py-3 px-4 text-sm font-medium transition-all duration-300 rounded-md ${location.pathname === section.path
-                ? 'bg-gray-100 text-black font-semibold'
-                : 'text-gray-700 hover:text-black hover:bg-gray-50'
-                }`}
+              className={`w-full group relative transition-all duration-200 ${
+                index !== sections.length - 1 ? 'border-b border-gray-50' : ''
+              }`}
             >
-              {section.name}
+              <div className={`flex items-center justify-between px-6 py-4 transition-colors duration-200 ${
+                location.pathname === section.path
+                  ? 'bg-gray-50'
+                  : 'hover:bg-gray-50'
+              }`}>
+                <div className="flex flex-col items-start">
+                  <span className={`text-base font-medium transition-colors duration-200 ${
+                    location.pathname === section.path
+                      ? 'text-black'
+                      : 'text-gray-700 group-hover:text-black'
+                  }`}>
+                    {section.name}
+                  </span>
+                  {/* Subtle indicator line */}
+                  <div className={`h-0.5 bg-black transition-all duration-300 ${
+                    location.pathname === section.path 
+                      ? 'w-6 opacity-100' 
+                      : 'w-0 opacity-0 group-hover:w-4 group-hover:opacity-100'
+                  }`} />
+                </div>
+                
+                {/* Arrow icon for visual feedback */}
+                <svg 
+                  className={`w-4 h-4 transition-all duration-200 ${
+                    location.pathname === section.path
+                      ? 'text-black translate-x-1'
+                      : 'text-gray-400 group-hover:text-black group-hover:translate-x-1'
+                  }`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </button>
           ))}
         </div>
+
+        {/* Optional: Footer with additional info */}
+        <div className="border-t border-gray-100 px-6 py-4 bg-gray-50/50">
+          <p className="text-xs text-gray-400 text-center">
+            Let's create something amazing
+          </p>
+        </div>
       </div>
+
+      {/* Backdrop overlay */}
+      <div
+        className={`md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm transition-all duration-300 ${
+          mobileMenuOpen 
+            ? 'opacity-100 visible' 
+            : 'opacity-0 invisible'
+        }`}
+        style={{ top: '4rem', zIndex: 40 }}
+        onClick={() => setMobileMenuOpen(false)}
+      />
     </nav>
   );
 };

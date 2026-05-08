@@ -38,7 +38,7 @@ const ProjectsPage = () => {
           </div>
         </section>
 
-        <UpcomingProjects />
+        {/* <UpcomingProjects /> */}
       </PageFade>
       <Footer />
     </div>
