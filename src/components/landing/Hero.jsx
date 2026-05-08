@@ -150,7 +150,7 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-2 items-center pt-2">
             <a
-              href="/doc/Ankit_Karki_resume.pdf"
+              href="/doc/Ankit_Karki_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
