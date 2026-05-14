@@ -1,23 +1,53 @@
 export const experience = [
-    {
-      role: "Django Developer",
-      company: "Vasuki Tech",
-      location: "Remote",
-      period: "Nov 2025 – Present",
-      description: [
-        "Working as a backend developer in a startup environment, primarily using Django to build and maintain RESTful APIs. Designed database schemas, implemented business logic, and handled data validation to ensure reliable application behavior. Collaborated with frontend developers for API integration and participated in debugging, testing, and iterative development processes.",
-      ],
-      tags: ["Django", "PostgreSQL", "REST APIs"],
-    },
-    {
-      role: "Backend Developer",
-      company: "NepBigyapan",
-      companyUrl: "https://www.nepbigyapan.com.np",
-      location: "Kathmandu, Nepal",
-      period: "Nov 2024 – September 2025",
-      description: [
-        "Started as an intern and progressed to a Junior Backend Developer role. Worked on building and maintaining backend features, including authentication, data validation, and relational database design. Developed and integrated REST APIs to support frontend applications, and collaborated closely with frontend developers to ensure smooth system functionality and performance.",
-      ],
-      tags: ["Laravel", "REST APIs", "MySQL", "Git"],
-    },
-  ];
+  {
+    role: "Django Developer",
+    company: "Vasuki Tech",
+    location: "Jhapa, Nepal (Remote)",
+    period: "Oct 2025 – Present",
+    description: [
+      "Developed scalable backend systems and RESTful APIs using Django and Django REST Framework (DRF)",
+      "Designed and optimized PostgreSQL database schemas, queries, and backend workflows for performance and reliability",
+      "Implemented JWT-based authentication, authorization, and secure API access control",
+      "Integrated backend services with frontend applications and mobile-friendly APIs",
+      "Worked with Docker, Redis, and Celery for containerized development and asynchronous task processing",
+      "Collaborated with frontend developers to deliver clean and maintainable API integrations",
+    ],
+    tags: [
+      "Python",
+      "Django",
+      "DRF",
+      "PostgreSQL",
+      "REST APIs",
+      "JWT",
+      "Docker",
+      "Redis",
+      "Celery",
+      "Git",
+    ],
+  },
+
+  {
+    role: "Backend Developer",
+    company: "NepBigyapan",
+    companyUrl: "https://www.nepbigyapan.com.np",
+    location: "Kathmandu, Nepal",
+    period: "Nov 2024 – Sept 2025",
+    description: [
+      "Worked on backend modules for a College Management System including authentication and role-based access",
+      "Built and maintained RESTful APIs using Django and DRF for React.js frontend integration",
+      "Improved existing backend systems by optimizing queries, fixing bugs, and enhancing performance",
+      "Worked with relational databases and contributed to backend logic and data handling",
+      "Collaborated with team members using Git and participated in debugging and feature improvements",
+    ],
+    tags: [
+      "Python",
+      "Django",
+      "DRF",
+      "React.js",
+      "REST APIs",
+      "MySQL",
+      "Git",
+      "Backend Development",
+    ],
+  },
+];
