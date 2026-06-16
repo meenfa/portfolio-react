@@ -55,7 +55,7 @@ const Contact = () => {
             </div>
 
             <a
-              href="/doc/Ankit_Karki_CV.pdf"
+              href="/doc/Ankit_Karki_Software_Dev_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
