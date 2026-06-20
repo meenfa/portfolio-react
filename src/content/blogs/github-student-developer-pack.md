@@ -6,7 +6,7 @@ It gives you free access to more than 70 premium tools, courses, and developer r
 
 In this blog, I'll walk you through what the pack is, how to activate it, and why every student developer should take advantage of it.
 
----
+
 
 ## What Is the GitHub Student Developer Pack?
 
@@ -18,7 +18,7 @@ And the best part? You don't have to pay a single rupee or dollar for it.
 
 **Check it out here:** [education.github.com/pack](https://education.github.com/pack)
 
----
+
 
 ## Who Can Apply?
 
@@ -30,7 +30,7 @@ You're eligible for the pack if:
 
 Even if you don't have a school email, you can still apply by uploading a student ID or any official document that proves you're a student.
 
----
+
 
 ## How to Activate the GitHub Student Developer Pack
 
@@ -74,7 +74,7 @@ You will see:
 
 Once the benefits become available, you will be able to access the Student Developer Pack offers. We hope you enjoy your GitHub Education benefits.
 
----
+
 
 ## Start Using the Free Tools
 
@@ -92,7 +92,7 @@ You can explore and activate over 70+ partner offers directly from the GitHub St
 
 You can activate them one by one , each will guide you through the setup.
 
----
+
 
 ## Benefits
 
@@ -102,7 +102,7 @@ You can activate them one by one , each will guide you through the setup.
 - **Boost your resume**:show real projects with GitHub and JetBrains tools
 - **Save money**:enjoy premium tools worth hundreds of dollars for free
 
----
+
 
 ## Tips to Make the Most of It
 
@@ -112,7 +112,7 @@ You can activate them one by one , each will guide you through the setup.
 - Keep an eye on new offers , GitHub adds new partners regularly
 - Re-verify your student status every year to keep your benefits active
 
----
+
 
 ## Common Issues and Fixes
 
@@ -137,6 +137,6 @@ It's more than just free software , it's a chance to explore, experiment, and gr
 
 [https://education.github.com/pack](https://education.github.com/pack)
 
----
+
 
 *Happy coding!*

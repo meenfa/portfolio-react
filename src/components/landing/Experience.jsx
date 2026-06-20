@@ -10,7 +10,7 @@ const Experience = () => {
   };
 
   return (
-    <section className="py-10 bg-white">
+    <section className="py-10 bg-[#FAF9F6]">
       <div className="mx-auto px-3 max-w-2xl">
         <h2 className="text-2xl font-bold mb-4 text-black">Experience</h2>
         <div className="space-y-4">

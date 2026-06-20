@@ -10,7 +10,7 @@ const ProjectsSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-10 bg-white pt-2">
+    <section className="py-10 bg-[#FAF9F6] pt-2">
       <div className="mx-auto px-2 max-w-2xl">
         <h2 className="text-2xl font-bold text-black mb-2">Projects</h2>
 

@@ -1,5 +1,5 @@
 
----
+
 
 ## TL;DR
 
@@ -7,7 +7,7 @@ Most quiz platforms serve questions in the same order every time. Students figur
 
 In Python you can use **random.shuffle()** which already uses Fisher-Yates internally. In JavaScript there is no built-in equivalent so you need to write it yourself, which is about 6 lines of code. Either way, adding this to your quiz platform takes under 10 minutes and immediately makes it harder to game.
 
----
+
 
 ## Have You Ever Thought About This?
 
@@ -19,7 +19,7 @@ You did not get hacked. No one exploited your database. The problem is much simp
 
 This is one of the most common and most overlooked security gaps in beginner-built quiz platforms. And the fix is a single algorithm called **Fisher-Yates**.
 
----
+
 
 ## Why Question Order Is a Security Problem
 
@@ -29,7 +29,7 @@ Students figure this out quickly. After a few attempts or after talking to class
 
 Even if you think shuffling randomly solves this, most naive approaches have a hidden problem.
 
----
+
 
 ## Why *Math.random()* Alone Is Not Enough
 
@@ -43,7 +43,7 @@ This looks like it shuffles but it actually does not produce a fair shuffle. Som
 
 What you actually need is a shuffle that gives every possible ordering an equal chance. That is exactly what Fisher-Yates does.
 
----
+
 
 ## What is Fisher-Yates?
 
@@ -86,7 +86,7 @@ function fisherYatesShuffle(questions) {
 
 That is the whole algorithm. It is short, fast, and mathematically proven to produce a fair shuffle every time.
 
----
+
 
 ## How to Use It in a Real Quiz Platform
 
@@ -100,7 +100,7 @@ Say you have a bank of 50 questions but you only want to show 10 per session. He
 
 The scoring part is important. Because every student sees questions in a different order, you cannot score by position. You need to match each submitted answer to its question ID in your database. The order does not matter for grading, only the ID does.
 
----
+
 
 ## What Does This Actually Prevent?
 
@@ -110,7 +110,7 @@ Every student gets a different question order. Screenshots from one student are 
 
 Within a single session, the same question will never appear twice because Fisher-Yates places each item exactly once by design.
 
----
+
 
 ## What This Does Not Prevent
 
@@ -122,7 +122,7 @@ A good quiz platform needs Fisher-Yates plus a large question bank, answer optio
 
 > **Worth knowing:** Advanced platforms go further by combining Fisher-Yates with adaptive algorithms that personalize question difficulty based on how a student is performing. But proper shuffling is the foundation you build everything else on. Start here.
 
----
+
 
 ## One Small Thing Most Developers Miss
 
@@ -137,7 +137,7 @@ for question in shuffled_questions:
 
 This closes one more pattern that students can exploit.
 
----
+
 
 ## The Bottom Line
 
@@ -145,7 +145,7 @@ If you are building a quiz or assessment platform, even a small one for a class 
 
 You do not need a complex proctoring system to get started. You just need to stop serving questions in the same order every time. Fisher-Yates is how you do that properly.
 
----
+
 
 ## Further Reading
 

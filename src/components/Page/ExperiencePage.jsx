@@ -13,7 +13,7 @@ const ExperiencePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#FAF9F6] text-gray-900">
       <Navbar />
       <PageFade>
       <header className="py-8 pt-24">
@@ -27,7 +27,7 @@ const ExperiencePage = () => {
           </p>
         </div>
       </header>
-      <section className="py-4 bg-white">
+      <section className="py-4 bg-[#FAF9F6]">
         <div className="mx-auto px-3 max-w-2xl">
           <div className="space-y-6">
             {experience.map((exp, index) => {

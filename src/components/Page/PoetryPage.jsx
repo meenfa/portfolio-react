@@ -159,8 +159,8 @@ const PoetryPage = () => {
     const navItems = ['portfolio', 'support'];
 
     return (
-        <div className="min-h-screen bg-white text-gray-900">
-            <nav className="fixed top-0 w-full bg-white backdrop-blur-md z-50 h-16 ">
+        <div className="min-h-screen bg-[#FAF9F6] text-gray-900">
+            <nav className="fixed top-0 w-full bg-[#FAF9F6] backdrop-blur-md z-50 h-16 ">
                 <div className="mx-auto px-4 max-w-2xl h-full">
                     <div className="flex justify-between items-center h-full">
                         {/* Logo */}
@@ -207,7 +207,7 @@ const PoetryPage = () => {
 
                     {/* Mobile Dropdown Menu */}
                     <div
-                        className={`md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-300 shadow-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                        className={`md:hidden absolute top-16 left-0 w-full bg-[#FAF9F6] border-b border-gray-300 shadow-lg transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                             }`}
                     >
                         <div className="px-6 py-4 space-y-1">

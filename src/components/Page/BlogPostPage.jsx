@@ -65,7 +65,7 @@ const ShareModal = ({ isOpen, onClose, blogUrl, blogTitle }) => {
             aria-labelledby="share-modal-title"
         >
             <div 
-                className="bg-white rounded-xl shadow-xl w-full max-w-md p-6 relative"
+                className="bg-[#FAF9F6] rounded-xl shadow-xl w-full max-w-md p-6 relative"
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
@@ -92,7 +92,7 @@ const ShareModal = ({ isOpen, onClose, blogUrl, blogTitle }) => {
                         />
                         <button
                             onClick={handleCopy}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-700 bg-[#FAF9F6] border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition"
                         >
                             {copied ? (
                                 <>
@@ -145,7 +145,7 @@ const BlogPostPage = () => {
 
     if (!blog || !content) {
         return (
-            <div className="min-h-screen bg-white text-gray-900">
+            <div className="min-h-screen bg-[#FAF9F6] text-gray-900">
                 <Navbar />
                 <PageFade>
                     <main className="mx-auto max-w-2xl px-5 pt-28 pb-16">
@@ -168,7 +168,7 @@ const BlogPostPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-[#FAF9F6]">
             <Navbar />
             <PageFade>
                 <main className="mx-auto max-w-2xl px-4 pt-28 pb-20">

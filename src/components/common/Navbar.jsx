@@ -43,7 +43,7 @@ const Navbar = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <nav className="fixed top-0 w-full bg-white/30 backdrop-blur-lg z-50 h-16">
+    <nav className="fixed top-0 w-full bg-[#FAF9F6]/30 backdrop-blur-lg z-50 h-16">
       <div className="mx-auto px-2 max-w-2xl h-full flex justify-between items-center">
         <div
           className="flex items-center cursor-pointer"
@@ -82,7 +82,7 @@ const Navbar = () => {
 
       {/* Professional Mobile Dropdown Menu */}
       <div
-        className={`md:hidden fixed top-16 left-0 right-0 bg-white shadow-xl transition-all duration-300 ease-in-out transform ${
+        className={`md:hidden fixed top-16 left-0 right-0 bg-[#FAF9F6] shadow-xl transition-all duration-300 ease-in-out transform ${
           mobileMenuOpen 
             ? 'translate-y-0 opacity-100 visible' 
             : '-translate-y-full opacity-0 invisible'

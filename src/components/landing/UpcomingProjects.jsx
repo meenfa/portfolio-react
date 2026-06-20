@@ -28,7 +28,7 @@ const UpcomingProjects = () => {
         : projects.filter(p => p.project_type === filter);
 
     return (
-        <section className="py-8 bg-white pt-0">
+        <section className="py-8 bg-[#FAF9F6] pt-0">
             <div className="mx-auto px-2 max-w-2xl">
                 <h2 className="text-2xl font-bold text-black mb-6">Upcoming Projects</h2>
 
@@ -99,11 +99,11 @@ const UpcomingProjects = () => {
                             className="
                                 text-gray-800 font-normal text-xs
                                 border border-gray-800/60 border-dashed 
-                                bg-white/20 backdrop-blur-sm
+                                bg-[#FAF9F6]/20 backdrop-blur-sm
                                 rounded-lg px-3 py-1.5 
                                 shadow-[inset_0_1px_3px_rgba(0,0,0,0.12)]
                                 hover:shadow-[inset_0_0_12px_2px_rgba(0,0,0,0.24)]
-                                hover:bg-white/30 
+                                hover:bg-[#FAF9F6]/30 
                                 hover:text-gray-900
                                 transition-all duration-200 
                                 inline-flex items-center gap-1

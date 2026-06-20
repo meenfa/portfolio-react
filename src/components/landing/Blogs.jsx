@@ -4,7 +4,7 @@ import BlogCard from "../ui/BlogCard";
 
 const Blogs = () => {
   return (
-    <section className="py-10 bg-white pt-0">
+    <section className="py-10 bg-[#FAF9F6] pt-0">
       <div className="mx-auto px-3 max-w-2xl">
         <h2 className="text-2xl font-bold mb-2 text-black">
           

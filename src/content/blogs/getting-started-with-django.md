@@ -3,7 +3,7 @@ If you're new to Django and curious about how web apps are built using Python, t
 
 ![Django framework logo and development setup](/image/blog-images/django.webp)
 
----
+
 
 ## 1. What Is Django and Why Use It?
 
@@ -11,7 +11,7 @@ Django is a high-level Python web framework that helps developers build clean, s
 
 If you've written Python scripts before, Django will feel familiar but more structured. Think of it as a tool that helps you turn plain Python code into full web applications.
 
----
+
 
 ## 2. Setting Up Your Environment
 
@@ -41,7 +41,7 @@ You can check if it installed correctly by running:
 django-admin --version
 ```
 
----
+
 
 ## 3. Creating Your First Django Project
 
@@ -74,7 +74,7 @@ Let's break that down:
 
 **wsgi.py / asgi.py** : Used when deploying your app to a server.
 
----
+
 
 ## 4. Running the Development Server
 
@@ -92,7 +92,7 @@ Starting development server at http://127.0.0.1:8000/
 
 Open that link in your browser, and you'll see Django's default "Congratulations!" page. That means everything is working.
 
----
+
 
 ## 5. Creating Your First App
 
@@ -125,7 +125,7 @@ INSTALLED_APPS = [
 ]
 ```
 
----
+
 
 ## 6. Understanding the Core Django Components
 
@@ -143,7 +143,7 @@ Here's a simple breakdown of the main pieces in every Django app:
 
 These five parts form the foundation of every Django app.
 
----
+
 
 ## 7. Making Your First View and URL
 
@@ -183,7 +183,7 @@ urlpatterns = [
 
 Now go to **http://127.0.0.1:8000/** , you should see "Hello, Django!" displayed in your browser.
 
----
+
 
 ## 8. Exploring the Django Admin Panel
 
@@ -203,7 +203,7 @@ http://127.0.0.1:8000/admin/
 
 Log in using your credentials, and you'll see the Django admin dashboard. You can register your models here later to add and manage data easily.
 
----
+
 
 ## 9. Final Thoughts
 
@@ -213,7 +213,7 @@ From here, you can move on to defining models, connecting a database, and buildi
 
 In the next part of this series, we'll dive deeper into models — how to structure data, define relationships, and use the Django ORM effectively.
 
----
+
 
 *Happy coding with Django!*
 

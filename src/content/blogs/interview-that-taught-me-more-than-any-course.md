@@ -2,7 +2,7 @@ Months ago, I walked through an interview that didn't go as I hoped. But instead
 
 ![Interview reflection and growth](/image/blog-images/interview.webp)
 
----
+
 
 ## The Quote That Changed Everything
 
@@ -10,7 +10,7 @@ The interviewer said something that seemed simple at first: *"We all grow techni
 
 That one sentence stuck with me. It was both reassuring and challenging. Yes, technical skills will come with experience. But what about everything else? What separates someone who just grows technically from someone who truly excels?
 
----
+
 
 ## What Really Matters (That Nobody Tells You)
 
@@ -40,7 +40,7 @@ How you talk, listen, ask questions, and work with others is just as important a
 
 Because here's the truth: most development work happens in teams. You'll spend more time in meetings, code reviews, and collaborative sessions than you will coding in isolation. If you can't communicate, collaborate, or handle feedback gracefully, your technical skills won't carry you far.
 
----
+
 
 ## What I'm Doing Differently Now
 
@@ -48,7 +48,7 @@ Since that interview, I've been intentional about how I explain my work and idea
 
 This isn't just about cracking interviews. It's about becoming more effective in any team, in any role, at any stage of my career.
 
----
+
 
 ## My Advice for Fellow Freshers
 
@@ -60,7 +60,7 @@ If you're preparing for interviews, here's what I'd tell you:
 
 **Build confidence** by understanding your work deeply. Don't just implement features—understand why they matter and what alternatives you considered.
 
----
+
 
 ## Final Thought
 
@@ -68,7 +68,7 @@ That interview didn't go as planned, but it taught me something crucial: technic
 
 **The code will come. Focus on becoming the kind of person who can use that code to make a real impact.**
 
----
+
 
 *Thanks for reading. Keep building, keep learning, and keep growing.*
 

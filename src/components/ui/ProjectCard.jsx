@@ -2,7 +2,7 @@ import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 
 const ProjectCard = ({ project }) => (
-  <div className="py-5 transition-all duration-300 bg-white">
+  <div className="py-5 transition-all duration-300 bg-[#FAF9F6]">
     <div className="flex flex-col gap-2">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">

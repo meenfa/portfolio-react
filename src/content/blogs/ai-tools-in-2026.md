@@ -49,6 +49,6 @@ It can save you a lot of money while building projects that actually matter for 
 
 **Don't let budget stop you from building. These tools exist exactly for students like you.**
 
----
+
 
 *The image above shows the ecosystem of AI tools available to students in 2026 - use them wisely and build something remarkable.*

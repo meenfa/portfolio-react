@@ -6,7 +6,7 @@ import PageFade from "../ui/motion/PageFade";
 
 const PageNotFound = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900 flex flex-col">
+    <div className="min-h-screen bg-[#FAF9F6] text-gray-900 flex flex-col">
       <Navbar />
       <PageFade>
         <main className="flex-1 flex items-center justify-center px-4">

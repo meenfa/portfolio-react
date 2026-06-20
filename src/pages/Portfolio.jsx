@@ -13,7 +13,7 @@ import Hero from '../components/landing/Hero';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900 ">
+    <div className="min-h-screen bg-[#FAF9F6] text-gray-900 ">
       <div className="pt-16">
         <Navbar />
 
