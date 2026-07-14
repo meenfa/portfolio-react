@@ -6,29 +6,29 @@ import PageFade from "../ui/motion/PageFade";
 
 const PageNotFound = () => {
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-gray-900">
+    <div className="min-h-screen bg-[#FAF9F6] text-gray-900 flex flex-col">
       <Navbar />
       <PageFade>
-        <header className="py-8 pt-24">
-          <div className="mx-auto px-2 max-w-2xl">
+        <main className="flex-1 flex items-center justify-center px-4 mt-24">
+          <div className="max-w-2xl w-full">
             <p className="text-sm text-gray-500 mb-2">404 Error</p>
-            <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
+
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
               Page not found
             </h1>
 
-            <p className="text-gray-700 text-sm md:text-base">
+            <p className="text-gray-600 text-lg md:text-lg mb-6 max-w-md">
               The page you’re looking for doesn’t exist or may have been moved.
             </p>
-            <div className="pt-4">
-              <Link
+
+            <Link
               to="/"
-              className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 transition"
+              className="inline-flex items-center text-sm font-medium text-black hover:text-gray-600 transition"
             >
               Back to home
             </Link>
-            </div>
           </div>
-        </header>
+        </main>
       </PageFade>
       <Footer />
     </div>

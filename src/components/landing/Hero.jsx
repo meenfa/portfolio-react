@@ -57,7 +57,7 @@ const Hero = () => {
 
               <ul className="space-y-3 text-gray-800 text-sm leading-relaxed">
                 <li className="flex items-start gap-2">
-                  {/* <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" /> */}
+               
                   <span>
                     I am a <span className="text-black font-bold">Backend developer</span> from Nepal
                     <span className="inline-block text-gray-800 ml-1">🇳🇵</span>.
@@ -65,7 +65,7 @@ const Hero = () => {
                 </li>
 
                 <li className="flex items-start gap-2">
-                  {/* <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" /> */}
+               
                   <span>
                     I build backend systems with{" "}
                     <HeroSkillBtn
@@ -84,7 +84,7 @@ const Hero = () => {
                 </li>
 
                 <li className="flex items-start gap-2">
-                  {/* <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" /> */}
+               
                   <span>
                     Built{" "}
                     <span className="text-black font-medium">
@@ -105,7 +105,7 @@ const Hero = () => {
                 </li>
 
                 <li className="flex items-start gap-2">
-                  {/* <PiCircleFill className="h-2 w-2 text-gray-600 mt-1 shrink-0" /> */}
+               
                   <span>
                     Built{" "}
                     <span className="text-black font-medium">

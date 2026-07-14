@@ -30,7 +30,6 @@ const Navbar = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [mobileMenuOpen]);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -64,8 +63,8 @@ const Navbar = () => {
               key={section.name}
               onClick={() => handleNavClick(section)}
               className={`text-sm cursor-pointer ${location.pathname === section.path
-                ? 'text-black border-b border-black'
-                : 'text-gray-800 hover:text-black hover:border-b-2 hover:border-gray-800'
+                ? 'text-gray-800'
+                : 'text-gray-800 hover:text-black'
                 }`}
             >
               {section.name}
@@ -73,14 +72,12 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <MobileMenuButton
           isOpen={mobileMenuOpen}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         />
       </div>
 
-      {/* Professional Mobile Dropdown Menu */}
       <div
         className={`md:hidden fixed top-16 left-0 right-0 bg-[#FAF9F6] shadow-xl transition-all duration-300 ease-in-out transform ${
           mobileMenuOpen 
@@ -96,7 +93,6 @@ const Navbar = () => {
           </p>
         </div> */}
 
-        {/* Menu Items */}
         <div className="py-2">
           {sections.map((section, index) => (
             <button
@@ -126,8 +122,7 @@ const Navbar = () => {
                       : 'w-0 opacity-0 group-hover:w-4 group-hover:opacity-100'
                   }`} />
                 </div>
-                
-                {/* Arrow icon for visual feedback */}
+
                 <svg 
                   className={`w-4 h-4 transition-all duration-200 ${
                     location.pathname === section.path
@@ -145,15 +140,13 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Optional: Footer with additional info */}
-        <div className="border-t border-gray-100 px-6 py-4 bg-gray-50/50">
+        {/* <div className="border-t border-gray-100 px-6 py-4 bg-gray-50/50">
           <p className="text-xs text-gray-400 text-center">
             Let's create something amazing
           </p>
-        </div>
+        </div> */}
       </div>
 
-      {/* Backdrop overlay */}
       <div
         className={`md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm transition-all duration-300 ${
           mobileMenuOpen 
