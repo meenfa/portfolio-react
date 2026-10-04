@@ -2,7 +2,7 @@ export const experience = [
   {
     role: "Django Developer",
     company: "Vasuki Tech",
-    location: "Morang, Nepal (Remote)",
+    location: "Biratnagar, Nepal (Remote)",
     period: "Oct 2025 – Present",
     description: [
       "Developed scalable backend systems and RESTful APIs using Django and Django REST Framework (DRF)",

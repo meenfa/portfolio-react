@@ -4,7 +4,7 @@ const Footer = () => {
     <footer className="py-10  bg-[#FAF9F6] mt-24">
     <div className="mx-auto px-2 max-w-2xl pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
         <p className="text-xs text-gray-800 flex gap-2 items-center">
-           <FaRegCopyright className="h-3 w-3"/>{new Date().getFullYear()} Ankit Karki
+           Ankit Karki
         </p>
 
         <p className="text-xs text-gray-800">
@@ -13,7 +13,7 @@ const Footer = () => {
             href="https://best-developers-portfolios.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-black transition-colors font-black"
+            className="underline hover:text-green-600 transition-colors font-base"
           >
             here
           </a>

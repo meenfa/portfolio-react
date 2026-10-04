@@ -14,7 +14,7 @@ const ProjectsSection = () => {
       <div className="mx-auto px-2 max-w-2xl">
         <h2 className="text-2xl font-bold text-black mb-2">Projects</h2>
 
-        <div className="flex flex-col divide-y divide-gray-600">
+        <div className="flex flex-col ">
           {projects.slice(0, 4).map((project, index) => (
             <div key={index}>
               <ProjectCard project={project} />

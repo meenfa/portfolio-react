@@ -30,7 +30,7 @@ const ProjectsPage = () => {
 
         <section className="py-4 bg-[#FAF9F6]">
           <div className="mx-auto px-2 max-w-2xl">
-            <div className="flex flex-col gap-2 divide-y divide-gray-600">
+            <div className="flex flex-col gap-2">
               {filteredProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}
